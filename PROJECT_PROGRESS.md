@@ -40,12 +40,12 @@ Pending:
 - 1D CNN
 - TabTransformer
 - Autoencoder
-- FastAPI integration
+- Node → FastAPI integration
 
 ### Website / Common Integration
 
 Owner: Jagadeeswar  
-Status: **NOT IMPLEMENTED YET**
+Status: **APPLICATION SKELETON ONLY**
 
 Planned:
 
@@ -53,6 +53,8 @@ Planned:
 - Node.js + Express backend
 - Python + FastAPI ML/DL service
 - Unified prediction/investigation interface
+
+The frontend placeholder, Node health endpoint, and FastAPI health endpoint are verified. React → Node prediction integration, Node → FastAPI integration, and the full website are not implemented yet.
 
 ### Agentic AI
 
@@ -75,15 +77,35 @@ Python + FastAPI
 Classical ML / Deep Learning / Agentic AI
 ```
 
+This remains the planned application architecture. The currently implemented application path is only:
+
+```text
+Raw claim
+        ↓
+FastAPI /predict
+        ↓
+Frozen preprocessing contract + existing MLP
+        ↓
+PredictionResponse
+```
+
 ## Current Overall Status
 
 - Dataset/reference material: ✅
 - Approach-1 existing implementation: ✅
 - DL environment: ✅
 - MLP: ✅
+- MLP training/evaluation/checkpoint: ✅
+- Application skeleton: ✅
+- Frontend health/startup verification: ✅
+- Node API health endpoint: ✅
+- FastAPI health endpoint: ✅
+- FastAPI MLP prediction endpoint: ✅
 - Remaining DL models: ⏳
-- Website: ⏳
-- Node backend: ⏳
-- FastAPI integration: ⏳
+- Node → FastAPI prediction integration: ⏳
+- React → Node prediction integration: ⏳
+- Full website/dashboard: ⏳
+- Model comparison UI: ⏳
+- Explainability integration: ⏳
 - Agentic AI: ⏳
 - Final unified application: ⏳

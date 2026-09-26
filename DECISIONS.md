@@ -8,3 +8,5 @@
 6. PR-AUC is the primary evaluation metric because the dataset has approximately 6% fraud cases.
 7. React → Node.js → FastAPI is the planned application architecture.
 8. Agentic AI is a separate team component owned by Varshith.
+9. The FastAPI prediction service reuses the fitted preprocessing transformer from `Approch-1/data/processed/preprocessor.joblib` read-only, while the MLP checkpoint and frozen feature-name contract remain under `Approch-2-DL/`.
+10. The prediction API reports an uncalibrated `fraud_score`, not a calibrated probability.
