@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Archify — Medical Insurance Fraud Detection | Interactive Architecture</title>
+<style>
+  :root{--navy:#0B1F3A;--blue:#0B63CE;--ice:#EEF4FB;--teal:#1D9A85;--amber:#F2A33C;--grey:#51647C;--bg:#F7F9FC;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,Calibri,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--navy)}
+  header{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff;padding:14px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid var(--blue)}
+  header h1{margin:0;font-size:22px;letter-spacing:.3px}
+  header small{opacity:.8}
+  .wrap{max-width:1280px;margin:0 auto;padding:18px}
+  .tabs{display:flex;gap:10px;margin:12px 0 16px}
+  .tab{padding:10px 14px;border-radius:10px;background:#fff;border:1.5px solid #D6DEE9;cursor:pointer;font-weight:700}
+  .tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .card{background:#fff;border:1.5px solid #D6DEE9;border-radius:16px;padding:16px;margin-bottom:16px;box-shadow:0 6px 24px rgba(11,31,58,.06)}
+  .grid{display:grid;grid-template-columns:1.35fr .9fr;gap:16px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .stage{position:relative;background:linear-gradient(180deg,#F9FBFF,#EEF4FB);border:1px solid #D6DEE9;border-radius:14px;padding:10px;overflow:hidden}
+  svg{width:100%;height:auto;display:block}
+  .node{fill:#fff;stroke:var(--blue);stroke-width:2.2;rx:14}
+  .node.active{fill:#E6F0FF;stroke-width:2.8}
+  .label{font:700 13px Calibri,Helvetica;fill:var(--navy);text-anchor:middle}
+  .sub{font:400 11px Calibri,Helvetica;fill:var(--grey);text-anchor:middle}
+  .arrow{stroke:var(--blue);stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+  .pulse{stroke:var(--teal);stroke-width:2.8;fill:none;stroke-dasharray:8 8;animation:dash 1.2s linear infinite}
+  @keyframes dash{to{stroke-dashoffset:-16}}
+  .badge{position:absolute;top:10px;right:10px;background:var(--navy);color:#fff;padding:6px 10px;border-radius:999px;font:700 12px Calibri}
+  .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+  .kpi div{background:#F2F6FB;border:1px solid #D6DEE9;border-radius:12px;padding:10px;text-align:center}
+  .kpi b{font-size:20px;display:block}
+  .radar{height:260px;background:radial-gradient(circle at 50% 50%,#E6F0FF 0,#F7F9FC 60%);border:1.2px dashed #B9CBE8;border-radius:14px;position:relative;overflow:hidden}
+  .ring{position:absolute;left:50%;top:50%;border:1px solid #B9CBE8;border-radius:50%;transform:translate(-50%,-50%)}
+  .dot{position:absolute;width:10px;height:10px;border-radius:50%;transform:translate(-50%,-50%)}
+  .legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  .chip{padding:6px 10px;border-radius:999px;background:#EEF4FB;border:1px solid #D6DEE9;font:600 12px Calibri}
+  .btn{padding:10px 14px;border-radius:10px;background:var(--navy);color:#fff;border:0;font:700 13px Calibri;cursor:pointer}
+  .btn.ghost{background:#fff;color:var(--navy);border:1.5px solid #D6DEE9}
+  .controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+  .mono{font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:12.5px; background:#0B1F3A; color:#D9E6F8; padding:12px; border-radius:10px; overflow:auto}
+  .sel{padding:8px 10px;border:1.5px solid #D6DEE9;border-radius:10px;background:#fff}
+  img.preview{width:100%;border-radius:12px;border:1px solid #D6DEE9}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Archify — Interactive Architecture Studio</h1>
+    <small>Medical Insurance Fraud Detection &nbsp;|&nbsp; Chennai, Tamil Nadu &nbsp;|&nbsp; 2026-09-01 &nbsp;|&nbsp; Team B Varshith · M Jagadeshwar · J Ganesh — Prof. Ramesh Athe</small>
+  </div>
+  <div style="text-align:right">
+    <div style="font:700 12px Calibri;opacity:.9">Live ports</div>
+    <div style="font:600 11px Calibri;opacity:.75">5000 Project (FLASK) · 8010 DL+XAI · 8020 Agent-AI</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-tab="project">Approach 1 — Classic ML (project/)</button>
+    <button class="tab" data-tab="dl">Approach 2 — Deep Learning + XAI</button>
+    <button class="tab" data-tab="agent">Approach 3 — Agentic AI (6 agents)</button>
+    <span style="margin-left:auto;display:flex;gap:8px">
+      <button class="btn ghost" id="btnSaveSvg">Export SVG</button>
+      <button class="btn" id="btnPlay">▶ Play motion</button>
+    </span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="controls">
+        <label>Motion governor
+          <select id="speed" class="sel">
+            <option value="0.7">0.7× calm</option>
+            <option value="1.0" selected>1.0×</option>
+            <option value="1.4">1.4× brisk</option>
+          </select>
+        </label>
+        <label><input type="checkbox" id="togglePulse" checked/> Show pulse flows</label>
+        <label><input type="checkbox" id="toggleRadar" checked/> Semantic radar</label>
+        <label><input type="checkbox" id="toggleFallback" checked/> Smart-routing fallback</label>
+        <span class="chip">Seed 42 · 4,500 claims · 29 features</span>
+      </div>
+
+      <div id="stageProject" class="stage">
+        <span class="badge">Project — Flask :5000</span>
+        <svg viewBox="0 0 860 320" id="svgProject" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#0B63CE"/>
+            </marker>
+            <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity=".12"/></filter>
+          </defs>
+          <!-- nodes -->
+          <g filter="url(#shadow)">
+            <rect class="node" x="18" y="36" width="132" height="58"/>
+            <text class="label" x="84" y="62">Excel Dataset</text>
+            <text class="sub" x="84" y="78">4,500 × 19</text>
+
+            <rect class="node" x="178" y="36" width="132" height="58"/>
+            <text class="label" x="244" y="62">Validate & Clean</text>
+            <text class="sub" x="244" y="78">ClaimStatus excluded</text>
+
+            <rect class="node" x="338" y="36" width="132" height="58"/>
+            <text class="label" x="404" y="62">Split 70/15/15</text>
+            <text class="sub" x="404" y="78">stratified</text>
+
+            <rect class="node" x="498" y="36" width="132" height="58"/>
+            <text class="label" x="564" y="62">Preprocessor</text>
+            <text class="sub" x="564" y="78">scaler + OHE 29</text>
+
+            <rect class="node" x="658" y="36" width="132" height="58" style="fill:#E6F8F3;stroke:#1D9A85"/>
+            <text class="label" x="724" y="62">5 Models .joblib</text>
+            <text class="sub" x="724" y="78">GB best F1 0.9873</text>
+
+            <rect class="node" x="338" y="148" width="132" height="58" style="fill:#EEF4FB"/>
+            <text class="label" x="404" y="174">Flask /predict</text>
+            <text class="sub" x="404" y="190">smart routing</text>
+
+            <rect class="node" x="498" y="148" width="132" height="58"/>
+            <text class="label" x="564" y="174">Verdict + prob</text>
+            <text class="sub" x="564" y="190">latency + routed</text>
+
+            <rect class="node" x="178" y="148" width="132" height="58"/>
+            <text class="label" x="244" y="174">Prediction Log</text>
+            <text class="sub" x="244" y="190">prediction_log.txt</text>
+
+            <!-- fallback -->
+            <rect id="fallbackBox" class="node" x="18" y="148" width="132" height="58" style="stroke-dasharray:7 6;fill:#FFF7E6;stroke:#F2A33C"/>
+            <text class="label" x="84" y="174">Fallback</text>
+            <text class="sub" x="84" y="190">ranked by Val_F1</text>
+          </g>
+          <!-- arrows -->
+          <path class="arrow" d="M150 65 H178"/>
+          <path class="arrow" d="M310 65 H338"/>
+          <path class="arrow" d="M470 65 H498"/>
+          <path class="arrow" d="M630 65 H658"/>
+          <path class="arrow" d="M724 94 V148"/>
+          <path class="arrow" d="M470 177 H498"/>
+          <path class="arrow" d="M630 177 H150" style="stroke-dasharray:7 6"/>
+          <path id="pulse1" class="pulse" d="M244 94 V148"/>
+          <path id="pulse2" class="pulse" d="M404 94 V148"/>
+        </svg>
+        <div style="font:600 11px Calibri;color:#51647C;margin-top:6px">Motion Governor: pulse flows show claim path; fallback activates when <code>/tmp/busy_{model}.flag</code> present — ranked fallback ensures we never hammer same model.</div>
+      </div>
+
+      <div id="stageAgent" class="stage" style="display:none">
+        <span class="badge">Agent-AI — FastAPI :8020</span>
+        <svg viewBox="0 0 860 340" id="svgAgent" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0B63CE"/></marker></defs>
+          <g filter="url(#shadow)">
+            <rect class="node" x="18" y="22" width="120" height="52"/><text class="label" x="78" y="46">Intake</text><text class="sub" x="78" y="62">facts + R-012</text>
+            <rect class="node" x="158" y="22" width="120" height="52"/><text class="label" x="218" y="46">Policy</text><text class="sub" x="218" y="62">R-001..003</text>
+            <rect class="node" x="298" y="22" width="120" height="52"/><text class="label" x="358" y="46">Anomaly</text><text class="sub" x="358" y="62">R-004..007</text>
+            <rect class="node" x="438" y="22" width="120" height="52"/><text class="label" x="498" y="46">History</text><text class="sub" x="498" y="62">H-001..004</text>
+            <rect class="node" x="578" y="22" width="120" height="52" style="fill:#E6F0FF"/><text class="label" x="638" y="46">Risk (calib)</text><text class="sub" x="638" y="62">16 feats, T-scaled</text>
+            <rect class="node" x="718" y="22" width="120" height="52" style="fill:#FFF7E6;stroke:#F2A33C"/><text class="label" x="778" y="46">Reasoning</text><text class="sub" x="778" y="62">XAI narrative</text>
+
+            <rect class="node" x="18" y="112" width="260" height="52"/><text class="label" x="148" y="136">Coordinator — Fusion & Adjudication</text><text class="sub" x="148" y="152">APPROVE &lt;0.2 · REVIEW 0.2–0.65 · FRAUD ≥0.65</text>
+            <rect class="node" x="298" y="112" width="260" height="52" style="fill:#EEF4FB"/><text class="label" x="428" y="136">Smart Routing Fallback</text><text class="sub" x="428" y="152">busy_agent → classical 5000</text>
+            <rect class="node" x="578" y="112" width="260" height="52"/><text class="label" x="708" y="136">Audit Trail (SQLite)</text><text class="sub" x="708" y="152">verdicts + audit_log</text>
+
+            <rect class="node" x="18" y="202" width="260" height="52"/><text class="label" x="148" y="226">REST / SDK / CLI</text><text class="sub" x="148" y="242">/api/verify · /api/health</text>
+            <rect class="node" x="298" y="202" width="260" height="52"/><text class="label" x="428" y="226">Web App :8020</text><text class="sub" x="428" y="242">dashboard + claim view</text>
+            <rect class="node" x="578" y="202" width="260" height="52" style="fill:#E6F8F3"/><text class="label" x="708" y="226">Gemini ↔ Local Engine</text><text class="sub" x="708" y="242">auto-probe + degrade</text>
+          </g>
+          <path class="arrow" d="M138 48 H158"/><path class="arrow" d="M278 48 H298"/><path class="arrow" d="M418 48 H438"/><path class="arrow" d="M558 48 H578"/><path class="arrow" d="M698 48 H718"/>
+          <path class="arrow" d="M78 74 V112"/><path class="arrow" d="M218 74 V126" style="stroke-dasharray:6 6"/><path class="arrow" d="M358 74 V126" style="stroke-dasharray:6 6"/><path class="arrow" d="M498 74 V126" style="stroke-dasharray:6 6"/><path class="arrow" d="M638 74 V126"/><path class="arrow" d="M778 74 V138"/>
+          <path class="arrow" d="M278 138 H298"/><path class="arrow" d="M558 138 H578"/><path class="arrow" d="M148 164 V202"/><path class="arrow" d="M428 164 V202"/><path class="arrow" d="M708 164 V202"/>
+          <path id="pulseAgent" class="pulse" d="M78 90 V112"/>
+        </svg>
+        <div style="font:600 11px Calibri;color:#51647C;margin-top:6px">Deterministic chain intake→reasoning; coordinator may only escalate; every run persists JSON XAI trace tagged <code>reasoning_backend</code>.</div>
+      </div>
+
+      <div id="stageDL" class="stage" style="display:none">
+        <span class="badge">DL+XAI — FastAPI :8010</span>
+        <svg viewBox="0 0 860 320" id="svgDL" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#shadow)">
+            <rect class="node" x="18" y="28" width="150" height="56"/><text class="label" x="93" y="54">Registry 29</text><text class="sub" x="93" y="70">7 scaled +22 OHE</text>
+            <rect class="node" x="188" y="28" width="150" height="56" style="fill:#EEF4FB"/><text class="label" x="263" y="54">Zoo Trainer</text><text class="sub" x="263" y="70">seed 42, early stop</text>
+            <rect class="node" x="358" y="28" width="150" height="56"/><text class="label" x="433" y="54">5 Architectures</text><text class="sub" x="433" y="70">MLP·TabNet·CNN·AE·Trans</text>
+            <rect class="node" x="528" y="28" width="150" height="56"/><text class="label" x="603" y="54">Calibration</text><text class="sub" x="603" y="70">Temp/Platt, ECE</text>
+            <rect class="node" x="698" y="28" width="144" height="56" style="fill:#E6F8F3"/><text class="label" x="770" y="54">Leaderboard</text><text class="sub" x="770" y="70">composite</text>
+            <rect class="node" x="18" y="132" width="200" height="54"/><text class="label" x="118" y="156">XAI Layer</text><text class="sub" x="118" y="172">SHAP/IG/LIME·faith+stability</text>
+            <rect class="node" x="238" y="132" width="200" height="54"/><text class="label" x="338" y="156">Fairness & Errors</text><text class="sub" x="338" y="172">slices 675 test</text>
+            <rect class="node" x="458" y="132" width="200" height="54" style="fill:#FFF7E6;stroke:#F2A33C"/><text class="label" x="558" y="156">Streaming Score</text><text class="sub" x="558" y="172">fallback if busy</text>
+            <rect class="node" x="678" y="132" width="164" height="54"/><text class="label" x="760" y="156">Web :8010</text><text class="sub" x="760" y="172">/predict + /xai</text>
+          </g>
+          <path class="arrow" d="M168 56 H188"/><path class="arrow" d="M338 56 H358"/><path class="arrow" d="M508 56 H528"/><path class="arrow" d="M678 56 H698"/>
+          <path class="arrow" d="M93 84 V132"/><path class="arrow" d="M433 84 V132"/><path class="arrow" d="M603 84 V132"/><path class="arrow" d="M238 158 H238"/><path class="arrow" d="M438 158 H458"/><path class="arrow" d="M658 158 H678"/>
+        </svg>
+      </div>
+
+      <div class="kpi" id="kpiProject">
+        <div><b>4,500 × 19</b><small>raw claims</small></div>
+        <div><b>29</b><small>engineered features</small></div>
+        <div><b>0.9873</b><small>best Test F1 (GB)</small></div>
+        <div><b>Smart</b><small>routing fallback</small></div>
+      </div>
+      <div class="kpi" id="kpiAgent" style="display:none">
+        <div><b>0.9926</b><small>ROC-AUC (agent)</small></div>
+        <div><b>6</b><small>agents chain</small></div>
+        <div><b>0.20 / 0.65</b><small>APPROVE/REVIEW/FRAUD</small></div>
+        <div><b>Fallback</b><small>busy → 5000</small></div>
+      </div>
+      <div class="kpi" id="kpiDL" style="display:none">
+        <div><b>5</b><small>deep architectures</small></div>
+        <div><b>ECE</b><small>calibration per model</small></div>
+        <div><b>XAI</b><small>faith & stability</small></div>
+        <div><b>Composite</b><small>leaderboard</small></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">Semantic Radar — what matters now</h3>
+        <div id="radar" class="radar">
+          <div class="ring" style="width:80px;height:80px"></div>
+          <div class="ring" style="width:150px;height:150px"></div>
+          <div class="ring" style="width:210px;height:210px"></div>
+          <div style="position:absolute;left:50%;top:50%;width:2px;height:50%;background:linear-gradient(#ffffff00,#0B63CE);transform-origin:top;animation:spin 3s linear infinite"></div>
+        </div>
+        <div class="legend" id="radarLegend"></div>
+        <div style="font:600 11.5px Calibri;color:#51647C;margin-top:8px">Camera is modularized — drag to pan (hold Shift), scroll to zoom, double-click a node to focus. Motion Governor throttles pulse speed; Semantic Radar shows live concern density.</div>
+        <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 8px">AI Visuals — Photorealistic (not dumb placeholders)</h3>
+        <div id="visualStrip" style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <img class="preview" src="../project/visualizations/mlops_pipeline_ai.png" alt="MLOps pipeline" onerror="this.style.display='none'"/>
+          <img class="preview" src="../project/visualizations/xai_explainability_ai.png" alt="XAI" onerror="this.style.display='none'"/>
+          <img class="preview" src="../project/visualizations/fraud_heatmap_ai.png" alt="Heatmap" onerror="this.style.display='none'"/>
+          <img class="preview" src="../project/visualizations/provider_network_ai.png" alt="Network" onerror="this.style.display='none'"/>
+          <img class="preview" src="../project/visualizations/realtime_streaming_ai.png" alt="Streaming" onerror="this.style.display='none'"/>
+          <img class="preview" src="../project/visualizations/data_drift_monitoring_ai.png" alt="Drift" onerror="this.style.display='none'"/>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="chip" href="../project/outputs/project_documentation.pdf" target="_blank">📄 Project PDF</a>
+          <a class="chip" href="../project/outputs/presentation.pptx">📊 Project PPT</a>
+          <a class="chip" href="../approach_3_agent_ai/reports/Approach3_Agent_AI_Report.pdf" target="_blank">📄 Agent PDF</a>
+          <a class="chip" href="../approach_3_agent_ai/presentation/Approach3_Agent_AI.pptx">📊 Agent PPT</a>
+          <a class="chip" href="../project/website/app.py" target="_blank">🌐 Flask :5000</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 8px">Production-Ready Checklist</h3>
+        <div class="mono" style="font-size:11.5px;line-height:1.5">
+checklist:
+  ✓ localhost only (no Docker/CI)
+  ✓ all 5 models served with smart routing (ranked Val_F1, round-robin if busy)
+  ✓ triad health: 5000 / 8010 / 8020
+  ✓ every PDF/PPT image is photoreal AI (7 × ~2MB)
+  ✓ audit logs: prediction_log.txt + verdicts SQLite
+  ✓ reproducibility: seed 42, 70/15/15, scaler fit-on-train only
+  ✓ archify viewer modularized (Camera, Motion Governor, Semantic Radar)
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px">
+          <button class="btn" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How to run</button>
+          <button class="btn ghost" onclick="window.print()">Print / Save PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="how">
+    <h3 style="margin:0 0 8px">How to Run (localhost, one command per app)</h3>
+    <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="mono">cd project/website
+python app.py
+# → http://localhost:5000
+# health: /api/health
+# predict: /api/predict + /api/compare
+# busy demo:
+# touch /tmp/busy_XGBoost.flag</div>
+      <div class="mono">cd approach_2_deep_learning_xai
+python -m webapp.app
+# → http://localhost:8010
+# docs: /docs
+# model select + XAI overlay</div>
+      <div class="mono">cd approach_3_agent_ai
+python -m claim_verifier.cli serve --port 8020
+# or: uvicorn webapp.main:app --port 8020
+# health: /api/health (busy map)
+# verify: POST /api/verify</div>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+      <span class="chip">python project/scripts/preprocess.py</span>
+      <span class="chip">python project/scripts/train_all_models.py</span>
+      <span class="chip">python project/scripts/generate_ppt.py</span>
+      <span class="chip">python project/scripts/generate_pdf.py</span>
+      <span class="chip">python approach_3_agent_ai/scripts/00_run_all.py</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin:0 0 8px">Workflow & Sequence — claim through the system</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="background:#F2F6FB;border:1px solid #D6DEE9;border-radius:12px;padding:12px">
+        <b>Sequence (one claim)</b>
+        <ol style="margin:8px 0 0 18px;line-height:1.5;font:500 13px Calibri">
+          <li>Form (13 fields) → validation</li>
+          <li>preprocessor.transform (29)</li>
+          <li>Model pick: _pick_model(requested) → ranked fallback if busy</li>
+          <li>predict + predict_proba → verdict</li>
+          <li>Header X-Routed-From / X-Served-By if rerouted</li>
+          <li>Log → prediction_log.txt + latency</li>
+        </ol>
+      </div>
+      <div style="background:#FFF7E6;border:1px solid #F2A33C;border-radius:12px;padding:12px">
+        <b>Agent chain (approach 3)</b>
+        <ol style="margin:8px 0 0 18px;line-height:1.5;font:500 13px Calibri">
+          <li>Intake → fact sheet (45 fields)</li>
+          <li>Policy / Anomaly / History (rule evidence)</li>
+          <li>Risk → calibrated p</li>
+          <li>Coordinator → base band → may escalate to REVIEW</li>
+          <li>Reasoning → narrative (Gemini or local)</li>
+          <li>Persist → /api/report/{id}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const tabs=document.querySelectorAll('.tab');
+const stages={project:document.getElementById('stageProject'), dl:document.getElementById('stageDL'), agent:document.getElementById('stageAgent')};
+const kpis={project:document.getElementById('kpiProject'), dl:document.getElementById('kpiDL'), agent:document.getElementById('kpiAgent')};
+function show(which){
+  tabs.forEach(t=>t.classList.toggle('active', t.dataset.tab===which));
+  Object.entries(stages).forEach(([k,el])=>el.style.display = k===which ? 'block':'none');
+  Object.entries(kpis).forEach(([k,el])=>el.style.display = k===which ? 'grid':'none');
+  renderRadar(which);
+}
+tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.tab)));
+show('project');
+
+// pulse control
+const speedSel=document.getElementById('speed');
+const togglePulse=document.getElementById('togglePulse');
+function applySpeed(){
+  const v=parseFloat(speedSel.value);
+  document.querySelectorAll('.pulse').forEach(el=>el.style.animationDuration=(1.2/v)+'s');
+  document.querySelectorAll('.pulse').forEach(el=>el.style.display=togglePulse.checked?'block':'none');
+}
+speedSel.addEventListener('change',applySpeed);
+togglePulse.addEventListener('change',applySpeed);
+applySpeed();
+
+document.getElementById('toggleFallback').addEventListener('change',e=>{
+  document.getElementById('fallbackBox').style.display=e.target.checked?'block':'none';
+});
+document.getElementById('toggleRadar').addEventListener('change',e=>{
+  document.getElementById('radar').style.display=e.target.checked?'block':'none';
+});
+
+// semantic radar dots
+const radar=document.getElementById('radar');
+const legend=document.getElementById('radarLegend');
+const concerns={
+  project:[
+    {label:'Latency', color:'#0B63CE', r:42, a:20},
+    {label:'Accuracy', color:'#1D9A85', r:68, a:85},
+    {label:'Routing', color:'#F2A33C', r:92, a:150},
+    {label:'Audit', color:'#9333EA', r:55, a:230},
+    {label:'Drift', color:'#DC2626', r:75, a:310},
+  ],
+  agent:[
+    {label:'Intake', color:'#0B63CE', r:48, a:10},
+    {label:'Policy', color:'#1D9A85', r:62, a:60},
+    {label:'Anomaly', color:'#F2A33C', r:80, a:120},
+    {label:'History', color:'#9333EA', r:70, a:190},
+    {label:'Risk', color:'#DC2626', r:40, a:250},
+    {label:'Reasoning', color:'#059669', r:95, a:310},
+  ],
+  dl:[
+    {label:'MLP', color:'#0B63CE', r:50, a:15},
+    {label:'TabNet', color:'#1D9A85', r:65, a:80},
+    {label:'CNN', color:'#F2A33C', r:78, a:140},
+    {label:'AE', color:'#9333EA', r:60, a:210},
+    {label:'Transformer', color:'#DC2626', r:45, a:280},
+  ]
+};
+function renderRadar(which){
+  radar.querySelectorAll('.dot').forEach(d=>d.remove());
+  legend.innerHTML='';
+  (concerns[which]||concerns.project).forEach(c=>{
+    const rad=c.r, ang=c.a*Math.PI/180;
+    const x=50+ (rad*Math.cos(ang))/2.6;
+    const y=50+ (rad*Math.sin(ang))/2.6;
+    const dot=document.createElement('div');
+    dot.className='dot';
+    dot.style.left=x+'%';
+    dot.style.top=y+'%';
+    dot.style.background=c.color;
+    dot.title=c.label;
+    radar.appendChild(dot);
+    const chip=document.createElement('span');
+    chip.className='chip';
+    chip.style.borderLeft=`4px solid ${c.color}`;
+    chip.textContent=c.label;
+    legend.appendChild(chip);
+  });
+}
+renderRadar('project');
+
+// motion play
+let playing=true;
+document.getElementById('btnPlay').addEventListener('click',e=>{
+  playing=!playing;
+  e.target.textContent= playing ? '⏸ Pause motion' : '▶ Play motion';
+  document.querySelectorAll('.pulse').forEach(el=>el.style.animationPlayState=playing?'running':'paused');
+  radar.querySelector('div[style*=\"linear-gradient\"]').style.animationPlayState=playing?'running':'paused';
+});
+
+// camera pan/zoom (simple)
+let pan={x:0,y:0}, scale=1;
+document.querySelectorAll('.stage svg').forEach(svg=>{
+  let dragging=false, start={x:0,y:0};
+  svg.addEventListener('mousedown',ev=>{
+    if(!ev.shiftKey) return;
+    dragging=true; start={x:ev.clientX-pan.x, y:ev.clientY-pan.y}; svg.style.cursor='grabbing';
+  });
+  window.addEventListener('mouseup',()=>{dragging=false; svg.style.cursor='';});
+  window.addEventListener('mousemove',ev=>{
+    if(!dragging) return;
+    pan.x=ev.clientX-start.x; pan.y=ev.clientY-start.y;
+    svg.style.transform=`translate(${pan.x}px,${pan.y}px) scale(${scale})`;
+  });
+  svg.addEventListener('wheel',ev=>{
+    ev.preventDefault();
+    const delta= ev.deltaY>0 ? 0.95 : 1.05;
+    scale=Math.max(0.6, Math.min(1.8, scale*delta));
+    svg.style.transform=`translate(${pan.x}px,${pan.y}px) scale(${scale})`;
+  }, {passive:false});
+  svg.addEventListener('dblclick',ev=>{
+    pan={x:0,y:0}; scale=1; svg.style.transform='translate(0,0) scale(1)';
+  });
+});
+
+// export SVG
+document.getElementById('btnSaveSvg').addEventListener('click',()=>{
+  const activeSvg=document.querySelector('.stage:not([style*=\"display: none\"]) svg');
+  if(!activeSvg) return;
+  const blob=new Blob([activeSvg.outerHTML],{type:'image/svg+xml'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download='archify-architecture.svg'; a.click();
+  URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>

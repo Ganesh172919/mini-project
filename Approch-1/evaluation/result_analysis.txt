@@ -1,0 +1,13 @@
+ERROR ANALYSIS — REAL TEST SET (675 claims, 40 fraud)
+============================================================
+LogisticRegression: FP=24 FN=0 TP=40 TN=611
+RandomForest: FP=0 FN=1 TP=39 TN=635
+XGBoost: FP=1 FN=0 TP=40 TN=634
+SVM: FP=13 FN=2 TP=38 TN=622
+GradientBoosting: FP=0 FN=1 TP=39 TN=635
+
+Observation: Tree ensembles (RF, XGBoost, GradBoost) show near-zero FP/FN on this dataset.
+Potential cause: the engineered Cluster column carries very strong predictive signal.
+Note: ClaimStatus (Approved/Denied/Pending) is excluded from the model - it is the
+post-adjudication outcome and would leak the target.
+Recommendation: Validate on future time-period claims to confirm generalization.

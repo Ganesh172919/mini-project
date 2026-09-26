@@ -1,0 +1,26 @@
+# Approach 1 - Traditional Machine Learning (Medical Insurance Claim Fraud Detection)
+# Python 3.11+ recommended (built and verified on CPython 3.11).
+# Install:  python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+# Localhost only - no Docker / no CI images are used anywhere in this project.
+
+# --- data -----------------------------------------------------------------
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1          # reads the repository Excel file
+PyYAML>=6.0
+
+# --- modelling ------------------------------------------------------------
+scikit-learn>=1.3
+joblib>=1.3
+xgboost>=2.0
+
+# --- plots ----------------------------------------------------------------
+matplotlib>=3.7
+seaborn>=0.12
+
+# --- reports / presentation ----------------------------------------------
+fpdf2>=2.7             # project_documentation.pdf + progress_tracker.pdf
+python-pptx>=0.6.23    # presentation.pptx
+
+# --- website (Flask, localhost) -------------------------------------------
+Flask>=3.0

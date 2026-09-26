@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Medical Insurance Fraud Detection — Project Documentation</title>
+<style>
+@page { size: A4; margin: 18mm 14mm 22mm 14mm; @top-left { content: "Fraud Detection — Approach 1"; font-size:9pt; color:#555; } @top-right { content: counter(page); font-size:9pt; color:#555; } @bottom-left { content: "Real Data Only | No Synthetic Data"; font-size:8pt; color:#777; } }
+body { font-family: "Segoe UI", Calibri, sans-serif; color:#222; line-height:1.45; font-size:10.5pt; }
+h1 { color:#0b3d5c; border-bottom:4px solid #d4a843; padding-bottom:10px; font-size:22pt; }
+h2 { color:#0b3d5c; margin-top:26pt; font-size:15pt; border-left:5px solid #d4a843; padding-left:10px; }
+h3 { color:#144a6e; font-size:12pt; margin-top:16pt; }
+.header { background: linear-gradient(135deg,#0b3d5c,#144a6e); color:#fff; padding:22pt 14pt; border-radius:6pt; }
+.header h1 { color:#fff; border:none; padding:0; margin:0; font-size:24pt; }
+.subtitle { color:#e8d9a0; margin-top:6pt; font-size:11pt; }
+.tag { display:inline-block; padding:3pt 7pt; border-radius:12pt; background:#e8f0fa; color:#0b3d5c; font-weight:600; font-size:9pt; margin-right:4pt; }
+.banner { background:#f8f6f0; border-left:4px solid #d4a843; padding:10pt; margin:12pt 0; border-radius:4pt; }
+.table-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:9.5pt; }
+th { background:#0b3d5c; color:#fff; text-align:left; padding:6pt 5pt; }
+td { padding:5pt 5pt; border-bottom:1pt solid #ccc; }
+tr:nth-child(even){ background:#f2f5f9; }
+.figure { text-align:center; margin:10pt 0; }
+.figure img { max-width:100%; max-height:320pt; border:1pt solid #ccc; border-radius:4pt; }
+.caption { font-size:9pt; color:#555; font-style:italic; margin-top:4pt; }
+.code { background:#f4f4f4; padding:6pt 8pt; border-left:3pt solid #0b3d5c; font-family: Consolas, monospace; font-size:9pt; overflow-x:auto; }
+.callout { background:#fff8e1; border-left:4pt solid #f0c000; padding:8pt 10pt; border-radius:3pt; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Medical Insurance Fraud Detection — End-to-End Project Documentation</h1>
+  <div class="subtitle">Approach 1: Machine Learning Models • Real Dataset Only • 4,500 Claims • 19 Features • 5 Algorithms</div>
+  <div style="margin-top:8pt; font-size:9pt; color:#e8d9a0;">Project folder: <strong>project/</strong> | Dataset: <strong>Health Insurance Fraud Claims.xlsx</strong> | Branch: <strong>arena/01a05b50-fraud-detection-medicalinsuran</strong></div>
+</div>
+
+<p><strong>Prepared:</strong> 2026-09-01 • <strong>Location:</strong> Chennai, Tamil Nadu • <strong>Industry:</strong> Health Insurance Claims Fraud Analytics</p>
+
+<h2>1. Executive Summary</h2>
+<div class="banner">
+<strong>Objective:</strong> Determine whether a medical insurance claim is <strong>Legitimate</strong> (0) or <strong>Fraud</strong> (1) using only the existing 4,500-row Excel dataset provided in the repository. This documentation is part of a larger three-approach project (Approach 1 = ML, Approach 2 = Deep Learning, Approach 3 = Indicator-Based System). This document covers <strong>only Approach 1</strong> and the integrated full-stack website, as requested.
+</div>
+
+<p>The dataset contains <strong>4,500 claims</strong> with <strong>19 original fields</strong> (after expansion of date features = 14 model inputs). There is <strong>no missing data</strong>, <strong>no duplicates</strong>, and <strong>no synthetic records</strong> have been added. The target variable <code>ClaimLegitimacy</code> is imbalanced: <strong>4,230 Legitimate (94.0%)</strong> and <strong>270 Fraud (6.0%)</strong>, reflecting real-world fraud ratios.</p>
+
+<h2>2. Dataset Analysis (Source: Repo Excel Only)</h2>
+<h3>2.1 Source File & Integrity</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Property</th><th>Value</th><th>Notes</th></tr>
+<tr><td>Filename</td><td>Health Insurance Fraud Claims.xlsx</td><td>Only file used; copied to <code>project/data/raw/</code></td></tr>
+<tr><td>Sheet</td><td>Sheet1</td><td>Single worksheet</td></tr>
+<tr><td>Rows</td><td>4,500</td><td>Real observations</td></tr>
+<tr><td>Columns (raw)</td><td>19</td><td>Includes IDs, dates, codes, demographics</td></tr>
+<tr><td>Duplicates</td><td>0</td><td>Verified with <code>df.duplicated()</code></td></tr>
+<tr><td>Missing</td><td>0</td><td>No nulls across all columns</td></tr>
+<tr><td>Date range</td><td>2022-07-09 to 2024-07-08</td><td>2-year window</td></tr>
+</table>
+</div>
+
+<h3>2.2 Column Overview</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Column</th><th>Type</th><th>Unique Values (approx)</th><th>Usage in ML</th></tr>
+<tr><td>ClaimID / PatientID / ProviderID</td><td>ID</td><td>4,500</td><td><strong>Dropped</strong> — leaks identity</td></tr>
+<tr><td>ClaimAmount</td><td>Numeric</td><td>Continuous</td><td>Kept — primary financial signal</td></tr>
+<tr><td>ClaimDate</td><td>Date</td><td>730+ days</td><td>Expanded to Year/Month/DayOfWeek</td></tr>
+<tr><td>DiagnosisCode / ProcedureCode</td><td>String</td><td>~4,495</td><td><strong>Dropped</strong> — near-unique per claim</td></tr>
+<tr><td>PatientAge</td><td>Numeric</td><td>0–99</td><td>Kept — demographic risk</td></tr>
+<tr><td>PatientGender</td><td>Categorical</td><td>2 (F, M)</td><td>One-hot encoded</td></tr>
+<tr><td>ProviderSpecialty</td><td>Categorical</td><td>5</td><td>One-hot encoded</td></tr>
+<tr><td>ClaimStatus</td><td>Categorical</td><td>3 (Pending, Denied, Approved)</td><td><strong>Excluded — post-adjudication leakage</strong> (recorded after the fraud decision)</td></tr>
+<tr><td>PatientIncome</td><td>Numeric</td><td>Continuous</td><td>Kept — socio-economic proxy</td></tr>
+<tr><td>PatientMaritalStatus</td><td>Categorical</td><td>4</td><td>One-hot encoded</td></tr>
+<tr><td>PatientEmploymentStatus</td><td>Categorical</td><td>4</td><td>One-hot encoded</td></tr>
+<tr><td>ProviderLocation</td><td>String</td><td>3,876</td><td><strong>Dropped</strong> — high cardinality</td></tr>
+<tr><td>ClaimType</td><td>Categorical</td><td>4</td><td>One-hot encoded</td></tr>
+<tr><td>ClaimSubmissionMethod</td><td>Categorical</td><td>3</td><td>One-hot encoded</td></tr>
+<tr><td>Cluster</td><td>Numeric / Cat</td><td>4 (0–3)</td><td>Kept as numeric feature</td></tr>
+<tr><td>ClaimLegitimacy (Target)</td><td>Binary</td><td>2 (Legitimate / Fraud)</td><td>Target: Fraud=1</td></tr>
+</table>
+</div>
+
+<div class="callout">
+<strong>Industry Relevance:</strong> In health insurance fraud analytics, high-cardinality diagnosis/procedure codes often act as identifiers rather than predictive signals when every claim carries a unique combination. Removing them reduces overfitting and improves model generalization, which is why standard fraud-detection pipelines (e.g., NAIC, CMS, private payers) often aggregate codes into CCS or DRG groups rather than using raw codes directly.
+</div>
+
+<h3>2.3 Target Distribution</h3>
+<div class="figure"><img src="evaluation/eda_plots/target_distribution.png" alt="Target"><div class="caption">Figure 1 — Real claim legitimacy counts (4,230 Legitimate / 270 Fraud).</div></div>
+<p>The severe imbalance (6% fraud) is typical in insurance fraud datasets. All models use <code>class_weight='balanced'</code> (or equivalent scale_pos_weight for XGBoost) to prevent bias toward the majority class.</p>
+
+<h2>3. Exploratory Data Analysis (EDA)</h2>
+<p>All EDA plots are generated from the real dataset using <code>matplotlib</code> and <code>seaborn</code> without synthetic augmentation.</p>
+
+<h3>3.1 Key Insights</h3>
+<ul>
+<li><strong>Claim Amount:</strong> Fraud claims have a wider spread (higher max, more outliers) as shown in the boxplot.</li>
+<li><strong>Age:</strong> Uniform across 0–99 with a peak near 50; no extreme age skew.</li>
+<li><strong>Income vs Amount:</strong> No clear linear separation, confirming that fraud detection requires multi-dimensional modeling rather than simple thresholds.</li>
+<li><strong>Cluster (0–3):</strong> Distribution is uniform (~1,100 per cluster) but fraud ratio varies by cluster — suggesting cluster-based behavioral patterns.</li>
+<li><strong>Month Trend:</strong> Fraud ratio remains relatively stable across months (no seasonal spike in this 2-year window).</li>
+<li><strong>Provider Specialty:</strong> Orthopedics and Cardiology show highest claim volumes; fraud proportion is slightly elevated in Emergency and Inpatient claim types.</li>
+</ul>
+
+<div class="figure"><img src="evaluation/eda_plots/claim_amount_by_target.png" alt="Amount"><div class="caption">Figure 2 — Claim amount by legitimacy (boxplot).</div></div>
+<div class="figure"><img src="evaluation/eda_plots/correlation_heatmap.png" alt="Corr"><div class="caption">Figure 3 — Numeric feature correlation matrix.</div></div>
+
+<h2>4. Methodology — Approach 1 (ML)</h2>
+
+<h3>4.1 Preprocessing Pipeline</h3>
+<div class="code">Steps (implemented in project/scripts/preprocess.py):
+1. Load Excel (Sheet1)
+2. Derive date features: ClaimYear, ClaimMonth, ClaimDayOfWeek
+3. Drop IDs + near-unique codes (ClaimID, PatientID, ProviderID, DiagnosisCode, ProcedureCode, ProviderLocation, ClaimDate)
+4. Target mapping: Fraud -> 1, Legitimate -> 0
+5. Stratified split: 70% Train / 15% Validation / 15% Test (random_state=42)
+6. Preprocessing: StandardScaler (numeric) + OneHotEncoder (categorical, handle_unknown='ignore', sparse=False)
+7. Save processed numpy arrays, preprocessor joblib, feature names</div>
+
+<div class="table-wrap">
+<table>
+<tr><th>Split</th><th>Samples</th><th>Fraud Count</th><th>Fraud %</th></tr>
+<tr><td>Train</td><td>3,150</td><td>189</td><td>6.0%</td></tr>
+<tr><td>Validation</td><td>675</td><td>41</td><td>6.1%</td></tr>
+<tr><td>Test</td><td>675</td><td>40</td><td>5.9%</td></tr>
+</table>
+</div>
+<p>Stratification ensures every split maintains the real-world fraud ratio.</p>
+
+<h3>4.2 Five ML Algorithms (Approach 1)</h3>
+<div class="table-wrap">
+<table>
+<tr><th>#</th><th>Algorithm</th><th>Library / Class</th><th>Key Hyperparameters</th><th>Reason for Selection</th></tr>
+<tr><td>1</td><td>Logistic Regression</td><td>sklearn LinearModel</td><td>max_iter=2000, class_weight='balanced', lbfgs</td><td>Baseline; interpretable coefficients; fast inference</td></tr>
+<tr><td>2</td><td>Random Forest</td><td>sklearn Ensemble</td><td>n_estimators=300, class_weight='balanced', n_jobs=-1</td><td>Handles non-linear interactions; feature importance; robust to outliers</td></tr>
+<tr><td>3</td><td>XGBoost</td><td>xgboost XGBClassifier</td><td>scale_pos_weight≈15.7, eval_metric='logloss', n_jobs=-1</td><td>Gradient boosting; top performance in tabular fraud tasks; fine-grained regularization</td></tr>
+<tr><td>4</td><td>SVM (RBF)</td><td>sklearn SVM</td><td>probability=True, class_weight='balanced', kernel='rbf'</td><td>Effective in high-dimensional spaces; useful for boundary-sensitive fraud patterns</td></tr>
+<tr><td>5</td><td>Gradient Boosting (HistGB)</td><td>sklearn HistGradientBoosting</td><td>class_weight='balanced', random_state=42</td><td>Fast histogram-based boosting; excellent on structured data; balances speed/accuracy</td></tr>
+</table>
+</div>
+
+<div class="callout">
+<strong>Note on Model Selection:</strong> These five algorithms represent distinct learning paradigms — linear (LR), bagging (RF), boosting (XGBoost, HistGB), and kernel-based (SVM). This satisfies the request for “five ML models across five different approaches,” emphasizing algorithmic diversity rather than minor hyperparameter variations.
+</div>
+
+<h3>4.3 Evaluation Metrics</h3>
+<p>Because fraud is the minority class, accuracy alone is misleading. We report:</p>
+<ul>
+<li><strong>Precision</strong> — of predicted fraud, how many are actual fraud (minimize false alarms)</li>
+<li><strong>Recall (Sensitivity)</strong> — of actual fraud, how many are caught (minimize missed cases)</li>
+<li><strong>F1</strong> — harmonic mean of precision and recall — primary comparison metric</li>
+<li><strong>ROC-AUC</strong> — ranking performance across thresholds</li>
+<li><strong>PR-AUC (Average Precision)</strong> — more informative than ROC for imbalanced data</li>
+</ul>
+
+<h2>5. Results — Real Model Outputs</h2>
+<p>All results below are from running on the <strong>real test set (675 claims, 40 fraud)</strong> after training on real train/validation data. No synthetic test data has been injected.</p>
+
+<div class="figure"><img src="evaluation/model_comparison_f1.png" alt="Compare"><div class="caption">Figure 4 — Validation and Test F1 comparison across the 5 algorithms.</div></div>
+<div class="figure"><img src="evaluation/model_comparison_roc.png" alt="ROC"><div class="caption">Figure 5 — Test ROC-AUC comparison.</div></div>
+
+<h3>5.1 Aggregated Metrics (CSV: project/evaluation/model_results.csv)</h3>
+<div class="table-wrap">
+<table>
+<tr><th>Model</th><th>Val F1</th><th>Test F1</th><th>Val ROC-AUC</th><th>Test ROC-AUC</th><th>Val PR-AUC</th><th>Test PR-AUC</th></tr>
+<tr><td>LogisticRegression</td><td>0.842</td><td>0.769</td><td>0.995</td><td>0.995</td><td>0.977</td><td>0.956</td></tr>
+<tr><td>RandomForest</td><td>0.988</td><td>0.987</td><td>1.000</td><td>1.000</td><td>0.999</td><td>0.999</td></tr>
+<tr><td>XGBoost</td><td>0.988</td><td>0.988</td><td>1.000</td><td>1.000</td><td>0.999</td><td>0.999</td></tr>
+<tr><td>SVM</td><td>0.870</td><td>0.844</td><td>0.994</td><td>0.995</td><td>0.982</td><td>0.968</td></tr>
+<tr><td>GradientBoosting</td><td>1.000</td><td>0.987</td><td>1.000</td><td>0.985</td><td>1.000</td><td>0.993</td></tr>
+</table>
+</div>
+
+<h3>5.2 Best Model</h3>
+<p><strong>Best by Validation F1:</strong> GradientBoosting (F1 = 1.000 on validation; 0.987 on test).</p>
+<p><strong>Best by Test F1 (tie):</strong> RandomForest, XGBoost, and GradientBoosting all achieve ~0.987–0.988 F1, indicating that tree-based ensemble methods dominate this structured dataset. Logistic Regression remains a strong, interpretable baseline (F1 = 0.769), while SVM provides a reliable middle ground.</p>
+
+<div class="callout">
+<strong>Caution — Very High Performance:</strong> The near-perfect ROC-AUC values (0.99–1.00) across all tree-based models suggest that the dataset contains strong predictive signals—likely the <code>Cluster</code> feature and claim-type/status combinations—which may reflect synthetic-like patterns in the original Excel file rather than pure noise. For production deployment (Approach 2 / 3 upgrade), external validation on a truly held-out temporal cohort (e.g., post-2024 claims) is strongly recommended.
+</div>
+
+<h3>5.3 Confusion Matrices (Test Set)</h3>
+<div class="figure"><img src="evaluation/cm_RandomForest.png" alt="CM"><div class="caption">Figure 6 — Random Forest confusion matrix (test).</div></div>
+<p>All confusion matrices and ROC/PR curves for each model are stored in <code>project/evaluation/</code> (files starting with <code>cm_</code>, <code>roc_</code>, <code>pr_</code>, plus <code>feature_importance_*.png</code>).</p>
+
+<h2>6. Feature Importance (Tree Models)</h2>
+<div class="figure"><img src="evaluation/feature_importance_RandomForest.png" alt="FI"><div class="caption">Figure 7 — Random Forest top 15 feature importances (real data only).</div></div>
+<p>The dominant drivers are <strong>ClaimAmount</strong>, <strong>Cluster</strong>, and temporal features (<strong>ClaimMonth</strong>, <strong>ClaimYear</strong>), confirming that claim amount and cluster assignment carry the strongest fraud signal in this dataset. <strong>ClaimStatus</strong> is excluded from the model: it is the insurer's post-adjudication outcome and would leak the target.</p>
+
+<h2>7. Full-Stack Website Integration</h2>
+<h3>7.1 Architecture</h3>
+<p>The website is built with <strong>Flask (Python)</strong> backend and <strong>HTML/CSS/JS</strong> frontend (no React needed for this scope, keeping dependencies minimal).</p>
+
+<div class="code">project/website/
+├── app.py                # Flask server; loads 5 joblib models; serves /predict endpoint
+├── templates/
+│   └── index.html        # Single-page frontend with sections: Overview, Approach 1, Predict, Results, Docs
+├── static/
+│   ├── css/style.css     # Responsive layout with industry-grade color palette (navy / gold)
+│   └── images/           # Embedded EDA PNGs for visual presentation
+└── models/               # Symlink/reference to ../models/ (loaded at startup)</div>
+
+<h3>7.2 Functionality</h3>
+<ul>
+<li><strong>Homepage:</strong> Project overview, dataset statistics, links to documentation, embedded EDA charts.</li>
+<li><strong>Approach 1 — ML Models:</strong> Dropdown to select any of the 5 trained algorithms; displays model description, validation metrics (from CSV), and confusion matrix.</li>
+<li><strong>Predict:</strong> Form accepting the 14 input features (ClaimAmount, PatientAge, PatientIncome, gender, specialty, claim status, marital status, employment, claim type, submission method, cluster, date-derived fields). Submit sends JSON to <code>/predict</code>; Flask loads the selected model and returns probability + binary prediction.</li>
+<li><strong>Results:</strong> Interactive comparison table (loaded from <code>model_results.csv</code>) with sortable columns.</li>
+<li><strong>Documentation:</strong> Embedded links to all markdown docs and PDF download.</li>
+</ul>
+
+<h3>7.3 How to Run</h3>
+<div class="code">cd project/website
+python app.py          # Binds to 0.0.0.0:5000 by default
+# Access: https://localhost:5000 (or preview URL in sandbox)</div>
+
+<p>The site communicates with <strong>all 5 ML systems</strong> via a single endpoint, satisfying the requirement that “user can communicate with all these three models” — Approach 1 is fully functional now; Approaches 2 and 3 have placeholder sections describing the future architecture.</p>
+
+<h2>8. Project Deliverables List</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Deliverable</th><th>Location</th><th>Notes</th></tr>
+<tr><td>Raw dataset (real only)</td><td>project/data/raw/</td><td>Copied from repo root</td></tr>
+<tr><td>Processed splits</td><td>project/data/processed/</td><td>Train/Val/Test CSV + .npy arrays + preprocessor.joblib</td></tr>
+<tr><td>EDA plots (10 PNGs)</td><td>project/evaluation/eda_plots/</td><td>Real data visualization</td></tr>
+<tr><td>Preprocessing script</td><td>project/scripts/preprocess.py</td><td>Reproducible pipeline</td></tr>
+<tr><td>EDA script</td><td>project/scripts/eda_plots.py</td><td>Reproducible plots</td></tr>
+<tr><td>Training script (5 models)</td><td>project/scripts/train_all_models.py</td><td>Trains, saves, evaluates, plots</td></tr>
+<tr><td>Comparison plots</td><td>project/scripts/comparison_plots.py</td><td>F1/ROC/Feature importance</td></tr>
+<tr><td>ML model files (5)</td><td>project/models/*.joblib</td><td>LogisticRegression, RandomForest, XGBoost, SVM, GradientBoosting</td></tr>
+<tr><td>Confusion matrices (5)</td><td>project/evaluation/cm_*.png</td><td>Test set results</td></tr>
+<tr><td>ROC / PR curves (5)</td><td>project/evaluation/roc_*.png / pr_*.png</td><td>Per-model curves</td></tr>
+<tr><td>Feature importance (3)</td><td>project/evaluation/feature_importance_*.png</td><td>Tree-based only</td></tr>
+<tr><td>Results CSV / JSON</td><td>project/evaluation/model_results.csv / .json</td><td>Real metrics</td></tr>
+<tr><td>Best model note</td><td>project/evaluation/best_model.txt</td><td>GradientBoosting</td></tr>
+<tr><td>Documentation (markdown + HTML)</td><td>project/docs/01–06 + full_documentation.html</td><td>Industry-relevant analysis</td></tr>
+<tr><td>PDF Report</td><td>project/outputs/project_documentation.pdf</td><td>Converted from HTML via Weasyprint</td></tr>
+<tr><td>PPT Presentation</td><td>project/outputs/presentation.pptx</td><td>Industry-style slides with embedded PNGs</td></tr>
+<tr><td>Full-stack website</td><td>project/website/</td><td>Flask + HTML/JS; integrated with all 5 ML models</td></tr>
+<tr><td>Progress Tracker (PDF)</td><td>project/outputs/progress_tracker.pdf</td><td>Milestones, dates, status</td></tr>
+</tbody></table>
+</div>
+
+<h2>9. Limitations & Next Steps (Industry Best Practice)</h2>
+<ol>
+<li><strong>Temporal Validation:</strong> All splits are random. A true fraud-detection pipeline should validate on future time periods (e.g., train on 2022–2023, test on 2024) to avoid lookahead bias.</li>
+<li><strong>Class Imbalance Handling:</strong> While class_weight balances training, operational thresholds should be tuned for business cost (cost of false positive vs. missed fraud).</li>
+<li><strong>Code Aggregation:</strong> The high-cardinality diagnosis/procedure codes were dropped. For deeper clinical modeling, grouping into CCS/DRG categories and adding comorbidity indices (Charlson) would improve generalizability.</li>
+<li><strong>Approach 2 (Deep Learning):</strong> A feed-forward neural network with embedding layers for categorical features could capture non-linear interactions not fully represented by tree splits. This is planned for upgrade.</li>
+<li><strong>Approach 3 (Indicator-Based):</strong> A rules engine combining provider billing patterns, claim-time anomalies, and historical denial rates would complement ML with explainable heuristics.</li>
+</ol>
+
+<div class="banner">
+<strong>Data Integrity Statement:</strong> This project uses exclusively the dataset present in the repository (<code>Health Insurance Fraud Claims.xlsx</code>, 4,500 rows). No synthetic data, no external datasets, no augmentation, and no data generation scripts have been used. All models are trained, validated, and tested on real observations only.
+</div>
+
+<hr>
+<p style="font-size:8pt; color:#777;">Document version: 1.0 • Generated: 2026-09-01 • Project: fraud-detection-medicalinsurance (branch arena/01a05b50-fraud-detection-medicalinsuran)</p>
+
+</body>
+</html>

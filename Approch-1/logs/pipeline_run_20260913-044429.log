@@ -1,0 +1,162 @@
+# Approach 1 pipeline run 20260913-044429
+# env: 3.11.2 sklearn 1.9.1 xgboost 3.2.0 pandas 3.0.5 numpy 2.4.6
+=== preprocess
+Preprocessing complete.
+Train: (3150, 13) Val: (675, 13) Test: (675, 13)
+Target distribution (train): {0: 2961, 1: 189}
+exit=0
+=== eda_plots
+/home/user/fraud-detection-medicalinsurance/project/scripts/eda_plots.py:21: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x='ClaimLegitimacy', data=df, palette='Set2')
+/home/user/fraud-detection-medicalinsurance/project/scripts/eda_plots.py:33: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(x='ClaimLegitimacy', y='ClaimAmount', data=df, palette='Set2')
+/home/user/fraud-detection-medicalinsurance/project/scripts/eda_plots.py:67: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x='ClaimType', data=df, palette='pastel')
+EDA plots saved to project/evaluation/eda_plots
+exit=0
+=== train_all_models
+/home/user/fraud-detection-medicalinsurance/.venv/lib/python3.11/site-packages/xgboost/training.py:200: UserWarning: [04:44:40] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+/home/user/fraud-detection-medicalinsurance/.venv/lib/python3.11/site-packages/sklearn/svm/_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+
+Training LogisticRegression ...
+  fit 0.01s | predict 100 rows 0.0003s | test F1 0.7692 | test ROC-AUC 0.9950
+
+Training RandomForest ...
+  fit 0.63s | predict 100 rows 0.0537s | test F1 0.9873 | test ROC-AUC 1.0000
+
+Training XGBoost ...
+  fit 0.03s | predict 100 rows 0.0006s | test F1 0.9877 | test ROC-AUC 1.0000
+
+Training SVM ...
+  fit 0.29s | predict 100 rows 0.0025s | test F1 0.8352 | test ROC-AUC 0.9955
+
+Training GradientBoosting ...
+  fit 0.19s | predict 100 rows 0.0013s | test F1 0.9873 | test ROC-AUC 0.9847
+
+All 5 models trained and saved.
+             Model  Val_Accuracy   Val_F1  Val_ROC_AUC  Test_F1  Test_ROC_AUC
+LogisticRegression      0.977778 0.842105     0.994537 0.769231      0.994961
+      RandomForest      0.998519 0.987654     1.000000 0.987342      0.999961
+           XGBoost      0.998519 0.987654     0.999962 0.987654      1.000000
+               SVM      0.983704 0.879121     0.994076 0.835165      0.995472
+  GradientBoosting      1.000000 1.000000     1.000000 0.987342      0.984665
+Best model by Val F1: GradientBoosting
+
+Detailed training log written to project/logs/training_metrics.json
+exit=0
+=== comparison_plots
+Comparison and feature importance plots saved.
+exit=0
+=== error_analysis
+Error analysis saved.
+LogisticRegression {'FP': 24, 'FN': 0, 'TP': 40, 'TN': 611}
+RandomForest {'FP': 0, 'FN': 1, 'TP': 39, 'TN': 635}
+XGBoost {'FP': 1, 'FN': 0, 'TP': 40, 'TN': 634}
+SVM {'FP': 13, 'FN': 2, 'TP': 38, 'TN': 622}
+GradientBoosting {'FP': 0, 'FN': 1, 'TP': 39, 'TN': 635}
+exit=0
+=== create_notebooks
+5 notebooks created.
+exit=0
+=== generate_pdf
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:22: DeprecationWarning: "uni" parameter is deprecated since v2.5.1 and will be removed in a future release
+  pdf.add_font('DejaVu', '', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', uni=True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:23: DeprecationWarning: "uni" parameter is deprecated since v2.5.1 and will be removed in a future release
+  pdf.add_font('DejaVu', 'B', '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', uni=True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:9: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  self.cell(0, 6, 'Medical Insurance Fraud Detection — Approach 1 (ML) | Real Data Only', 0, 1, 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:73: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 14, 'Medical Insurance', 0, 1, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:74: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 14, 'Fraud Detection', 0, 1, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:81: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 8, 'Approach 1 — Machine Learning Models', 0, 1, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:82: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 8, 'Real Dataset Only | No Synthetic Data', 0, 1, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:86: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 6, 'Dataset: Health Insurance Fraud Claims.xlsx  (4,500 claims | 19 raw features)', 0, 1, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:87: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 6, 'Branch: arena/01a0842d-fraud-detection-medicalinsuran', 0, 1, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:88: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 6, 'Location: Chennai, Tamil Nadu | Date: 2026-09-01', 0, 1, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:92: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 6, 'END-TO-END PROJECT DOCUMENTATION & RESULTS', 0, 1, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:18: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  self.cell(0, 10, f'Page {self.page_no()}/{{nb}} | Project: fraud-detection-medicalinsurance | 2026-09-01', 0, 0, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:32: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 8, title, 0, 1, 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:47: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 7, f'  {text}', 0, 1, 'L', fill=True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:62: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(4, 4.5, '-', 0, 0)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:121: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(65, 6, h, 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:136: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(65, 5.5, r[0], 1, 0, 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:137: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(45, 5.5, r[1], 1, 0, 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:138: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(55, 5.5, r[2], 1, 0, 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:183: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(42, 6, h, 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:196: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(42, 5, val, 1, 0, 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:208: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(32, 6, h, 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:223: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(32, 5.5, val, 1, 0, 'C' if val[:1].isdigit() else 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:271: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(5, 5, '-', 0, 0)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:277: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(90, 6, 'Milestone', 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:278: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(50, 6, 'Status', 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:279: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(45, 6, 'Date', 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:285: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(90, 6, row[0], 1, 0, 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:286: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(50, 6, row[1], 1, 0, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:287: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(45, 6, row[2], 1, 0, 'C')
+/home/user/fraud-detection-medicalinsurance/project/scripts/generate_pdf.py:512: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(5, 5, '-', 0, 0)
+PDF generated: project/outputs/project_documentation.pdf pages= 23
+exit=0
+=== generate_ppt
+PPT saved: project/outputs/presentation.pptx slides= 19
+exit=0
+=== progress_tracker
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:4: DeprecationWarning: "uni" parameter is deprecated since v2.5.1 and will be removed in a future release
+  pdf.add_font('DejaVu', '', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', uni=True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:5: DeprecationWarning: "uni" parameter is deprecated since v2.5.1 and will be removed in a future release
+  pdf.add_font('DejaVu', 'B', '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', uni=True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:11: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 8, title, 0, 1, 'L')
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:28: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(w, 7, h, 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:47: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(100, 6, r[0], 1, 0, 'L', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:50: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(45, 6, r[1], 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:53: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=0 use new_x=XPos.RIGHT, new_y=YPos.TOP.
+  pdf.cell(45, 6, r[2], 1, 0, 'C', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:60: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 7, '  Upcoming Upgrades (Not in this session)', 0, 1, 'L', True)
+/home/user/fraud-detection-medicalinsurance/project/scripts/progress_tracker.py:68: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 5, 'Data Integrity: Zero synthetic data used. All results derived exclusively from Health Insurance Fraud Claims.xlsx.', 0, 1, 'C')
+Progress tracker saved: project/outputs/progress_tracker.pdf
+exit=0

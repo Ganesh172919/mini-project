@@ -1,0 +1,676 @@
+ClaimAmount,PatientAge,PatientGender,ProviderSpecialty,PatientIncome,PatientMaritalStatus,PatientEmploymentStatus,ClaimType,ClaimSubmissionMethod,Cluster,ClaimYear,ClaimMonth,ClaimDayOfWeek
+2675.56,63,M,Orthopedics,54576.63,Married,Retired,Outpatient,Online,3,2024,1,6
+7536.66,30,M,General Practice,113032.62,Married,Employed,Outpatient,Phone,0,2024,2,0
+4902.44,48,M,Cardiology,54520.74,Married,Student,Routine,Paper,3,2023,6,0
+2607.4,11,F,Cardiology,48584.79,Married,Retired,Inpatient,Phone,1,2022,12,4
+3867.13,16,M,Pediatrics,31570.41,Divorced,Student,Routine,Online,1,2024,4,0
+7094.11,69,F,Neurology,73572.17,Divorced,Employed,Emergency,Phone,3,2022,12,5
+3570.15,89,M,Pediatrics,51887.71,Married,Retired,Routine,Phone,1,2024,6,2
+3522.11,75,F,Orthopedics,88875.18,Widowed,Student,Outpatient,Paper,0,2023,1,3
+5825.15,47,M,Pediatrics,61550.36,Single,Employed,Outpatient,Paper,3,2022,10,1
+8209.97,66,M,General Practice,30894.54,Widowed,Retired,Routine,Phone,1,2023,1,0
+7995.39,93,M,General Practice,20734.77,Widowed,Employed,Outpatient,Online,1,2023,1,6
+148.91,72,M,Cardiology,31410.48,Divorced,Unemployed,Routine,Paper,1,2024,7,4
+4567.27,63,M,Orthopedics,112980.79,Widowed,Unemployed,Routine,Paper,0,2024,2,6
+1890.83,73,F,Cardiology,23924.96,Widowed,Unemployed,Outpatient,Paper,1,2023,10,4
+1751.92,32,M,Pediatrics,119900.81,Divorced,Employed,Routine,Paper,2,2023,1,1
+8913.55,78,M,Neurology,75599.93,Widowed,Student,Emergency,Paper,3,2023,9,4
+7695.16,76,M,Pediatrics,118891.62,Single,Employed,Inpatient,Online,2,2023,10,4
+814.76,46,F,Neurology,140627.08,Divorced,Employed,Outpatient,Online,2,2024,2,0
+6326.53,17,M,Orthopedics,80240.83,Divorced,Student,Outpatient,Phone,3,2022,8,6
+3301.38,16,M,Pediatrics,21513.84,Divorced,Student,Outpatient,Phone,1,2023,6,6
+7634.27,94,M,Pediatrics,48228.25,Widowed,Employed,Inpatient,Paper,1,2023,7,2
+9216.64,62,F,General Practice,118470.98,Married,Student,Emergency,Paper,2,2023,1,3
+913.5,71,F,General Practice,50141.75,Married,Student,Inpatient,Paper,1,2023,2,2
+6055.96,54,M,Orthopedics,48033.17,Married,Employed,Inpatient,Online,1,2022,12,0
+3469.83,78,F,Orthopedics,140945.65,Married,Student,Emergency,Paper,2,2023,10,1
+8571.4,19,F,Neurology,100956.37,Single,Employed,Outpatient,Phone,0,2023,11,0
+406.46,40,M,Orthopedics,67481.75,Divorced,Retired,Outpatient,Paper,3,2024,6,5
+8059.19,54,F,General Practice,52670.0,Widowed,Student,Routine,Phone,3,2023,9,6
+6926.31,6,F,General Practice,95016.93,Widowed,Employed,Routine,Paper,0,2023,1,0
+8284.4,98,M,General Practice,54391.02,Widowed,Student,Outpatient,Phone,3,2024,1,3
+951.72,28,M,Cardiology,55889.77,Single,Student,Routine,Paper,3,2024,2,0
+689.29,87,F,Pediatrics,130051.6,Divorced,Unemployed,Outpatient,Paper,2,2024,2,4
+8056.35,63,F,General Practice,133301.74,Single,Student,Outpatient,Phone,2,2022,12,2
+7059.89,57,F,Neurology,106937.92,Married,Unemployed,Inpatient,Paper,0,2023,7,0
+8720.46,93,F,General Practice,64595.72,Divorced,Unemployed,Routine,Online,3,2024,1,4
+8018.57,55,M,Orthopedics,130148.58,Married,Unemployed,Outpatient,Online,2,2022,12,5
+3178.72,78,M,General Practice,92465.22,Married,Unemployed,Routine,Online,0,2022,11,0
+3476.56,26,F,Cardiology,96819.09,Divorced,Retired,Outpatient,Paper,0,2024,7,6
+5512.43,79,M,Neurology,75144.06,Widowed,Employed,Emergency,Paper,3,2023,3,6
+4178.39,65,F,Neurology,132938.44,Widowed,Employed,Inpatient,Paper,2,2023,12,3
+6316.21,86,F,Cardiology,87112.22,Married,Unemployed,Inpatient,Paper,0,2024,3,5
+7841.4,10,F,Orthopedics,79269.07,Married,Unemployed,Inpatient,Phone,3,2022,12,6
+838.05,14,M,Cardiology,57209.16,Widowed,Employed,Inpatient,Phone,3,2023,3,3
+817.22,62,M,Pediatrics,132103.54,Widowed,Unemployed,Outpatient,Online,2,2022,12,6
+5762.76,95,F,Orthopedics,118599.25,Married,Employed,Emergency,Phone,2,2022,11,1
+8775.56,64,F,Cardiology,146268.67,Single,Retired,Inpatient,Online,2,2023,11,0
+9027.56,69,F,Orthopedics,141769.43,Single,Retired,Inpatient,Online,2,2022,11,0
+6286.25,81,M,Cardiology,69431.35,Single,Employed,Emergency,Paper,3,2024,6,5
+7633.81,2,M,Orthopedics,125393.69,Widowed,Retired,Routine,Paper,2,2024,4,0
+1249.78,89,M,Pediatrics,85277.11,Divorced,Unemployed,Routine,Phone,0,2022,9,5
+316.94,18,M,Neurology,76195.27,Married,Retired,Routine,Paper,3,2023,3,1
+6990.14,21,F,Orthopedics,145409.76,Widowed,Retired,Routine,Online,2,2023,7,0
+8981.39,25,M,Orthopedics,125378.5,Divorced,Retired,Outpatient,Paper,2,2023,5,0
+3310.9,78,F,Pediatrics,92061.94,Single,Student,Outpatient,Online,0,2022,9,3
+720.27,41,F,Orthopedics,133572.4,Single,Unemployed,Outpatient,Phone,2,2023,3,6
+4552.87,60,F,Pediatrics,141753.53,Widowed,Unemployed,Inpatient,Paper,2,2023,9,6
+6363.85,20,F,Cardiology,81244.35,Widowed,Unemployed,Emergency,Phone,3,2024,6,1
+9304.01,55,M,Cardiology,71772.53,Widowed,Employed,Routine,Paper,3,2023,11,3
+8692.39,34,M,Orthopedics,27512.47,Divorced,Unemployed,Outpatient,Online,1,2022,10,4
+6395.95,77,M,Cardiology,24647.29,Married,Student,Inpatient,Paper,1,2023,5,1
+675.11,43,M,Pediatrics,32965.03,Divorced,Employed,Emergency,Phone,1,2023,10,5
+8264.34,38,M,Pediatrics,56482.63,Divorced,Student,Inpatient,Phone,3,2024,5,4
+1628.19,2,F,Neurology,102130.73,Married,Unemployed,Routine,Phone,0,2024,5,1
+7793.75,29,M,General Practice,33441.34,Single,Student,Routine,Phone,1,2024,3,3
+5768.81,85,M,Pediatrics,57904.98,Married,Student,Emergency,Online,3,2024,4,1
+8936.33,61,F,Pediatrics,123945.22,Married,Employed,Routine,Online,2,2023,8,5
+8196.56,33,F,General Practice,51450.6,Divorced,Unemployed,Outpatient,Online,1,2023,8,1
+2040.23,95,M,General Practice,112835.49,Divorced,Unemployed,Outpatient,Online,0,2024,4,4
+1823.68,28,F,Cardiology,55218.2,Divorced,Retired,Inpatient,Paper,3,2023,9,6
+8615.38,68,F,General Practice,50195.54,Divorced,Unemployed,Outpatient,Online,1,2022,10,2
+8100.39,59,F,General Practice,84631.75,Widowed,Employed,Emergency,Phone,0,2023,6,3
+7434.95,14,F,Orthopedics,44211.84,Widowed,Unemployed,Routine,Phone,1,2024,2,2
+6376.66,87,F,Orthopedics,37712.57,Divorced,Employed,Emergency,Paper,1,2024,6,4
+6668.67,47,F,Neurology,24900.66,Married,Employed,Routine,Online,1,2023,9,1
+1457.77,35,F,General Practice,135714.97,Widowed,Student,Outpatient,Phone,2,2022,12,2
+9452.85,77,M,Cardiology,93459.4,Divorced,Unemployed,Outpatient,Phone,0,2022,8,3
+4050.45,15,M,Orthopedics,125874.5,Divorced,Employed,Inpatient,Paper,2,2023,8,2
+4053.23,15,F,Orthopedics,34030.19,Divorced,Retired,Routine,Online,1,2024,3,2
+2955.21,81,M,Cardiology,94509.4,Married,Retired,Emergency,Paper,0,2023,11,3
+2881.94,14,M,Neurology,136149.68,Married,Retired,Inpatient,Phone,2,2022,7,5
+5797.19,0,F,Orthopedics,141008.27,Divorced,Retired,Routine,Online,2,2024,2,2
+6110.64,82,M,Orthopedics,34375.29,Divorced,Unemployed,Emergency,Paper,1,2024,4,3
+2768.17,70,F,Orthopedics,102420.1,Single,Student,Outpatient,Online,0,2024,7,4
+6633.84,5,F,Cardiology,52836.18,Divorced,Unemployed,Inpatient,Online,3,2023,5,4
+5468.15,15,F,Orthopedics,33068.95,Single,Student,Inpatient,Phone,1,2023,8,2
+1951.73,96,M,Cardiology,42837.4,Single,Retired,Inpatient,Paper,1,2022,8,5
+8243.09,17,M,Neurology,70326.97,Widowed,Retired,Inpatient,Phone,3,2023,5,6
+5238.69,22,M,Cardiology,115716.39,Divorced,Unemployed,Inpatient,Paper,0,2023,3,0
+6581.04,21,F,Cardiology,21529.46,Widowed,Employed,Outpatient,Paper,1,2023,2,0
+9874.63,78,M,Orthopedics,36393.35,Married,Unemployed,Inpatient,Online,1,2023,5,6
+6980.04,80,F,Neurology,118495.49,Married,Student,Outpatient,Online,2,2023,1,0
+599.13,78,F,Orthopedics,131486.4,Married,Employed,Outpatient,Online,2,2023,11,2
+8046.17,15,F,Neurology,119026.55,Divorced,Unemployed,Inpatient,Paper,2,2022,10,6
+5569.76,49,M,General Practice,41606.07,Widowed,Unemployed,Inpatient,Paper,1,2024,2,1
+8304.5,29,M,Neurology,80993.07,Widowed,Unemployed,Emergency,Paper,3,2024,2,0
+1316.91,37,M,Cardiology,21583.38,Married,Unemployed,Routine,Paper,1,2024,2,3
+3664.5,11,M,Cardiology,103702.83,Divorced,Unemployed,Outpatient,Paper,0,2022,12,2
+9509.55,72,M,Neurology,22399.33,Single,Employed,Inpatient,Phone,1,2022,9,6
+3900.52,1,F,General Practice,116500.33,Single,Retired,Routine,Phone,0,2023,7,5
+6671.66,85,M,Orthopedics,122954.93,Married,Student,Inpatient,Phone,2,2022,9,1
+1558.03,22,M,Neurology,56990.28,Married,Unemployed,Outpatient,Online,3,2023,2,6
+1926.76,24,M,Neurology,109478.09,Married,Student,Outpatient,Paper,0,2023,2,6
+5842.88,11,M,Orthopedics,122752.97,Widowed,Employed,Routine,Paper,2,2023,11,3
+2814.73,43,F,Orthopedics,107197.14,Married,Student,Emergency,Paper,0,2022,12,1
+9746.51,78,F,General Practice,27193.21,Married,Retired,Outpatient,Phone,1,2024,5,3
+5964.27,67,F,Pediatrics,117976.6,Widowed,Retired,Outpatient,Online,2,2023,11,6
+4792.22,79,M,Cardiology,128104.61,Divorced,Student,Outpatient,Phone,2,2023,8,0
+6459.95,17,M,General Practice,139900.01,Divorced,Employed,Inpatient,Phone,2,2024,5,3
+8003.12,2,M,Neurology,27323.33,Married,Employed,Outpatient,Phone,1,2022,9,1
+6359.42,40,F,Orthopedics,72962.69,Divorced,Unemployed,Inpatient,Online,3,2022,9,4
+3229.95,70,F,Pediatrics,60151.92,Single,Student,Emergency,Online,3,2024,2,0
+9643.89,83,F,General Practice,149417.14,Widowed,Employed,Outpatient,Phone,2,2023,6,0
+1942.4,81,M,Cardiology,129645.61,Divorced,Student,Emergency,Phone,2,2023,9,6
+6166.68,42,M,Orthopedics,128757.19,Widowed,Student,Routine,Paper,2,2023,5,0
+9845.58,51,M,Orthopedics,120272.01,Single,Employed,Emergency,Phone,2,2023,5,0
+4067.55,7,F,Cardiology,66740.61,Divorced,Retired,Emergency,Phone,3,2022,8,4
+7724.57,48,M,Cardiology,108557.2,Widowed,Unemployed,Outpatient,Phone,0,2023,1,2
+5709.39,80,M,Neurology,148176.66,Single,Retired,Inpatient,Paper,2,2022,9,0
+9293.44,97,M,Neurology,92800.52,Divorced,Employed,Inpatient,Paper,0,2023,6,4
+3003.76,46,M,Cardiology,124958.22,Divorced,Unemployed,Emergency,Online,2,2022,7,3
+7918.02,18,F,General Practice,44447.61,Married,Student,Routine,Paper,1,2022,8,0
+6335.22,28,F,Cardiology,91990.61,Married,Student,Routine,Online,0,2022,10,0
+6049.03,91,M,Cardiology,99282.94,Married,Employed,Emergency,Online,0,2023,8,4
+8103.13,92,M,Pediatrics,136354.4,Widowed,Unemployed,Outpatient,Online,2,2023,6,5
+4445.82,93,M,Neurology,134768.74,Widowed,Retired,Outpatient,Paper,2,2024,4,3
+7958.8,33,M,Cardiology,90913.46,Married,Employed,Outpatient,Paper,0,2023,2,0
+1933.44,89,F,Cardiology,57131.46,Married,Student,Routine,Paper,3,2023,9,6
+6577.99,36,F,Orthopedics,46320.78,Married,Student,Outpatient,Paper,1,2022,12,2
+7684.04,1,M,Orthopedics,144078.2,Married,Student,Inpatient,Online,2,2023,9,6
+5324.24,50,M,General Practice,98740.9,Divorced,Student,Emergency,Paper,0,2023,5,4
+3497.36,4,F,Neurology,37989.21,Widowed,Employed,Inpatient,Phone,1,2023,3,1
+9637.27,46,F,General Practice,138507.6,Single,Employed,Emergency,Phone,2,2023,12,2
+7778.56,88,M,Cardiology,39028.5,Single,Student,Outpatient,Paper,1,2024,7,0
+758.31,71,M,Neurology,108799.04,Divorced,Unemployed,Emergency,Paper,0,2023,1,2
+5501.61,81,M,Pediatrics,38163.67,Married,Employed,Routine,Paper,1,2023,2,6
+6994.66,2,F,Cardiology,47007.41,Single,Retired,Inpatient,Phone,1,2022,9,6
+9157.16,62,F,Cardiology,61623.55,Widowed,Student,Inpatient,Online,3,2022,11,0
+2922.44,76,F,Cardiology,103487.25,Married,Retired,Outpatient,Phone,0,2024,2,6
+3492.19,92,F,Pediatrics,73531.66,Single,Employed,Inpatient,Online,3,2023,11,3
+3748.41,41,F,Cardiology,65210.11,Divorced,Unemployed,Inpatient,Online,3,2022,11,4
+2834.08,74,F,Cardiology,37665.2,Widowed,Employed,Inpatient,Paper,1,2024,2,1
+7777.72,80,F,Neurology,32690.44,Single,Student,Emergency,Online,1,2023,10,2
+6521.53,67,M,Neurology,27178.29,Married,Employed,Inpatient,Paper,1,2023,2,3
+7854.65,35,F,Pediatrics,134363.67,Divorced,Student,Emergency,Phone,2,2023,9,0
+412.7,56,M,Pediatrics,24629.58,Single,Unemployed,Outpatient,Online,1,2023,12,1
+3132.5,75,M,Pediatrics,60531.09,Widowed,Unemployed,Outpatient,Online,3,2022,10,5
+8963.93,14,M,General Practice,112694.09,Widowed,Retired,Routine,Paper,0,2022,12,1
+6354.95,97,M,Pediatrics,90373.6,Widowed,Unemployed,Emergency,Phone,0,2022,12,5
+3133.99,79,M,Pediatrics,62227.13,Married,Employed,Outpatient,Phone,3,2024,6,5
+9755.9,84,F,General Practice,138328.82,Widowed,Employed,Inpatient,Phone,2,2024,3,4
+3222.1,10,F,General Practice,133113.71,Single,Unemployed,Routine,Phone,2,2023,8,3
+9298.53,16,M,General Practice,72821.99,Widowed,Unemployed,Inpatient,Phone,3,2023,10,3
+516.72,11,F,Pediatrics,144994.96,Widowed,Employed,Outpatient,Phone,2,2023,9,2
+8267.99,99,M,Orthopedics,32804.3,Widowed,Unemployed,Routine,Phone,1,2023,11,6
+7097.89,25,M,Neurology,47391.87,Married,Unemployed,Emergency,Phone,1,2022,12,1
+1927.86,19,F,Neurology,117994.45,Single,Student,Outpatient,Phone,2,2022,12,4
+154.51,24,F,Cardiology,142843.16,Widowed,Retired,Routine,Paper,2,2023,10,1
+8338.13,94,M,Cardiology,108405.99,Married,Employed,Routine,Online,0,2023,8,5
+3041.5,10,M,General Practice,80395.76,Widowed,Student,Emergency,Paper,3,2022,7,5
+3100.97,19,F,Neurology,26795.93,Divorced,Employed,Emergency,Paper,1,2024,3,0
+2668.29,50,F,Neurology,64521.78,Single,Unemployed,Inpatient,Online,3,2024,6,6
+8201.97,80,F,General Practice,118521.56,Married,Employed,Outpatient,Paper,2,2023,4,0
+909.08,32,F,Orthopedics,107226.71,Divorced,Unemployed,Inpatient,Online,0,2023,7,6
+758.99,57,M,General Practice,90046.52,Widowed,Employed,Emergency,Online,0,2024,4,4
+8435.14,82,F,Pediatrics,90395.82,Widowed,Employed,Emergency,Online,0,2023,1,4
+7390.38,61,M,Cardiology,124534.2,Married,Student,Routine,Paper,2,2022,10,4
+6737.3,42,F,Orthopedics,148283.56,Married,Unemployed,Outpatient,Paper,2,2023,9,5
+7039.59,54,F,Pediatrics,41388.3,Single,Employed,Outpatient,Paper,1,2024,3,6
+6699.34,24,F,Neurology,43963.08,Single,Employed,Routine,Paper,1,2023,9,6
+6843.07,5,M,General Practice,142636.45,Single,Employed,Routine,Phone,2,2023,9,5
+6651.6,2,F,Cardiology,76189.52,Married,Employed,Emergency,Paper,3,2023,6,4
+2363.56,68,M,General Practice,25738.92,Divorced,Student,Inpatient,Online,1,2023,6,3
+2830.1,15,M,Neurology,58225.16,Married,Retired,Outpatient,Phone,3,2023,12,4
+465.18,85,F,General Practice,62502.47,Widowed,Unemployed,Inpatient,Phone,3,2023,5,3
+1874.61,52,F,Neurology,137773.75,Single,Employed,Inpatient,Paper,2,2022,11,1
+5722.95,39,F,Orthopedics,62217.58,Widowed,Unemployed,Inpatient,Paper,3,2022,11,3
+1301.73,35,M,Neurology,107898.43,Married,Retired,Inpatient,Online,0,2023,9,1
+2618.48,48,F,Cardiology,61816.12,Divorced,Student,Outpatient,Paper,3,2024,3,3
+611.52,72,F,Neurology,87728.88,Single,Retired,Outpatient,Phone,0,2022,8,1
+2896.54,9,F,Orthopedics,53851.66,Single,Student,Inpatient,Phone,3,2023,3,6
+4820.7,99,F,Neurology,109454.8,Widowed,Employed,Inpatient,Phone,0,2023,9,1
+3419.26,64,F,Orthopedics,96078.64,Divorced,Employed,Inpatient,Paper,0,2022,8,2
+7255.86,30,F,Pediatrics,89524.13,Widowed,Retired,Outpatient,Paper,0,2022,8,2
+3746.26,3,F,Cardiology,63701.49,Married,Retired,Emergency,Online,3,2023,4,5
+802.23,73,M,Pediatrics,85136.16,Single,Retired,Outpatient,Online,0,2024,6,6
+6482.98,22,M,Cardiology,111311.5,Divorced,Unemployed,Emergency,Paper,0,2023,4,1
+1678.97,70,F,Pediatrics,97591.39,Married,Retired,Outpatient,Paper,0,2024,3,1
+5943.92,23,M,Orthopedics,29053.96,Widowed,Unemployed,Routine,Online,1,2023,10,2
+2958.07,86,M,Neurology,36372.28,Divorced,Employed,Emergency,Online,1,2023,5,1
+5489.01,60,M,Orthopedics,121593.73,Divorced,Student,Routine,Paper,2,2022,10,5
+2111.91,34,M,Pediatrics,94615.0,Divorced,Retired,Inpatient,Phone,0,2023,1,2
+7896.74,59,M,Orthopedics,23699.46,Divorced,Retired,Emergency,Phone,1,2023,3,4
+7997.55,76,M,Cardiology,78256.73,Married,Retired,Outpatient,Paper,3,2022,11,0
+1004.78,80,F,Cardiology,76606.7,Divorced,Unemployed,Outpatient,Online,3,2022,7,6
+2842.99,93,F,Cardiology,50286.39,Divorced,Student,Routine,Phone,1,2023,12,1
+4152.41,33,F,General Practice,21240.06,Single,Student,Emergency,Phone,1,2024,5,3
+2871.79,2,F,Pediatrics,38024.83,Divorced,Retired,Routine,Phone,1,2022,12,5
+3207.39,40,M,Cardiology,94036.54,Divorced,Student,Inpatient,Paper,0,2023,12,1
+8407.89,19,M,General Practice,128046.54,Divorced,Employed,Routine,Paper,2,2023,8,5
+6471.42,43,F,Orthopedics,112291.3,Single,Employed,Outpatient,Online,0,2023,12,2
+7914.0,96,F,General Practice,72246.83,Widowed,Employed,Routine,Online,3,2022,9,4
+577.3,65,M,General Practice,62770.74,Divorced,Unemployed,Emergency,Paper,3,2022,9,1
+1330.54,9,M,General Practice,60791.68,Divorced,Employed,Outpatient,Online,3,2023,7,5
+440.45,72,M,Neurology,67269.49,Widowed,Retired,Emergency,Phone,3,2024,5,0
+8697.25,12,F,General Practice,79144.84,Single,Retired,Routine,Phone,3,2023,3,4
+4023.49,59,F,Pediatrics,143536.93,Divorced,Employed,Emergency,Paper,2,2023,8,0
+6395.81,17,M,Cardiology,110669.96,Married,Retired,Routine,Online,0,2022,9,2
+5005.36,53,F,General Practice,24267.31,Married,Retired,Inpatient,Phone,1,2024,6,3
+9949.18,81,F,Orthopedics,119227.07,Widowed,Unemployed,Routine,Paper,2,2023,6,3
+9101.28,76,M,General Practice,25794.11,Married,Unemployed,Outpatient,Phone,1,2022,10,4
+3948.39,96,F,Orthopedics,128983.92,Married,Employed,Emergency,Phone,2,2023,8,3
+6290.77,62,M,Neurology,82947.7,Widowed,Unemployed,Inpatient,Phone,3,2024,3,4
+1275.22,10,F,Neurology,22899.22,Widowed,Student,Outpatient,Paper,1,2023,1,3
+101.33,77,F,Neurology,113015.77,Divorced,Employed,Emergency,Online,0,2023,7,4
+716.5,1,M,Cardiology,95789.8,Single,Employed,Routine,Online,0,2023,2,3
+2552.54,5,M,Neurology,134543.67,Married,Student,Inpatient,Online,2,2023,1,1
+8697.83,32,M,Orthopedics,133562.22,Widowed,Student,Outpatient,Online,2,2022,12,1
+1901.09,62,M,Neurology,88268.31,Single,Retired,Inpatient,Paper,0,2022,9,0
+8346.0,65,F,Orthopedics,55702.79,Widowed,Employed,Routine,Paper,3,2022,12,0
+7353.72,19,F,Neurology,125822.18,Widowed,Student,Routine,Online,2,2023,6,1
+5211.37,80,M,Orthopedics,133225.79,Widowed,Employed,Emergency,Paper,2,2023,8,1
+881.5,76,M,Orthopedics,126491.39,Divorced,Employed,Routine,Phone,2,2023,1,1
+4657.55,71,M,Orthopedics,110621.85,Married,Retired,Inpatient,Online,0,2023,2,1
+9216.39,77,F,Pediatrics,74357.11,Widowed,Employed,Inpatient,Phone,3,2023,2,4
+4239.63,98,M,Pediatrics,45697.22,Widowed,Employed,Inpatient,Phone,1,2023,9,0
+6913.91,59,M,Orthopedics,42831.44,Married,Unemployed,Routine,Paper,1,2024,1,2
+7859.22,8,F,Orthopedics,112043.09,Widowed,Employed,Inpatient,Online,0,2023,8,2
+2787.77,43,M,Neurology,60645.32,Widowed,Retired,Emergency,Online,3,2024,3,4
+2282.42,63,M,Orthopedics,120529.53,Divorced,Employed,Routine,Phone,2,2024,3,1
+4025.88,17,M,Pediatrics,29405.31,Divorced,Retired,Inpatient,Paper,1,2022,11,4
+7250.3,2,F,Neurology,57424.34,Married,Unemployed,Inpatient,Paper,3,2024,6,6
+6513.39,49,F,Pediatrics,27006.78,Single,Unemployed,Routine,Paper,1,2023,1,1
+5694.82,50,F,Neurology,121827.71,Widowed,Retired,Emergency,Online,2,2023,9,3
+4976.99,86,M,Neurology,142269.85,Married,Retired,Inpatient,Phone,2,2023,11,0
+2808.9,36,F,Orthopedics,71112.16,Divorced,Employed,Inpatient,Online,3,2024,5,2
+4381.73,64,F,Orthopedics,71055.56,Divorced,Unemployed,Emergency,Phone,3,2023,10,3
+6247.06,54,F,Cardiology,108341.74,Married,Retired,Emergency,Phone,0,2023,5,4
+4911.4,40,F,Pediatrics,145603.14,Divorced,Unemployed,Outpatient,Paper,2,2023,6,3
+8314.44,92,F,Pediatrics,46147.75,Widowed,Student,Routine,Online,1,2024,5,4
+8192.75,52,M,Neurology,112327.28,Married,Unemployed,Inpatient,Paper,0,2022,9,1
+4923.93,65,F,Orthopedics,107887.28,Single,Student,Outpatient,Paper,0,2022,10,4
+8511.51,78,F,General Practice,53500.43,Divorced,Student,Routine,Online,3,2023,10,3
+2776.89,20,F,Pediatrics,102452.84,Widowed,Unemployed,Outpatient,Phone,0,2024,1,3
+4148.63,34,F,Orthopedics,29563.24,Married,Student,Inpatient,Phone,1,2022,12,1
+3320.77,38,M,Orthopedics,109709.8,Divorced,Student,Outpatient,Online,0,2024,5,0
+8919.47,25,F,Orthopedics,136434.66,Married,Unemployed,Inpatient,Paper,2,2023,12,6
+6807.7,97,M,Cardiology,148959.61,Divorced,Retired,Inpatient,Online,2,2023,12,5
+6997.7,55,M,Pediatrics,59160.07,Divorced,Employed,Outpatient,Online,3,2023,7,1
+6209.35,20,F,Pediatrics,52980.59,Divorced,Employed,Inpatient,Phone,3,2023,5,0
+8218.67,73,F,Neurology,139265.36,Divorced,Retired,Routine,Paper,2,2023,12,4
+7270.95,97,M,Neurology,103837.82,Married,Unemployed,Emergency,Online,0,2023,4,0
+529.78,42,M,Cardiology,115197.77,Single,Unemployed,Routine,Phone,0,2023,4,4
+4740.8,51,M,Orthopedics,72853.82,Married,Employed,Inpatient,Phone,3,2023,5,3
+4250.79,23,M,Neurology,145097.9,Widowed,Student,Outpatient,Online,2,2024,1,1
+4038.87,71,M,Neurology,52977.03,Divorced,Employed,Outpatient,Online,3,2022,12,3
+9555.1,84,M,Orthopedics,58745.53,Divorced,Student,Inpatient,Paper,3,2023,2,3
+3438.35,90,F,General Practice,140779.93,Widowed,Unemployed,Routine,Online,2,2023,7,4
+8241.98,21,F,Pediatrics,130745.44,Widowed,Unemployed,Routine,Paper,2,2024,5,5
+2950.66,41,M,General Practice,113919.97,Divorced,Retired,Routine,Online,0,2022,8,3
+5108.3,21,M,Orthopedics,123359.47,Divorced,Unemployed,Routine,Paper,2,2023,8,1
+6400.37,98,F,Orthopedics,145737.72,Divorced,Employed,Routine,Paper,2,2024,6,2
+4486.03,18,F,Pediatrics,73828.92,Single,Employed,Outpatient,Online,3,2023,2,4
+6522.78,70,F,General Practice,113037.94,Divorced,Retired,Routine,Paper,0,2023,9,2
+3746.64,60,F,Cardiology,49768.33,Widowed,Employed,Emergency,Online,1,2023,6,0
+7288.3,53,M,Orthopedics,103564.27,Widowed,Employed,Emergency,Paper,0,2022,8,1
+9159.39,56,M,General Practice,115633.55,Single,Employed,Routine,Paper,0,2023,9,5
+6682.63,43,M,Neurology,58488.52,Married,Student,Emergency,Paper,3,2022,11,1
+4195.06,34,M,General Practice,148076.95,Divorced,Employed,Inpatient,Online,2,2022,11,5
+1016.99,11,F,General Practice,146624.06,Single,Employed,Outpatient,Online,2,2022,7,3
+7928.16,14,M,Orthopedics,89989.94,Married,Student,Inpatient,Online,0,2023,3,2
+5571.8,88,F,Pediatrics,76615.65,Married,Retired,Outpatient,Phone,3,2023,3,2
+8271.62,74,F,Neurology,64081.39,Divorced,Student,Routine,Paper,3,2024,2,6
+5490.52,13,F,Cardiology,147175.03,Married,Student,Outpatient,Paper,2,2023,11,2
+4912.69,86,M,Orthopedics,110825.41,Married,Employed,Outpatient,Online,0,2023,8,6
+4727.27,74,M,Neurology,131627.37,Widowed,Student,Inpatient,Online,2,2022,8,2
+8274.54,63,M,Orthopedics,105474.25,Married,Student,Outpatient,Phone,0,2024,2,6
+4649.88,75,M,Orthopedics,97339.08,Divorced,Student,Emergency,Online,0,2024,2,1
+8718.73,40,F,Pediatrics,49877.39,Single,Employed,Emergency,Paper,1,2023,12,2
+5495.77,63,M,Orthopedics,140557.63,Divorced,Employed,Outpatient,Paper,2,2022,12,6
+2499.86,32,F,Orthopedics,71692.55,Married,Employed,Outpatient,Paper,3,2023,9,3
+993.87,82,M,General Practice,96098.8,Divorced,Student,Outpatient,Paper,0,2024,2,6
+1862.56,16,F,Pediatrics,106329.64,Widowed,Retired,Routine,Phone,0,2022,8,3
+5055.98,2,F,Cardiology,149155.2,Widowed,Retired,Outpatient,Phone,2,2022,7,1
+3937.72,34,F,Orthopedics,62267.28,Widowed,Retired,Routine,Online,3,2023,2,1
+1646.39,14,F,Cardiology,119272.15,Widowed,Student,Outpatient,Phone,2,2023,1,6
+2467.88,8,F,Neurology,81079.91,Married,Employed,Emergency,Paper,3,2023,2,0
+408.38,20,M,Neurology,78701.03,Single,Student,Inpatient,Online,3,2023,1,3
+5512.3,55,M,Cardiology,70708.59,Widowed,Retired,Routine,Online,3,2023,12,6
+4476.86,72,F,Orthopedics,139872.04,Divorced,Student,Routine,Paper,2,2023,10,3
+362.46,70,M,Orthopedics,75366.11,Divorced,Retired,Emergency,Online,3,2023,10,2
+5143.28,75,M,General Practice,49364.58,Married,Retired,Inpatient,Paper,1,2023,5,2
+4815.72,52,M,Orthopedics,63247.49,Widowed,Employed,Emergency,Online,3,2023,1,5
+4246.05,61,M,Cardiology,138623.06,Divorced,Employed,Inpatient,Online,2,2024,3,2
+6314.31,43,F,Orthopedics,73070.88,Married,Student,Inpatient,Online,3,2024,1,4
+2158.07,60,F,Cardiology,118592.48,Married,Unemployed,Routine,Paper,2,2024,2,3
+9519.16,59,F,Cardiology,135530.12,Married,Employed,Routine,Phone,2,2024,7,0
+1629.15,15,F,Cardiology,45662.49,Single,Retired,Inpatient,Online,1,2022,10,4
+2491.21,54,F,Neurology,124347.86,Married,Employed,Inpatient,Paper,2,2022,7,1
+5369.69,3,F,Pediatrics,106153.92,Divorced,Employed,Inpatient,Online,0,2024,6,5
+8241.57,50,M,Neurology,23298.29,Widowed,Student,Outpatient,Phone,1,2023,1,0
+6141.23,73,F,Cardiology,30171.47,Widowed,Employed,Outpatient,Paper,1,2022,11,5
+7538.61,80,F,Pediatrics,128613.2,Widowed,Student,Inpatient,Phone,2,2022,12,4
+8831.08,56,M,Neurology,85175.63,Divorced,Unemployed,Outpatient,Paper,0,2023,3,1
+8397.73,0,F,Cardiology,94743.95,Single,Unemployed,Routine,Paper,0,2023,3,4
+4638.47,81,F,Neurology,128481.59,Widowed,Unemployed,Emergency,Online,2,2024,5,2
+6445.56,88,F,Orthopedics,108232.72,Divorced,Employed,Routine,Online,0,2024,2,5
+7602.68,88,M,General Practice,97088.02,Divorced,Unemployed,Emergency,Paper,0,2024,6,4
+4395.13,65,F,Neurology,24037.39,Single,Student,Routine,Phone,1,2022,7,1
+279.43,66,F,Cardiology,104968.38,Married,Employed,Outpatient,Paper,0,2023,7,5
+7757.38,27,F,Neurology,36064.42,Widowed,Student,Routine,Paper,1,2024,2,4
+6964.88,58,F,Pediatrics,43437.72,Divorced,Retired,Outpatient,Paper,1,2023,5,5
+5868.87,72,M,Pediatrics,97233.6,Widowed,Student,Outpatient,Phone,0,2024,1,6
+8143.49,83,F,Neurology,112059.15,Single,Employed,Inpatient,Paper,0,2023,6,1
+8929.53,22,M,Cardiology,138277.07,Divorced,Unemployed,Emergency,Phone,2,2023,1,0
+9571.53,14,M,Cardiology,114653.58,Single,Student,Inpatient,Phone,0,2024,5,0
+7001.92,22,F,Orthopedics,139278.21,Widowed,Employed,Routine,Paper,2,2022,8,0
+7168.92,86,F,Pediatrics,126582.86,Single,Employed,Routine,Paper,2,2023,5,5
+6444.18,27,F,Pediatrics,23964.55,Divorced,Student,Emergency,Paper,1,2023,12,4
+939.44,92,F,Cardiology,98643.5,Married,Retired,Routine,Paper,0,2023,12,2
+1418.78,72,M,Orthopedics,86197.51,Widowed,Retired,Routine,Phone,0,2023,4,2
+8835.92,45,M,General Practice,57859.03,Widowed,Student,Routine,Online,3,2024,2,0
+5993.5,4,M,Neurology,99366.71,Divorced,Retired,Outpatient,Paper,0,2023,2,6
+5598.1,62,M,Cardiology,54294.79,Divorced,Unemployed,Emergency,Paper,3,2022,11,5
+4176.48,29,F,Orthopedics,87269.93,Widowed,Student,Emergency,Online,0,2023,2,6
+6097.17,28,M,General Practice,49910.98,Single,Student,Outpatient,Phone,1,2023,4,5
+9300.82,81,M,Cardiology,111977.97,Married,Unemployed,Outpatient,Online,0,2023,3,3
+2761.65,30,F,Pediatrics,78889.75,Widowed,Student,Inpatient,Online,3,2022,7,0
+6400.46,41,F,Cardiology,67878.41,Widowed,Unemployed,Outpatient,Paper,3,2022,9,5
+7401.26,10,M,General Practice,133540.89,Married,Employed,Inpatient,Paper,2,2023,3,1
+4276.1,65,M,Neurology,86080.52,Single,Retired,Inpatient,Online,0,2023,1,4
+1597.34,91,M,Neurology,22934.06,Widowed,Retired,Outpatient,Paper,1,2022,7,5
+7569.97,70,M,Pediatrics,31403.29,Divorced,Unemployed,Routine,Phone,1,2023,8,6
+5903.68,99,F,Pediatrics,142592.69,Married,Retired,Routine,Online,2,2023,11,4
+3035.7,72,F,Pediatrics,126659.97,Single,Employed,Inpatient,Online,2,2022,8,2
+5215.31,9,M,Orthopedics,45186.06,Married,Retired,Outpatient,Online,1,2024,6,6
+5977.24,57,M,Neurology,44445.34,Single,Employed,Routine,Online,1,2023,4,1
+2780.37,1,M,Orthopedics,96755.39,Single,Retired,Outpatient,Online,0,2022,11,6
+6807.56,72,M,Orthopedics,111730.57,Single,Student,Routine,Paper,0,2023,4,0
+469.75,77,M,Pediatrics,125601.25,Single,Student,Routine,Phone,2,2024,5,4
+7362.78,4,F,Neurology,113101.39,Widowed,Student,Outpatient,Phone,0,2023,1,0
+9469.92,10,F,Cardiology,81588.82,Divorced,Student,Outpatient,Paper,3,2023,9,5
+2795.84,25,F,Cardiology,103775.01,Single,Unemployed,Inpatient,Online,0,2023,10,5
+983.97,77,F,Neurology,24344.34,Married,Retired,Emergency,Online,1,2023,4,5
+3899.95,72,M,Cardiology,142499.12,Divorced,Unemployed,Emergency,Online,2,2023,1,2
+5034.58,28,M,Orthopedics,78262.21,Widowed,Student,Outpatient,Phone,3,2023,1,4
+2786.36,9,M,General Practice,74050.72,Widowed,Employed,Inpatient,Phone,3,2023,6,3
+8602.29,81,M,Cardiology,111664.71,Married,Unemployed,Routine,Online,0,2024,5,2
+5640.44,50,F,General Practice,36354.3,Widowed,Unemployed,Routine,Paper,1,2023,7,3
+177.63,84,F,General Practice,113409.07,Married,Unemployed,Inpatient,Phone,0,2022,7,3
+8234.21,82,F,Pediatrics,99169.88,Widowed,Retired,Routine,Phone,0,2023,4,2
+4884.61,56,M,Neurology,103771.5,Single,Student,Inpatient,Paper,0,2024,6,1
+9770.32,61,F,Neurology,109791.14,Widowed,Retired,Routine,Online,0,2022,11,5
+2265.28,41,M,Pediatrics,118351.85,Widowed,Retired,Outpatient,Paper,2,2023,3,0
+893.85,70,F,Pediatrics,128297.4,Widowed,Student,Outpatient,Phone,2,2023,6,4
+9478.11,76,F,Neurology,127094.23,Widowed,Retired,Routine,Online,2,2023,6,1
+1274.57,83,F,Cardiology,142348.24,Divorced,Unemployed,Routine,Phone,2,2024,3,1
+9971.53,20,M,Cardiology,70409.36,Widowed,Retired,Outpatient,Paper,3,2023,6,2
+1697.54,98,F,Cardiology,75751.07,Single,Retired,Routine,Online,3,2023,7,3
+5404.69,63,F,General Practice,96400.28,Divorced,Unemployed,Outpatient,Paper,0,2023,2,2
+4204.78,94,F,General Practice,27609.76,Single,Student,Outpatient,Phone,1,2023,2,6
+3976.1,76,M,Orthopedics,74336.04,Widowed,Unemployed,Routine,Phone,3,2024,6,4
+8090.84,97,F,General Practice,117780.14,Married,Employed,Outpatient,Phone,2,2023,10,2
+5703.58,11,F,General Practice,41405.11,Widowed,Employed,Emergency,Online,1,2022,10,6
+9698.89,17,F,Neurology,53039.15,Widowed,Student,Outpatient,Online,3,2023,8,2
+4947.48,67,M,Pediatrics,90923.13,Married,Student,Routine,Phone,0,2023,1,3
+4925.57,58,F,Orthopedics,62819.15,Divorced,Employed,Routine,Phone,3,2024,3,4
+1168.13,10,F,Neurology,67746.1,Widowed,Student,Inpatient,Online,3,2023,6,2
+7316.5,34,M,General Practice,25465.82,Married,Employed,Emergency,Phone,1,2024,5,5
+2794.24,7,F,Neurology,45650.82,Single,Student,Emergency,Phone,1,2023,6,0
+5509.94,82,M,Orthopedics,37138.76,Single,Student,Inpatient,Paper,1,2023,10,0
+1395.65,23,M,Orthopedics,33133.67,Single,Retired,Outpatient,Phone,1,2023,12,5
+3319.38,14,M,Neurology,33499.12,Divorced,Student,Outpatient,Phone,1,2022,12,6
+1450.08,40,F,General Practice,142251.61,Single,Unemployed,Inpatient,Paper,2,2023,4,4
+4230.21,56,F,Orthopedics,106364.76,Single,Student,Outpatient,Online,0,2023,3,6
+798.63,96,F,General Practice,49023.2,Divorced,Student,Outpatient,Phone,1,2023,12,2
+6276.21,96,F,General Practice,71183.49,Single,Unemployed,Outpatient,Online,3,2023,9,1
+5861.52,94,M,Neurology,43399.95,Married,Retired,Routine,Phone,1,2023,8,6
+4652.02,50,F,Cardiology,116301.38,Widowed,Unemployed,Outpatient,Online,0,2024,1,3
+5172.4,57,F,Cardiology,110396.05,Single,Employed,Outpatient,Phone,0,2024,2,2
+7751.92,3,F,Orthopedics,24907.15,Single,Unemployed,Outpatient,Paper,1,2023,12,2
+5846.63,76,F,Cardiology,97483.92,Widowed,Unemployed,Routine,Online,0,2023,2,0
+7112.79,89,F,Neurology,112638.18,Single,Employed,Outpatient,Online,0,2022,10,6
+2099.96,65,M,Pediatrics,46908.22,Divorced,Employed,Outpatient,Phone,1,2023,1,4
+7774.92,74,M,Cardiology,148466.45,Single,Unemployed,Outpatient,Paper,2,2023,9,4
+9350.92,2,M,Neurology,61554.77,Widowed,Student,Emergency,Paper,3,2023,2,2
+8303.66,26,M,Orthopedics,63771.74,Single,Retired,Inpatient,Phone,3,2024,2,6
+4104.82,4,F,General Practice,120991.84,Divorced,Unemployed,Routine,Online,2,2024,2,6
+893.78,86,M,Pediatrics,64993.94,Married,Retired,Routine,Online,3,2022,8,5
+1169.64,44,F,Pediatrics,20510.81,Divorced,Student,Routine,Online,1,2023,6,3
+1896.21,85,F,General Practice,126194.14,Single,Student,Routine,Online,2,2024,1,1
+1292.43,40,M,Cardiology,70143.17,Married,Student,Emergency,Online,3,2023,9,5
+9100.84,74,M,Pediatrics,76370.94,Divorced,Unemployed,Inpatient,Online,3,2023,12,2
+4212.89,80,F,General Practice,131534.47,Married,Employed,Emergency,Phone,2,2024,6,0
+5420.22,25,F,Neurology,51329.51,Widowed,Retired,Emergency,Online,1,2023,10,4
+4599.96,39,F,Neurology,126695.66,Single,Retired,Outpatient,Online,2,2024,6,1
+5302.16,23,F,Cardiology,94978.91,Widowed,Unemployed,Inpatient,Paper,0,2022,9,4
+3740.82,89,F,Pediatrics,94932.72,Divorced,Unemployed,Routine,Paper,0,2024,4,5
+3185.94,96,F,Pediatrics,42842.98,Married,Unemployed,Outpatient,Online,1,2023,12,5
+5251.05,86,M,Neurology,134484.58,Single,Employed,Outpatient,Online,2,2022,11,3
+5612.33,98,M,Cardiology,116774.5,Married,Employed,Inpatient,Phone,2,2023,8,1
+3354.64,99,M,General Practice,38312.92,Single,Employed,Inpatient,Paper,1,2022,8,3
+3015.21,84,M,Pediatrics,71751.33,Divorced,Unemployed,Inpatient,Phone,3,2022,10,0
+2916.96,50,M,Pediatrics,130316.4,Divorced,Employed,Inpatient,Paper,2,2023,6,0
+5606.29,95,M,Orthopedics,59699.59,Divorced,Student,Outpatient,Phone,3,2024,6,0
+8681.03,7,F,General Practice,145454.11,Single,Unemployed,Emergency,Paper,2,2022,12,0
+489.5,71,F,Cardiology,120473.61,Single,Student,Emergency,Paper,2,2023,10,5
+1418.5,27,M,Pediatrics,118556.8,Married,Student,Outpatient,Phone,2,2023,11,3
+4602.17,48,F,General Practice,35337.27,Single,Employed,Emergency,Paper,1,2022,10,4
+637.89,66,M,Orthopedics,91497.27,Married,Employed,Inpatient,Phone,0,2023,9,0
+4705.54,21,F,General Practice,102867.9,Divorced,Employed,Outpatient,Phone,0,2023,2,5
+5001.95,68,F,Cardiology,61093.64,Divorced,Unemployed,Emergency,Online,3,2022,9,0
+8479.88,47,M,Orthopedics,68568.74,Married,Unemployed,Routine,Online,3,2023,3,4
+7146.06,5,F,Orthopedics,56428.13,Married,Student,Emergency,Online,3,2022,11,1
+7310.87,14,M,General Practice,126176.89,Single,Student,Emergency,Phone,2,2024,2,2
+8564.24,63,M,General Practice,47879.57,Divorced,Student,Inpatient,Paper,1,2024,1,2
+307.36,91,M,Neurology,45983.49,Widowed,Retired,Outpatient,Online,1,2022,9,1
+7717.98,65,F,General Practice,36550.54,Married,Student,Inpatient,Online,1,2023,9,2
+5359.81,88,M,Pediatrics,137226.42,Divorced,Student,Outpatient,Online,2,2024,3,0
+5524.8,89,M,General Practice,80820.39,Divorced,Retired,Outpatient,Paper,3,2023,1,6
+4803.39,87,M,Pediatrics,81132.37,Married,Employed,Outpatient,Paper,3,2023,3,2
+1480.99,17,M,Pediatrics,92949.53,Divorced,Unemployed,Outpatient,Phone,0,2023,1,2
+3402.92,84,M,Orthopedics,94343.06,Married,Employed,Emergency,Online,0,2022,11,3
+6233.31,42,M,Pediatrics,21145.93,Widowed,Student,Routine,Paper,1,2023,10,0
+7734.12,6,F,Orthopedics,141578.32,Widowed,Unemployed,Outpatient,Paper,2,2023,5,5
+2290.26,65,M,Pediatrics,39949.39,Single,Unemployed,Emergency,Online,1,2024,1,3
+3699.93,98,M,General Practice,90574.16,Divorced,Employed,Inpatient,Phone,0,2022,12,5
+6029.89,67,F,Orthopedics,110962.7,Single,Unemployed,Outpatient,Phone,0,2024,4,6
+3682.35,63,F,Orthopedics,37181.03,Widowed,Unemployed,Outpatient,Paper,1,2022,8,4
+2164.25,86,F,Orthopedics,149608.77,Married,Employed,Inpatient,Phone,2,2022,12,5
+5736.84,60,M,Orthopedics,122913.21,Single,Unemployed,Outpatient,Paper,2,2023,11,4
+9105.31,90,F,Orthopedics,33568.29,Divorced,Retired,Inpatient,Online,1,2022,10,4
+5118.51,51,M,Cardiology,147941.44,Single,Employed,Emergency,Online,2,2023,7,1
+9557.81,84,M,Pediatrics,91788.9,Single,Unemployed,Emergency,Paper,0,2023,7,6
+9462.41,28,F,Neurology,29213.32,Married,Unemployed,Routine,Phone,1,2023,10,5
+4541.25,19,F,Cardiology,57736.88,Divorced,Retired,Routine,Paper,3,2023,6,1
+1820.24,40,F,Neurology,110768.01,Widowed,Employed,Emergency,Paper,0,2023,7,2
+3577.07,8,M,Orthopedics,66727.85,Married,Employed,Inpatient,Phone,3,2023,6,4
+8745.9,14,M,General Practice,111511.67,Single,Student,Inpatient,Online,0,2022,11,3
+8821.63,23,M,Orthopedics,56476.73,Single,Unemployed,Outpatient,Paper,3,2022,8,4
+2878.76,28,F,Pediatrics,49235.28,Married,Retired,Routine,Paper,1,2024,1,0
+2451.68,41,F,General Practice,116633.28,Married,Unemployed,Routine,Online,0,2023,11,3
+7370.22,72,F,Pediatrics,114548.02,Divorced,Unemployed,Emergency,Online,0,2023,10,0
+5969.12,32,M,Cardiology,135582.01,Single,Unemployed,Outpatient,Paper,2,2022,10,1
+2858.6,61,M,Pediatrics,149412.87,Married,Employed,Inpatient,Paper,2,2022,11,1
+7968.61,76,M,General Practice,29082.05,Widowed,Retired,Outpatient,Phone,1,2022,12,3
+6009.42,15,M,Cardiology,86649.45,Married,Unemployed,Inpatient,Online,0,2022,7,4
+9154.03,70,M,Orthopedics,41022.66,Divorced,Unemployed,Inpatient,Paper,1,2024,6,5
+5814.28,66,F,Pediatrics,126734.15,Single,Unemployed,Emergency,Phone,2,2022,9,4
+1062.05,30,M,Pediatrics,93562.2,Divorced,Unemployed,Emergency,Phone,0,2023,7,0
+7119.56,98,F,General Practice,121467.83,Married,Student,Routine,Phone,2,2023,2,3
+4929.76,26,F,Pediatrics,132079.88,Widowed,Employed,Routine,Online,2,2024,2,2
+5278.67,15,M,Cardiology,77136.01,Widowed,Employed,Inpatient,Online,3,2023,3,6
+7341.82,82,F,General Practice,47915.57,Single,Retired,Emergency,Paper,1,2022,7,0
+5138.02,70,M,Pediatrics,60232.61,Widowed,Unemployed,Emergency,Online,3,2023,8,5
+433.4,67,M,Orthopedics,134030.14,Single,Retired,Emergency,Paper,2,2022,10,5
+9514.19,92,F,Pediatrics,46673.77,Married,Retired,Outpatient,Phone,1,2024,5,6
+7209.42,8,F,Orthopedics,20566.75,Married,Student,Routine,Phone,1,2023,6,3
+303.79,5,M,General Practice,32934.51,Widowed,Unemployed,Inpatient,Paper,1,2023,1,5
+1104.07,39,F,Cardiology,109661.2,Married,Employed,Routine,Paper,0,2022,8,1
+1932.82,82,M,General Practice,50341.52,Widowed,Student,Routine,Phone,1,2023,7,2
+2672.3,49,M,General Practice,80705.76,Single,Employed,Routine,Phone,3,2023,5,2
+5175.41,37,F,Pediatrics,59707.75,Single,Retired,Emergency,Online,3,2024,4,3
+5244.16,73,M,Cardiology,122688.56,Married,Employed,Outpatient,Online,2,2024,2,3
+804.44,55,M,Pediatrics,148041.92,Divorced,Student,Emergency,Paper,2,2023,8,1
+5281.67,0,F,Orthopedics,73364.1,Married,Unemployed,Outpatient,Phone,3,2023,2,6
+1538.73,71,F,Neurology,61903.33,Single,Employed,Routine,Online,3,2022,12,6
+4384.44,57,M,Cardiology,131586.29,Married,Retired,Emergency,Online,2,2023,6,4
+3207.37,20,F,Cardiology,47155.56,Widowed,Student,Inpatient,Online,1,2022,10,6
+1208.0,38,M,Neurology,73483.42,Divorced,Retired,Emergency,Paper,3,2024,3,0
+1584.18,58,F,General Practice,145296.3,Divorced,Unemployed,Routine,Phone,2,2023,2,0
+3493.04,56,F,Pediatrics,107910.39,Widowed,Student,Inpatient,Online,0,2024,1,2
+6442.09,83,M,General Practice,51514.45,Divorced,Retired,Inpatient,Phone,1,2023,11,6
+3865.97,16,F,Cardiology,29395.32,Widowed,Unemployed,Outpatient,Phone,1,2023,11,6
+696.65,98,M,Orthopedics,24442.83,Widowed,Employed,Outpatient,Online,1,2024,5,3
+1293.53,60,F,Neurology,55341.89,Divorced,Retired,Outpatient,Phone,3,2023,7,0
+2496.02,24,F,Pediatrics,37187.5,Married,Employed,Routine,Online,1,2023,12,4
+4102.47,41,M,Cardiology,79826.86,Divorced,Student,Outpatient,Paper,3,2024,1,6
+6229.81,12,M,Pediatrics,131920.96,Widowed,Retired,Emergency,Paper,2,2023,1,6
+8990.74,85,M,General Practice,85851.5,Divorced,Retired,Emergency,Online,0,2024,6,5
+7641.8,20,F,Orthopedics,132193.74,Divorced,Employed,Emergency,Phone,2,2024,4,2
+6846.88,99,F,Cardiology,73930.09,Widowed,Student,Routine,Phone,3,2022,11,1
+519.98,53,M,Pediatrics,126681.56,Single,Employed,Emergency,Phone,2,2024,1,2
+2672.06,54,F,Cardiology,62106.42,Married,Employed,Emergency,Phone,3,2023,11,4
+3858.95,37,F,Cardiology,34035.12,Single,Retired,Outpatient,Phone,1,2024,2,5
+1440.01,42,F,Neurology,122455.46,Widowed,Retired,Inpatient,Phone,2,2022,8,0
+5014.03,41,M,Orthopedics,126805.1,Widowed,Employed,Routine,Paper,2,2023,11,5
+6224.25,22,F,Orthopedics,144269.44,Single,Employed,Outpatient,Paper,2,2023,7,6
+5241.92,86,F,General Practice,57783.59,Widowed,Student,Inpatient,Online,3,2023,10,3
+4341.73,53,F,Cardiology,143818.66,Divorced,Employed,Inpatient,Paper,2,2023,6,3
+759.86,35,M,Neurology,90651.08,Married,Unemployed,Emergency,Paper,0,2023,4,0
+665.16,92,F,Cardiology,36428.12,Single,Employed,Outpatient,Online,1,2024,4,2
+860.35,11,F,Neurology,106831.39,Divorced,Employed,Outpatient,Online,0,2022,11,3
+3244.11,38,F,Cardiology,93509.33,Divorced,Student,Inpatient,Online,0,2023,2,5
+815.93,29,M,Neurology,35927.49,Divorced,Unemployed,Outpatient,Paper,1,2024,2,4
+6118.26,29,M,Orthopedics,92012.43,Divorced,Employed,Routine,Paper,0,2023,10,0
+5448.94,21,M,Neurology,55500.59,Divorced,Retired,Outpatient,Paper,3,2023,6,5
+8374.68,67,F,Pediatrics,52878.53,Divorced,Retired,Routine,Paper,3,2023,2,0
+1478.79,12,M,Cardiology,115043.39,Divorced,Student,Routine,Paper,0,2024,2,4
+4319.19,78,F,Pediatrics,57292.69,Divorced,Retired,Routine,Phone,3,2023,9,5
+9925.59,34,M,Orthopedics,138765.14,Widowed,Retired,Routine,Online,2,2023,1,2
+5641.58,18,F,General Practice,104119.12,Single,Retired,Emergency,Paper,0,2022,10,0
+7085.3,30,M,General Practice,64873.38,Married,Student,Routine,Paper,3,2024,5,6
+3181.05,87,M,Orthopedics,47892.35,Single,Unemployed,Inpatient,Paper,1,2022,12,5
+4679.09,87,F,Orthopedics,122984.69,Divorced,Retired,Outpatient,Online,2,2022,7,0
+5811.35,90,M,Pediatrics,35282.44,Divorced,Student,Routine,Paper,1,2023,2,6
+322.02,74,F,Neurology,47811.39,Widowed,Unemployed,Routine,Phone,1,2022,9,1
+5108.72,82,M,Pediatrics,122151.68,Single,Employed,Outpatient,Phone,2,2024,6,0
+5910.67,13,F,Pediatrics,64061.71,Married,Unemployed,Inpatient,Paper,3,2024,4,1
+4889.65,74,F,Cardiology,121191.43,Married,Employed,Outpatient,Online,2,2022,9,0
+4206.71,22,M,General Practice,61158.32,Single,Unemployed,Emergency,Phone,3,2024,4,5
+1817.89,92,M,Cardiology,38887.18,Widowed,Employed,Outpatient,Paper,1,2022,11,0
+7660.55,12,F,Cardiology,94026.25,Single,Unemployed,Routine,Online,0,2023,3,5
+7095.64,86,F,Cardiology,103430.8,Divorced,Retired,Outpatient,Online,0,2023,2,3
+3686.13,1,M,Neurology,125257.65,Married,Unemployed,Inpatient,Online,2,2023,11,0
+6577.5,89,M,General Practice,147251.28,Widowed,Employed,Inpatient,Paper,2,2023,3,5
+903.38,91,M,Cardiology,61840.06,Single,Student,Routine,Paper,3,2022,12,4
+3125.48,1,F,Cardiology,106281.58,Widowed,Unemployed,Outpatient,Paper,0,2023,3,4
+5102.0,39,F,General Practice,105725.02,Single,Unemployed,Routine,Paper,0,2023,9,5
+8941.59,37,F,General Practice,87188.78,Married,Unemployed,Inpatient,Online,0,2022,8,3
+582.08,88,F,Cardiology,34857.87,Married,Unemployed,Inpatient,Online,1,2022,10,4
+463.16,96,M,Neurology,105120.85,Divorced,Retired,Emergency,Paper,0,2023,7,0
+2805.27,61,M,Cardiology,119894.74,Married,Retired,Emergency,Phone,2,2022,11,0
+6107.78,73,F,Cardiology,123166.86,Single,Unemployed,Outpatient,Paper,2,2022,12,2
+9712.31,78,M,General Practice,60244.02,Single,Retired,Outpatient,Paper,3,2022,7,4
+7056.07,99,F,Pediatrics,70111.16,Single,Unemployed,Emergency,Phone,3,2024,4,4
+189.64,20,M,General Practice,88124.9,Divorced,Retired,Routine,Paper,0,2023,6,6
+8084.96,57,F,Pediatrics,78153.22,Married,Employed,Outpatient,Phone,3,2023,9,1
+7454.53,11,F,Orthopedics,58745.42,Divorced,Student,Emergency,Phone,3,2023,12,4
+4100.99,40,F,Pediatrics,25444.45,Widowed,Student,Outpatient,Paper,1,2022,7,0
+145.86,92,F,Neurology,149454.31,Divorced,Student,Routine,Paper,2,2023,1,1
+2775.45,29,F,Cardiology,52740.94,Widowed,Student,Inpatient,Paper,3,2023,8,6
+5240.32,13,F,Cardiology,73188.69,Married,Retired,Inpatient,Phone,3,2023,2,6
+1270.36,20,M,Orthopedics,131126.61,Divorced,Retired,Outpatient,Phone,2,2024,3,0
+463.05,95,M,Cardiology,41371.05,Widowed,Student,Inpatient,Online,1,2023,12,5
+3217.69,84,F,Orthopedics,146282.24,Widowed,Retired,Outpatient,Phone,2,2024,6,6
+6355.19,46,F,Pediatrics,64336.22,Married,Unemployed,Routine,Paper,3,2023,9,6
+7820.77,27,M,General Practice,106292.91,Divorced,Student,Emergency,Phone,0,2022,10,1
+8846.3,83,F,Cardiology,47282.41,Married,Employed,Inpatient,Online,1,2023,6,4
+8564.8,3,M,Neurology,61362.78,Divorced,Employed,Outpatient,Paper,3,2024,4,5
+114.59,88,M,Cardiology,31522.29,Married,Employed,Outpatient,Paper,1,2022,11,6
+4459.2,84,F,Pediatrics,56391.85,Single,Employed,Emergency,Online,3,2023,4,3
+8253.87,76,M,Neurology,36669.89,Single,Retired,Emergency,Paper,1,2023,3,3
+4199.88,25,M,Neurology,122960.41,Single,Student,Outpatient,Phone,2,2023,3,3
+9673.65,78,M,Neurology,140564.97,Widowed,Employed,Outpatient,Online,2,2023,3,0
+1233.43,38,F,Cardiology,50022.42,Divorced,Employed,Routine,Phone,1,2023,10,3
+881.79,63,F,Pediatrics,22492.48,Married,Unemployed,Outpatient,Online,1,2022,10,0
+8309.94,62,F,Orthopedics,131832.22,Widowed,Student,Outpatient,Online,2,2023,12,4
+9801.71,86,F,Neurology,141401.64,Single,Student,Inpatient,Paper,2,2022,8,2
+2533.89,59,M,General Practice,76123.2,Widowed,Employed,Inpatient,Paper,3,2022,10,4
+7558.44,97,F,Cardiology,22718.24,Divorced,Unemployed,Routine,Online,1,2023,6,4
+782.68,8,M,Neurology,109279.81,Single,Employed,Emergency,Paper,0,2023,5,2
+4522.47,39,F,Pediatrics,81170.81,Divorced,Unemployed,Emergency,Online,3,2022,9,5
+4356.32,24,F,Orthopedics,98599.65,Widowed,Student,Outpatient,Online,0,2022,7,0
+8783.2,89,F,Neurology,112331.63,Divorced,Student,Outpatient,Paper,0,2023,10,6
+5453.86,95,M,Cardiology,140772.72,Widowed,Employed,Inpatient,Online,2,2024,7,0
+3581.06,67,M,Pediatrics,125356.28,Divorced,Employed,Emergency,Phone,2,2024,4,2
+4873.11,57,F,Orthopedics,103211.75,Single,Retired,Emergency,Online,0,2024,6,1
+9948.71,96,F,Orthopedics,51229.53,Divorced,Unemployed,Inpatient,Online,1,2023,3,2
+8668.52,25,M,General Practice,54875.88,Married,Student,Emergency,Paper,3,2022,10,5
+3795.76,72,M,Cardiology,123603.18,Widowed,Retired,Emergency,Phone,2,2023,8,5
+8452.13,1,F,Cardiology,71686.94,Widowed,Student,Inpatient,Phone,3,2024,5,3
+4046.76,20,F,Neurology,94821.44,Married,Employed,Emergency,Paper,0,2024,1,0
+3517.71,43,M,General Practice,110749.66,Divorced,Unemployed,Routine,Phone,0,2022,10,6
+742.05,57,M,Neurology,91349.43,Married,Employed,Outpatient,Online,0,2023,2,3
+2770.52,48,M,Orthopedics,143205.26,Single,Employed,Emergency,Paper,2,2022,9,5
+4992.7,28,F,Orthopedics,90789.07,Divorced,Retired,Inpatient,Phone,0,2022,12,1
+2661.25,0,M,Pediatrics,75114.3,Widowed,Student,Inpatient,Phone,3,2024,4,1
+6156.04,97,F,General Practice,128919.38,Divorced,Retired,Emergency,Phone,2,2024,3,5
+1644.58,24,M,General Practice,84122.17,Married,Student,Inpatient,Phone,3,2023,7,0
+9091.83,15,M,Neurology,22933.92,Widowed,Student,Inpatient,Paper,1,2023,5,5
+2732.69,81,F,Pediatrics,45964.71,Married,Student,Outpatient,Online,1,2023,2,6
+212.4,88,M,Orthopedics,137772.72,Divorced,Employed,Emergency,Online,2,2022,8,1
+3126.87,37,M,Orthopedics,35796.45,Widowed,Retired,Emergency,Phone,1,2024,3,6
+3612.84,84,M,Neurology,146558.45,Divorced,Unemployed,Routine,Online,2,2022,10,2
+8386.71,96,F,General Practice,120682.06,Married,Retired,Inpatient,Phone,2,2023,1,3
+8805.37,44,F,Cardiology,56327.51,Widowed,Student,Emergency,Phone,3,2023,12,6
+398.03,24,M,Pediatrics,141828.85,Divorced,Employed,Routine,Paper,2,2023,4,2
+4606.2,72,M,General Practice,130738.79,Single,Retired,Routine,Paper,2,2023,9,2
+1788.19,97,M,Cardiology,89755.16,Divorced,Employed,Outpatient,Paper,0,2022,12,6
+4006.3,75,F,Cardiology,62759.57,Divorced,Unemployed,Routine,Paper,3,2024,4,1
+6604.6,99,M,Neurology,119711.63,Married,Student,Routine,Paper,2,2023,3,4
+5988.99,46,F,Cardiology,128165.3,Single,Employed,Inpatient,Paper,2,2023,1,2
+3042.65,12,F,Neurology,86327.68,Divorced,Unemployed,Inpatient,Paper,0,2024,6,5
+4241.51,77,F,Neurology,90897.17,Single,Retired,Inpatient,Online,0,2023,12,1
+8951.53,88,F,Pediatrics,131866.49,Divorced,Unemployed,Emergency,Paper,2,2023,3,6
+7218.55,48,M,General Practice,132349.98,Single,Retired,Emergency,Phone,2,2023,11,0
+5458.54,76,F,Cardiology,107644.98,Single,Employed,Emergency,Online,0,2022,8,0
+3109.03,54,M,Pediatrics,76203.41,Married,Retired,Routine,Online,3,2023,5,1
+5231.46,22,M,Pediatrics,104578.85,Married,Employed,Inpatient,Phone,0,2023,5,6
+1780.6,82,M,Pediatrics,144518.59,Widowed,Unemployed,Routine,Online,2,2024,5,2
+8290.29,22,M,Orthopedics,86328.07,Widowed,Retired,Inpatient,Phone,0,2022,7,6
+6761.43,99,F,Pediatrics,101590.58,Divorced,Retired,Outpatient,Paper,0,2023,4,0
+2914.31,10,M,Orthopedics,96451.21,Widowed,Unemployed,Emergency,Online,0,2022,11,6
+3941.07,73,F,Neurology,71062.13,Married,Student,Routine,Phone,3,2023,9,4
+9259.96,25,F,Pediatrics,49488.82,Divorced,Employed,Emergency,Online,1,2024,5,5
+9389.57,15,F,Cardiology,47794.16,Widowed,Student,Emergency,Phone,1,2023,4,6
+6074.58,3,M,Pediatrics,117398.23,Widowed,Employed,Routine,Paper,2,2023,7,6
+319.02,52,M,Pediatrics,83086.49,Divorced,Student,Routine,Phone,3,2023,4,2
+5743.61,60,M,Orthopedics,131934.34,Married,Employed,Inpatient,Paper,2,2023,3,5
+9005.79,74,F,Neurology,84327.7,Married,Retired,Routine,Online,0,2024,1,6
+9079.72,83,M,General Practice,120316.85,Single,Unemployed,Inpatient,Online,2,2023,6,6
+2320.27,71,M,General Practice,41917.88,Divorced,Unemployed,Outpatient,Paper,1,2023,9,3
+9298.48,0,F,Cardiology,128841.2,Divorced,Student,Inpatient,Online,2,2023,6,1
+5653.29,25,F,Cardiology,51823.98,Widowed,Unemployed,Inpatient,Paper,1,2023,9,6
+7406.53,71,M,Cardiology,110508.79,Married,Unemployed,Routine,Phone,0,2023,1,5
+6296.32,84,F,Neurology,47207.41,Widowed,Student,Emergency,Phone,1,2022,8,6
+3881.2,6,M,Pediatrics,73025.04,Single,Unemployed,Outpatient,Online,3,2023,12,0
+564.96,17,M,Pediatrics,84347.76,Married,Retired,Emergency,Online,0,2022,9,2
+7732.13,59,F,Cardiology,78701.11,Divorced,Retired,Inpatient,Phone,3,2023,11,6
+893.05,37,M,Pediatrics,36517.31,Single,Student,Routine,Phone,1,2023,8,0
+8186.12,14,M,Neurology,34170.0,Divorced,Retired,Emergency,Phone,1,2023,1,0
+4643.51,34,F,Neurology,130337.85,Married,Employed,Emergency,Online,2,2023,9,6
+1710.34,92,F,Cardiology,76547.43,Married,Student,Inpatient,Online,3,2024,6,5
+6708.74,12,M,Neurology,36050.26,Married,Unemployed,Emergency,Paper,1,2024,3,6
+4808.4,23,M,General Practice,137214.94,Married,Student,Outpatient,Online,2,2024,7,6
+8871.18,69,M,Orthopedics,20483.56,Single,Student,Outpatient,Phone,1,2023,11,6
+1375.81,70,F,Cardiology,75432.79,Single,Employed,Inpatient,Phone,3,2024,4,2
+291.34,10,M,Orthopedics,20122.6,Married,Student,Inpatient,Paper,1,2023,3,6
+3226.15,36,F,Neurology,36995.52,Divorced,Unemployed,Inpatient,Phone,1,2024,7,0
+9580.05,5,M,Pediatrics,137377.13,Married,Employed,Emergency,Paper,2,2024,2,2
+5257.48,93,F,Cardiology,101904.5,Widowed,Employed,Outpatient,Phone,0,2022,8,0
+5275.06,62,M,General Practice,49276.92,Married,Employed,Outpatient,Online,1,2023,11,1
+7501.33,51,M,Cardiology,124152.3,Widowed,Retired,Outpatient,Phone,2,2022,7,5
+4153.18,30,M,Cardiology,22587.19,Single,Unemployed,Outpatient,Phone,1,2024,3,4
+9027.44,8,F,Orthopedics,86490.78,Widowed,Retired,Outpatient,Phone,0,2023,2,3
+2451.69,85,F,Pediatrics,23769.58,Widowed,Employed,Inpatient,Phone,1,2023,6,1
+675.82,1,M,General Practice,121944.33,Divorced,Retired,Outpatient,Paper,2,2023,2,4
+6008.83,31,F,Cardiology,32603.68,Married,Unemployed,Outpatient,Online,1,2023,2,3
+5921.2,46,M,Cardiology,143434.41,Married,Retired,Routine,Paper,2,2024,2,4
+8746.89,24,M,General Practice,109895.72,Married,Employed,Outpatient,Online,0,2024,6,6
+533.02,96,M,Cardiology,46582.85,Divorced,Unemployed,Inpatient,Paper,1,2023,9,1
+3631.86,17,F,Neurology,67802.11,Single,Employed,Outpatient,Online,3,2022,10,2
+9497.8,30,M,Pediatrics,79027.19,Widowed,Unemployed,Routine,Phone,3,2022,11,2
+7001.64,44,F,Neurology,84225.57,Single,Employed,Routine,Phone,0,2023,9,1
+4947.28,94,F,Orthopedics,72464.15,Widowed,Employed,Outpatient,Online,3,2023,11,2
+2137.83,17,F,Orthopedics,92310.73,Widowed,Unemployed,Inpatient,Phone,0,2022,10,4
+2998.94,0,M,Orthopedics,22033.63,Married,Employed,Inpatient,Online,1,2023,6,2
+3235.94,59,F,Orthopedics,138204.46,Divorced,Employed,Emergency,Online,2,2023,5,3
+6197.05,64,M,Neurology,51395.81,Divorced,Employed,Inpatient,Phone,1,2023,6,1
+757.99,41,M,Cardiology,115113.97,Divorced,Unemployed,Emergency,Phone,0,2023,7,0
+3617.67,69,F,General Practice,60612.77,Single,Employed,Inpatient,Online,3,2023,6,1
+9696.1,52,F,Orthopedics,93881.49,Divorced,Student,Routine,Paper,0,2022,10,2
+8537.41,34,M,Orthopedics,68814.82,Widowed,Unemployed,Inpatient,Online,3,2024,3,5
+3486.61,76,F,Cardiology,121188.35,Widowed,Unemployed,Routine,Online,2,2023,2,6
+4579.15,87,F,General Practice,46946.73,Divorced,Unemployed,Inpatient,Phone,1,2023,6,0
+3618.31,86,F,Orthopedics,78987.99,Divorced,Unemployed,Routine,Paper,3,2022,12,1
+8167.9,33,M,Cardiology,120899.74,Married,Employed,Routine,Paper,2,2022,10,0
+1331.25,85,M,Pediatrics,118429.58,Widowed,Employed,Emergency,Paper,2,2024,5,2
+6475.17,10,M,Cardiology,63531.4,Married,Employed,Routine,Online,3,2024,1,4
+8302.7,24,M,General Practice,76600.62,Single,Student,Emergency,Paper,3,2024,3,2
+2340.1,94,F,Cardiology,90851.09,Married,Unemployed,Emergency,Phone,0,2023,2,6
+4637.18,66,F,Pediatrics,118011.9,Married,Employed,Inpatient,Online,2,2023,2,2
+9625.51,43,F,Pediatrics,142732.32,Divorced,Student,Routine,Phone,2,2023,5,5
+614.52,18,F,Cardiology,92042.06,Single,Employed,Inpatient,Online,0,2023,5,4
+9414.71,90,M,Cardiology,137713.63,Married,Student,Routine,Online,2,2023,5,1
+2541.38,66,M,Cardiology,48765.96,Divorced,Unemployed,Outpatient,Phone,1,2024,7,0
+6146.72,25,F,Cardiology,52408.4,Widowed,Retired,Outpatient,Phone,3,2023,3,4
+8956.07,17,M,Pediatrics,96413.4,Married,Student,Inpatient,Online,0,2022,10,1
+5899.18,64,F,General Practice,148118.14,Widowed,Employed,Routine,Paper,2,2022,9,5
+3137.09,55,M,Orthopedics,149676.79,Single,Unemployed,Inpatient,Paper,2,2023,11,5
+7966.32,66,F,Pediatrics,42222.84,Married,Unemployed,Inpatient,Online,1,2023,8,6
+6575.91,59,F,Orthopedics,77599.87,Single,Retired,Inpatient,Paper,3,2023,12,5
+7425.05,77,M,General Practice,100708.24,Divorced,Unemployed,Emergency,Online,0,2024,2,3
+8882.16,97,F,Neurology,115617.69,Divorced,Unemployed,Outpatient,Paper,0,2022,10,2
+7870.48,52,M,Neurology,117244.52,Single,Student,Routine,Paper,2,2024,1,5
+9997.2,78,F,Cardiology,77399.42,Divorced,Retired,Inpatient,Paper,3,2024,2,3
+1726.23,77,F,Neurology,96162.2,Married,Student,Routine,Phone,0,2024,6,4
+6034.67,0,M,Neurology,137180.29,Widowed,Unemployed,Routine,Paper,2,2024,4,5
+1896.24,16,F,Neurology,67460.88,Married,Unemployed,Outpatient,Phone,3,2022,8,0
+6188.57,94,F,General Practice,40440.64,Widowed,Employed,Routine,Paper,1,2023,6,4
+4068.43,43,F,Cardiology,52792.87,Married,Unemployed,Emergency,Phone,3,2023,8,3
+9188.96,21,M,Cardiology,135829.4,Single,Retired,Emergency,Online,2,2022,10,6
+5835.21,27,M,Neurology,131637.66,Single,Student,Outpatient,Online,2,2023,11,5
+8601.77,90,F,Neurology,140707.87,Single,Unemployed,Outpatient,Phone,2,2023,5,5
+3432.38,98,F,Orthopedics,145534.91,Widowed,Unemployed,Outpatient,Phone,2,2023,5,1

@@ -1,0 +1,125 @@
+{
+  "models": {
+    "LogisticRegression": {
+      "fit_seconds": 0.013,
+      "predict_100_seconds": 0.0003,
+      "model_bytes": 1103,
+      "n_train": 3150,
+      "positive_class_weight": "balanced",
+      "test_metrics": {
+        "Val_Accuracy": 0.9777777777777777,
+        "Val_Precision": 0.7407407407407407,
+        "Val_Recall": 0.975609756097561,
+        "Val_F1": 0.8421052631578947,
+        "Val_ROC_AUC": 0.9945372008925136,
+        "Val_PR_AUC": 0.9410934409158116,
+        "Test_Accuracy": 0.9644444444444444,
+        "Test_Precision": 0.625,
+        "Test_Recall": 1.0,
+        "Test_F1": 0.7692307692307693,
+        "Test_ROC_AUC": 0.9949606299212599,
+        "Test_PR_AUC": 0.9186476827198672
+      }
+    },
+    "RandomForest": {
+      "fit_seconds": 0.625,
+      "predict_100_seconds": 0.0537,
+      "model_bytes": 3465961,
+      "n_train": 3150,
+      "positive_class_weight": "balanced",
+      "test_metrics": {
+        "Val_Accuracy": 0.9985185185185185,
+        "Val_Precision": 1.0,
+        "Val_Recall": 0.975609756097561,
+        "Val_F1": 0.9876543209876543,
+        "Val_ROC_AUC": 1.0,
+        "Val_PR_AUC": 1.0000000000000002,
+        "Test_Accuracy": 0.9985185185185185,
+        "Test_Precision": 1.0,
+        "Test_Recall": 0.975,
+        "Test_F1": 0.9873417721518988,
+        "Test_ROC_AUC": 0.9999606299212599,
+        "Test_PR_AUC": 0.9993902439024392
+      }
+    },
+    "XGBoost": {
+      "fit_seconds": 0.028,
+      "predict_100_seconds": 0.0006,
+      "model_bytes": 85788,
+      "n_train": 3150,
+      "positive_class_weight": "balanced",
+      "test_metrics": {
+        "Val_Accuracy": 0.9985185185185185,
+        "Val_Precision": 1.0,
+        "Val_Recall": 0.975609756097561,
+        "Val_F1": 0.9876543209876543,
+        "Val_ROC_AUC": 0.9999615295837501,
+        "Val_PR_AUC": 0.9994192799070848,
+        "Test_Accuracy": 0.9985185185185185,
+        "Test_Precision": 0.975609756097561,
+        "Test_Recall": 1.0,
+        "Test_F1": 0.9876543209876543,
+        "Test_ROC_AUC": 1.0,
+        "Test_PR_AUC": 1.0
+      }
+    },
+    "SVM": {
+      "fit_seconds": 0.285,
+      "predict_100_seconds": 0.0025,
+      "model_bytes": 96459,
+      "n_train": 3150,
+      "positive_class_weight": "balanced",
+      "test_metrics": {
+        "Val_Accuracy": 0.9837037037037037,
+        "Val_Precision": 0.8,
+        "Val_Recall": 0.975609756097561,
+        "Val_F1": 0.8791208791208791,
+        "Val_ROC_AUC": 0.9940755558975148,
+        "Val_PR_AUC": 0.9441756596349578,
+        "Test_Accuracy": 0.9777777777777777,
+        "Test_Precision": 0.7450980392156863,
+        "Test_Recall": 0.95,
+        "Test_F1": 0.8351648351648352,
+        "Test_ROC_AUC": 0.995472440944882,
+        "Test_PR_AUC": 0.9251801781510335
+      }
+    },
+    "GradientBoosting": {
+      "fit_seconds": 0.192,
+      "predict_100_seconds": 0.0013,
+      "model_bytes": 72352,
+      "n_train": 3150,
+      "positive_class_weight": "balanced",
+      "test_metrics": {
+        "Val_Accuracy": 1.0,
+        "Val_Precision": 1.0,
+        "Val_Recall": 1.0,
+        "Val_F1": 1.0,
+        "Val_ROC_AUC": 1.0,
+        "Val_PR_AUC": 1.0,
+        "Test_Accuracy": 0.9985185185185185,
+        "Test_Precision": 1.0,
+        "Test_Recall": 0.975,
+        "Test_F1": 0.9873417721518988,
+        "Test_ROC_AUC": 0.9846653543307088,
+        "Test_PR_AUC": 0.9764814814814815
+      }
+    }
+  },
+  "generated_at": "2026-09-13 04:44:42",
+  "wall_clock_seconds": 4.12,
+  "python": "3.11.2",
+  "scikit_learn": "1.9.1",
+  "split": {
+    "train": 3150,
+    "val": 675,
+    "test": 675,
+    "train_fraud": 189,
+    "val_fraud": 41,
+    "test_fraud": 40
+  },
+  "n_features": 29,
+  "random_state": 42,
+  "best_model_by_val_f1": "GradientBoosting",
+  "data_source": "Health Insurance Fraud Claims.xlsx (repository dataset, no synthetic data)"
+}
