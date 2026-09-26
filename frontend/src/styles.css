@@ -1,0 +1,67 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #17231f;
+  background: #e6eee8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 2rem;
+  background: radial-gradient(circle at top right, #f7cfa6 0, transparent 35%), #e6eee8;
+}
+
+.status-panel {
+  width: min(100%, 40rem);
+  padding: clamp(2rem, 8vw, 5rem);
+  border: 1px solid #a9bdb0;
+  background: #f8f5ed;
+  box-shadow: 1rem 1rem 0 #c1d0c6;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: #a54f35;
+  font: 700 0.78rem/1.2 Arial, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #1c493a;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 0.95;
+}
+
+.status-message {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.planned-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font: 600 0.8rem/1.2 Arial, sans-serif;
+}
+
+.planned-areas span {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #a9bdb0;
+  color: #315948;
+}
