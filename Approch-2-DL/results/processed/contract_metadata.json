@@ -1,0 +1,49 @@
+{
+  "source_processed_dir": "E:\\mini-project\\Approch-2-DL\\results\\processed",
+  "feature_count": 29,
+  "feature_names": [
+    "ClaimAmount",
+    "PatientAge",
+    "PatientIncome",
+    "ClaimYear",
+    "ClaimMonth",
+    "ClaimDayOfWeek",
+    "Cluster",
+    "PatientGender_F",
+    "PatientGender_M",
+    "ProviderSpecialty_Cardiology",
+    "ProviderSpecialty_General Practice",
+    "ProviderSpecialty_Neurology",
+    "ProviderSpecialty_Orthopedics",
+    "ProviderSpecialty_Pediatrics",
+    "PatientMaritalStatus_Divorced",
+    "PatientMaritalStatus_Married",
+    "PatientMaritalStatus_Single",
+    "PatientMaritalStatus_Widowed",
+    "PatientEmploymentStatus_Employed",
+    "PatientEmploymentStatus_Retired",
+    "PatientEmploymentStatus_Student",
+    "PatientEmploymentStatus_Unemployed",
+    "ClaimType_Emergency",
+    "ClaimType_Inpatient",
+    "ClaimType_Outpatient",
+    "ClaimType_Routine",
+    "ClaimSubmissionMethod_Online",
+    "ClaimSubmissionMethod_Paper",
+    "ClaimSubmissionMethod_Phone"
+  ],
+  "split_sizes": {
+    "train": 3150,
+    "val": 675,
+    "test": 675
+  },
+  "fraud_counts": {
+    "train": 189,
+    "val": 41,
+    "test": 40
+  },
+  "leakage_excluded": [
+    "ClaimStatus"
+  ],
+  "contract": "Approch-1 frozen 29-feature leakage-excluded baseline"
+}

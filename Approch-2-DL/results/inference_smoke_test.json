@@ -1,0 +1,9 @@
+{
+  "input_shape": [
+    1,
+    29
+  ],
+  "probability_fraud": 0.9615476727485657,
+  "prediction": "Fraud",
+  "inference_ms": 0.19420000035097473
+}

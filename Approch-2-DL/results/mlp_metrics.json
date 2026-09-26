@@ -1,0 +1,71 @@
+{
+  "model": "MLP",
+  "primary_metric": "pr_auc",
+  "checkpoint": "E:\\mini-project\\Approch-2-DL\\models\\mlp\\mlp_best.pt",
+  "best_epoch": 34,
+  "feature_contract": "Approch-1 frozen 29-feature leakage-excluded baseline",
+  "metrics": {
+    "val": {
+      "accuracy": 0.9881481481481481,
+      "precision": 0.851063829787234,
+      "recall": 0.975609756097561,
+      "f1": 0.9090909090909091,
+      "roc_auc": 0.9963453104562592,
+      "pr_auc": 0.9781994498268471,
+      "threshold": 0.5,
+      "confusion_matrix": [
+        [
+          627,
+          7
+        ],
+        [
+          1,
+          40
+        ]
+      ],
+      "false_positives": 7,
+      "false_negatives": 1,
+      "inference_total_ms": 4.629399999885209,
+      "inference_ms_per_sample": 0.0068583703702003096
+    },
+    "test": {
+      "accuracy": 0.9881481481481481,
+      "precision": 0.8478260869565217,
+      "recall": 0.975,
+      "f1": 0.9069767441860465,
+      "roc_auc": 0.9972834645669291,
+      "pr_auc": 0.9537510366788954,
+      "threshold": 0.5,
+      "confusion_matrix": [
+        [
+          628,
+          7
+        ],
+        [
+          1,
+          39
+        ]
+      ],
+      "false_positives": 7,
+      "false_negatives": 1,
+      "inference_total_ms": 0.7319999999708671,
+      "inference_ms_per_sample": 0.0010844444444012846
+    }
+  },
+  "inference": {
+    "val": {
+      "samples": 675,
+      "total_ms": 4.629399999885209
+    },
+    "test": {
+      "samples": 675,
+      "total_ms": 0.7319999999708671
+    }
+  },
+  "methodological_notes": {
+    "ClaimStatus": "Excluded as post-adjudication leakage.",
+    "Cluster": "Retained for baseline comparability but may be a target proxy; ablation and temporal validation are required.",
+    "ClaimAmount": "Retained; strong class separation may indicate an engineered shortcut.",
+    "identifiers_and_codes": "ClaimID, PatientID, ProviderID, DiagnosisCode, ProcedureCode, and ProviderLocation are excluded because they are unique or near-unique in this dataset."
+  }
+}

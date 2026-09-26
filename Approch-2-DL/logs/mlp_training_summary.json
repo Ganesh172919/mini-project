@@ -1,0 +1,17 @@
+{
+  "model": "MLP",
+  "device": "cpu",
+  "epochs_requested": 100,
+  "epochs_completed": 49,
+  "best_epoch": 34,
+  "best_val_pr_auc": 0.9781994498268471,
+  "training_seconds": 4.430001100000027,
+  "seed": 42,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "checkpoint": "E:\\mini-project\\Approch-2-DL\\models\\mlp\\mlp_best.pt",
+  "train_size": 3150,
+  "val_size": 675,
+  "train_fraud": 189,
+  "val_fraud": 41
+}
