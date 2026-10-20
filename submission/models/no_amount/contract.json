@@ -1,0 +1,58 @@
+{
+  "numeric": [
+    "PatientAge",
+    "PatientIncome",
+    "ClaimYear",
+    "ClaimMonth",
+    "ClaimDayOfWeek"
+  ],
+  "categorical": [
+    "PatientGender",
+    "ProviderSpecialty",
+    "PatientMaritalStatus",
+    "PatientEmploymentStatus",
+    "ClaimType",
+    "ClaimSubmissionMethod"
+  ],
+  "features": [
+    "num__PatientAge",
+    "num__PatientIncome",
+    "num__ClaimYear",
+    "num__ClaimMonth",
+    "num__ClaimDayOfWeek",
+    "cat__PatientGender_F",
+    "cat__PatientGender_M",
+    "cat__ProviderSpecialty_Cardiology",
+    "cat__ProviderSpecialty_General Practice",
+    "cat__ProviderSpecialty_Neurology",
+    "cat__ProviderSpecialty_Orthopedics",
+    "cat__ProviderSpecialty_Pediatrics",
+    "cat__PatientMaritalStatus_Divorced",
+    "cat__PatientMaritalStatus_Married",
+    "cat__PatientMaritalStatus_Single",
+    "cat__PatientMaritalStatus_Widowed",
+    "cat__PatientEmploymentStatus_Employed",
+    "cat__PatientEmploymentStatus_Retired",
+    "cat__PatientEmploymentStatus_Student",
+    "cat__PatientEmploymentStatus_Unemployed",
+    "cat__ClaimType_Emergency",
+    "cat__ClaimType_Inpatient",
+    "cat__ClaimType_Outpatient",
+    "cat__ClaimType_Routine",
+    "cat__ClaimSubmissionMethod_Online",
+    "cat__ClaimSubmissionMethod_Paper",
+    "cat__ClaimSubmissionMethod_Phone"
+  ],
+  "feature_count": 27,
+  "removed": [
+    "ClaimStatus",
+    "ClaimID",
+    "PatientID",
+    "ProviderID",
+    "DiagnosisCode",
+    "ProcedureCode",
+    "ProviderLocation",
+    "Cluster",
+    "ClaimAmount"
+  ]
+}

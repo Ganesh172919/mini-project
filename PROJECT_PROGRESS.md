@@ -1,5 +1,18 @@
 # Mini-Project 2 — Project Progress
 
+## Final two-approach submission 20 October 2026
+
+The current completed submission is documented in `submission/README.md`.
+
+- Approach 1: all five classical algorithms retrained and evaluated.
+- Approach 2: MLP, Residual MLP and 1D CNN trained and evaluated.
+- Four experiments compare the original contract, removal of Cluster, removal of Cluster plus amount, and chronological intake validation.
+- The separate model laboratory supports both approaches with real browser inference and an independent local Python API.
+- Final research manuscript, technical report and presentation are in `submission/deliverables/`.
+- Raw data and historical model artifacts remain intact. The earlier application skeleton is preserved.
+
+The sections below are historical development notes and do not describe the final submission website.
+
 ## Reference Materials
 
 - `Health Insurance Fraud Claims.xlsx`

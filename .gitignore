@@ -47,3 +47,8 @@ node_modules/
 # Frontend build artifacts
 .next/
 coverage/
+
+# Submission runtime and private artifact build files
+.submission-venv/
+submission/.build/
+.chart-data-*/
