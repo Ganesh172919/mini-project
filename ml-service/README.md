@@ -1,107 +1,36 @@
 # Python ML Service
 
-FastAPI inference service for Mini-Project 2.
+FastAPI inference service for Mini-Project 2 supporting both Approach 1 (Classical ML) and Approach 2 (Deep Learning).
 
-## Current status
-
-The following endpoints are implemented and verified:
+## Endpoints
 
 ```text
-GET /health
-POST /predict
+GET  /health
+POST /predict/dl?model=<MLP|ResidualMLP|CNN1D|TabTransformer|Autoencoder>
+POST /predict/ml?model=<RandomForest|XGBoost|GradientBoosting|SVM|LogisticRegression>
+POST /predict  (defaults to DL MLP for backwards compatibility)
 ```
 
-The prediction path is:
+## Supported Models
 
-```text
-Raw claim
-	↓
-Validated ClaimInput
-	↓
-Read-only fitted transformer from Approch-1
-	↓
-29-feature frozen contract
-	↓
-Existing Approch-2-DL MLP checkpoint
-	↓
-PredictionResponse
-```
+- **Classical ML (`/predict/ml`):**
+  - Uses Ganesh's frozen preprocessing pipeline from `Approch-1/data/processed/preprocessor.joblib`.
+  - Loads models from `Approch-1/models/`: `RandomForest.joblib`, `XGBoost.joblib`, `GradientBoosting.joblib`, `SVM.joblib`, `LogisticRegression.joblib`.
 
-The service does not retrain or modify the MLP. It reuses the existing `MLP` class and loads `Approch-2-DL/models/mlp/mlp_best.pt`. The fitted preprocessing transformer is read from `Approch-1/data/processed/preprocessor.joblib`; `Approch-1` remains unchanged.
+- **Deep Learning (`/predict/dl`):**
+  - Uses the frozen 29-feature contract and preprocessor.
+  - Loads PyTorch models from `Approch-2-DL/models/`:
+    - `MLP`: `mlp/mlp_best.pt`
+    - `ResidualMLP`: `residualmlp/residualmlp_best.pt`
+    - `CNN1D`: `cnn1d/cnn1d_best.pt`
+    - `TabTransformer`: `tabtransformer/tabtransformer_best.pt`
+    - `Autoencoder`: `autoencoder/autoencoder_best.pt` (anomaly detection via reconstruction error, threshold = 0.1286)
 
-### Health endpoint
-
-```text
-GET /health
-
-
-Expected response:
-
-```json
-{"status":"ok"}
-```
-
-### Prediction endpoint
-
-`POST /predict` accepts the model-relevant raw claim fields below. Optional identifiers, codes, location, and `ClaimStatus` are accepted only as descriptive metadata and are excluded from model input. `ClaimLegitimacy` is never accepted because it is the training target.
-
-Required model-input fields:
-
-- `ClaimAmount`
-- `ClaimDate`
-- `PatientAge`
-- `PatientGender`
-- `ProviderSpecialty`
-- `PatientIncome`
-- `PatientMaritalStatus`
-- `PatientEmploymentStatus`
-- `ClaimType`
-- `ClaimSubmissionMethod`
-- `Cluster`
-
-`ClaimDate` is transformed into `ClaimYear`, `ClaimMonth`, and `ClaimDayOfWeek`. The fitted transformer then produces the exact frozen 29-feature ordering.
-
-Example request:
-
-```json
-{
-	"ClaimAmount": 794.07,
-	"ClaimDate": "2024-03-04",
-	"PatientAge": 75,
-	"PatientGender": "M",
-	"ProviderSpecialty": "Orthopedics",
-	"PatientIncome": 99260.16,
-	"PatientMaritalStatus": "Widowed",
-	"PatientEmploymentStatus": "Employed",
-	"ClaimType": "Emergency",
-	"ClaimSubmissionMethod": "Paper",
-	"Cluster": 0
-}
-```
-
-Example response shape:
-
-```json
-{
-	"model_name": "MLP",
-	"model_version": "mlp_best.pt",
-	"prediction": "Legitimate",
-	"fraud_score": 0.0,
-	"score_is_calibrated": false,
-	"feature_count": 29,
-	"feature_contract": "Approch-1 frozen 29-feature leakage-excluded baseline"
-}
-```
-
-`fraud_score` is the MLP sigmoid output and is not a calibrated probability. Invalid or missing required fields return HTTP 422. Missing or incompatible model artifacts fail clearly during service loading.
-
-Additional DL models, explainability, agentic AI, Node → FastAPI integration, and React → Node integration are not implemented yet.
-
-## Run
-
-Use the existing virtual environment only:
+## How to Run
 
 ```powershell
-& '.\Approch-2-DL\.venv\Scripts\python.exe' -m pip install -r ml-service\requirements.txt
-& '.\Approch-2-DL\.venv\Scripts\python.exe' -m uvicorn app.main:app --app-dir ml-service --host 127.0.0.1 --port 8000
+cd E:\mini-project
+.\Approch-2-DL\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --app-dir ml-service
 ```
+
+Interactive API documentation is available at `http://127.0.0.1:8000/docs`.
