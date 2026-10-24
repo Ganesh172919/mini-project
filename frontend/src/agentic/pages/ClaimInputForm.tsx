@@ -1,3 +1,5 @@
+import React from "react"
+
 export function ClaimInputForm() {
   const [form, setForm] = React.useState({
     claim_amount: "",
@@ -50,8 +52,8 @@ export function ClaimInputForm() {
           <select value={form.claim_type} onChange={(e) => setForm({ ...form, claim_type: e.target.value })} required>
             <option value="">Select type</option>
             <option value="medical_surgical">Medical/Surgical</option>
-            <option value>diagnostic</option>
-            <option value>pharmaceutical</option>
+            <option value="diagnostic">Diagnostic</option>
+            <option value="pharmaceutical">Pharmaceutical</option>
           </select>
         </div>
         <div className="form-row">
@@ -71,8 +73,8 @@ export function ClaimInputForm() {
           <label>Submission Method</label>
           <select value={form.submission_method} onChange={(e) => setForm({ ...form, submission_method: e.target.value })} required>
             <option value="">Select method</option>
-            <option value>electronic">Electronic</option>
-            <option value>paper">Paper</option>
+            <option value="electronic">Electronic</option>
+            <option value="paper">Paper</option>
           </select>
         </div>
         <button type="submit" className="submit-btn">Analyze with AI Agents</button>

@@ -1,3 +1,5 @@
+import { ClaimInputForm } from "./ClaimInputForm"
+
 export function AgenticDashboard() {
   return (
     <section className="agentic-dashboard">
