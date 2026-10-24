@@ -1,0 +1,68 @@
+{
+  "model": "Autoencoder",
+  "primary_metric": "pr_auc",
+  "checkpoint": "E:\\mini-project\\Approch-2-DL\\models\\autoencoder\\autoencoder_best.pt",
+  "feature_contract": "Approch-1 frozen 29-feature leakage-excluded baseline",
+  "score_is_calibrated": false,
+  "score_interpretation": "reconstruction-error anomaly score; not a supervised fraud probability",
+  "metrics": {
+    "val": {
+      "accuracy": 0.8948148148148148,
+      "precision": 0.058823529411764705,
+      "recall": 0.04878048780487805,
+      "f1": 0.05333333333333334,
+      "roc_auc": 0.40947911056397635,
+      "pr_auc": 0.05436803272447473,
+      "threshold": 0.12858837842941284,
+      "confusion_matrix": [
+        [
+          602,
+          32
+        ],
+        [
+          39,
+          2
+        ]
+      ],
+      "false_positives": 32,
+      "false_negatives": 39,
+      "inference_total_ms": 0.3724000125657767,
+      "inference_ms_per_sample": 0.0005517037223196692,
+      "anomaly_score_note": "normalised reconstruction error, NOT a calibrated fraud probability"
+    },
+    "test": {
+      "accuracy": 0.9037037037037037,
+      "precision": 0.037037037037037035,
+      "recall": 0.025,
+      "f1": 0.029850746268656716,
+      "roc_auc": 0.46023622047244095,
+      "pr_auc": 0.05226969853142382,
+      "threshold": 0.12858837842941284,
+      "confusion_matrix": [
+        [
+          609,
+          26
+        ],
+        [
+          39,
+          1
+        ]
+      ],
+      "false_positives": 26,
+      "false_negatives": 39,
+      "inference_total_ms": 0.49810000928118825,
+      "inference_ms_per_sample": 0.0007379259396758345,
+      "anomaly_score_note": "normalised reconstruction error, NOT a calibrated fraud probability"
+    }
+  },
+  "inference": {
+    "val": {
+      "samples": 675,
+      "total_ms": 0.3724000125657767
+    },
+    "test": {
+      "samples": 675,
+      "total_ms": 0.49810000928118825
+    }
+  }
+}
