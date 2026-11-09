@@ -1,5 +1,5 @@
 import { Router, Request, Response } from "express"
-import { ClaimInput, AgentResponse } from "../shared/schemas"
+import { ClaimInput, AgentResponse } from "../shared/schemas.js"
 
 const router = Router()
 
