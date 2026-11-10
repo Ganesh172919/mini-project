@@ -28,8 +28,8 @@ export function HomePage({ onNavigate }: Props) {
         <div className="hero-badge">🩺 Mini-Project 2 · 2026</div>
         <h1 className="hero-title">Health Insurance Fraud<br />Intelligence Platform</h1>
         <p className="hero-sub">
-          Multi-approach fraud detection combining Classical ML, Deep Learning MLP,
-          and Agentic AI pipelines — trained on real insurance claim data.
+          A clinical analytics workspace for comparing claim-risk models,
+          testing predictions, and inspecting the current Agentic AI workflow.
         </p>
       </div>
 
@@ -38,23 +38,23 @@ export function HomePage({ onNavigate }: Props) {
         <div className="stats-grid">
           <div className="stat-card">
             <div className="stat-value">5</div>
-            <div className="stat-label">Classical ML Models</div>
+            <div className="stat-label">Classical ML models</div>
           </div>
           <div className="stat-card">
             <div className="stat-value">99.9%</div>
-            <div className="stat-label">Best Test ROC-AUC</div>
+            <div className="stat-label">Best test ROC-AUC</div>
           </div>
           <div className="stat-card">
             <div className="stat-value">{(dlData.metrics.test.f1 * 100).toFixed(1)}%</div>
-            <div className="stat-label">MLP Test F1</div>
+            <div className="stat-label">MLP test F1</div>
           </div>
           <div className="stat-card">
             <div className="stat-value">29</div>
-            <div className="stat-label">Feature Contract</div>
+            <div className="stat-label">Feature contract</div>
           </div>
           <div className="stat-card">
-            <div className="stat-value">6</div>
-            <div className="stat-label">AI Agents</div>
+            <div className="stat-value">4</div>
+            <div className="stat-label">Recorded agent events</div>
           </div>
         </div>
       )}
@@ -91,8 +91,8 @@ export function HomePage({ onNavigate }: Props) {
           <div className="approach-icon">🧠</div>
           <div className="approach-title">Approach 2 — Deep Learning</div>
           <p className="approach-desc">
-            Multi-Layer Perceptron with batch normalisation and dropout, trained on the
-            same 29-feature contract. Real-time inference via FastAPI.
+            Five PyTorch architectures trained against the same 29-feature contract.
+            Select a model to inspect benchmark evidence and run FastAPI inference.
           </p>
           {dlData && (
             <div style={{ marginTop: "1rem", fontSize: "0.8rem", color: "var(--success)" }}>
@@ -105,8 +105,8 @@ export function HomePage({ onNavigate }: Props) {
           <div className="approach-icon">🤖</div>
           <div className="approach-title">Approach 3 — Agentic AI</div>
           <p className="approach-desc">
-            Six-agent pipeline: Ingestion → Validation → Risk Scorer → XAI Explainer
-            → Decision → Audit. Each agent produces an inspectable audit trail.
+            Agentic claim analysis with a six-role design and a currently verified
+            four-event execution trail. Inspect the active response before review.
           </p>
         </button>
       </div>

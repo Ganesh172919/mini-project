@@ -3,6 +3,7 @@ import cors from 'cors'
 import { healthRouter } from './routes/health.js'
 import agenticRouter from './agentic/predict.js'
 import mlRouter from './routes/ml.js'
+import chatRouter from './routes/chat.js'
 
 const app = express()
 const port = Number(process.env.PORT ?? 3000)
@@ -11,6 +12,7 @@ app.use(cors())
 app.use(express.json())
 app.use('/api/health', healthRouter)
 app.use('/api', mlRouter)
+app.use('/api/chat', chatRouter)
 app.use('/agentic', agenticRouter)
 
 app.listen(port, () => {

@@ -70,8 +70,9 @@ export function AgenticPage() {
         <h2>Agentic AI — Multi-Agent Pipeline</h2>
       </div>
       <p className="page-description">
-        Six specialised agents process each claim sequentially, producing an
-        inspectable chain-of-custody audit trail. (Approach 3 — Varshith's implementation)
+        The designed workflow names six specialised roles. The active Node route
+        currently records four execution events for each claim. (Approach 3 —
+        Varshith's implementation)
       </p>
 
       {/* Agent pipeline display */}
@@ -237,7 +238,7 @@ export function AgenticPage() {
           <div className="result-panel placeholder-center">
             <div className="placeholder-icon">🤖</div>
             <div className="placeholder-title">Awaiting agent run</div>
-            <div className="placeholder-text">Submit a claim to trigger the six-agent pipeline.</div>
+            <div className="placeholder-text">Submit a claim to record the active execution events.</div>
           </div>
         )}
       </div>

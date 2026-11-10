@@ -6,11 +6,11 @@ import { AgenticPage } from "./pages/AgenticPage"
 
 type Tab = "home" | "classical" | "dl" | "agentic"
 
-const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: "home",      label: "Dashboard",    icon: "🏠" },
-  { id: "classical", label: "Classical ML",  icon: "📊" },
-  { id: "dl",        label: "Deep Learning", icon: "🧠" },
-  { id: "agentic",   label: "Agentic AI",    icon: "🤖" },
+const TABS: { id: Tab; label: string }[] = [
+  { id: "home",      label: "Overview" },
+  { id: "classical", label: "Classical ML" },
+  { id: "dl",        label: "Deep Learning" },
+  { id: "agentic",   label: "Agentic AI" },
 ]
 
 export function App() {
@@ -37,7 +37,7 @@ export function App() {
                 onClick={() => setActiveTab(t.id)}
                 aria-current={activeTab === t.id ? "page" : undefined}
               >
-                {t.icon} {t.label}
+                {t.label}
               </button>
             ))}
           </nav>

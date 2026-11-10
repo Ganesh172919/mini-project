@@ -6,7 +6,7 @@ export function PipelinePreview() {
   return (
     <div
       className="pipeline-preview"
-      aria-label="Preview of the six-agent claim review pipeline"
+      aria-label="Preview of the designed claim review pipeline"
     >
       <div className="pipeline-preview__halo" aria-hidden="true" />
       <div className="pipeline-card">

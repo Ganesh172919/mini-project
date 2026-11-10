@@ -1,4 +1,12 @@
 import { ClaimInputForm } from "./ClaimInputForm"
+import { AgentCard } from "../components/AgentCard"
+import { AGENTS } from "../data/agents"
+import {
+  AlertTriangleIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  LockIcon,
+} from "../../components/Icons"
 
 export function AgenticDashboard() {
   return (

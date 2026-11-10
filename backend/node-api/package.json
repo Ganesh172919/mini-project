@@ -9,6 +9,7 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@types/cors": "^2.8.19",
     "cors": "^2.8.6",
     "express": "latest"
