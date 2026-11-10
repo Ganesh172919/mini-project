@@ -1,51 +1,128 @@
 import React from "react"
 
 export function ClaimInputForm() {
-  const [form, setForm] = React.useState({
-    claim_amount: "",
-    patient_age: "",
-    patient_income: "",
-    claim_type: "",
-    provider_specialty: "",
-    cluster: "",
-    submission_method: "",
-    diagnosis_codes: "",
-    procedure_codes: "",
-  })
+  const [form, setForm] = useState<ClaimFormState>(EMPTY_FORM)
+  const [result, setResult] = useState<PredictionResult | null>(null)
+  const [scoredAt, setScoredAt] = useState<Date | null>(null)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const resultRef = useRef<HTMLElement>(null)
 
-  const [result, setResult] = React.useState<{
-    prediction: string
-    fraud_score: number
-    audit_trail: any[]
-  } | null>(null)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setResult(null)
-    const response = await fetch("/agentic/predict", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    })
-    const data = await response.json()
-    setResult(data)
+  const update = (key: keyof ClaimFormState, value: string) => {
+    setForm((current) => ({ ...current, [key]: value }))
   }
 
+  const loadSample = () => {
+    setForm(SAMPLE_FORM)
+    setError(null)
+    setResult(null)
+  }
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    if (submitting) return
+
+    setError(null)
+
+    const amount = Number(form.claim_amount)
+    const age = Number(form.patient_age)
+    const income = Number(form.patient_income)
+    const cluster = Number(form.cluster)
+
+    if (!Number.isFinite(amount) || amount <= 0) {
+      setError("Enter a claim amount greater than zero.")
+      return
+    }
+    if (!Number.isFinite(age) || age < 0 || age > 120) {
+      setError("Enter a patient age between 0 and 120.")
+      return
+    }
+    if (!Number.isFinite(income) || income < 0) {
+      setError("Enter a patient income of zero or more.")
+      return
+    }
+    if (!Number.isFinite(cluster) || cluster < 0 || cluster > 5) {
+      setError("Enter a risk cluster between 0 and 5.")
+      return
+    }
+    if (
+      !form.claim_type ||
+      !form.provider_specialty ||
+      !form.submission_method
+    ) {
+      setError("Select a claim type, provider specialty, and submission method.")
+      return
+    }
+
+    const payload: ClaimPayload = {
+      claim_amount: amount,
+      patient_age: age,
+      patient_income: income,
+      claim_type: form.claim_type,
+      provider_specialty: form.provider_specialty,
+      cluster,
+      submission_method: form.submission_method,
+      diagnosis_codes: splitCodes(form.diagnosis_codes),
+      procedure_codes: splitCodes(form.procedure_codes),
+    }
+
+    setSubmitting(true)
+    setResult(null)
+
+    try {
+      const prediction = await predictClaim(payload)
+      setResult(prediction)
+      setScoredAt(new Date())
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches
+      window.setTimeout(() => {
+        resultRef.current?.scrollIntoView({
+          behavior: reduceMotion ? "auto" : "smooth",
+          block: "nearest",
+        })
+      }, 140)
+    } catch (requestError) {
+      setError(getErrorMessage(requestError))
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  const exportResult = () => {
+    if (!result) return
+    const payload = {
+      ...result,
+      exported_at: new Date().toISOString(),
+      model_note:
+        "Fraud score is uncalibrated and intended for human triage, not final adjudication.",
+    }
+    const blob = new Blob([JSON.stringify(payload, null, 2)], {
+      type: "application/json",
+    })
+    const url = URL.createObjectURL(blob)
+    const anchor = document.createElement("a")
+    anchor.href = url
+    anchor.download = `claim-assessment-${new Date()
+      .toISOString()
+      .slice(0, 10)}.json`
+    document.body.appendChild(anchor)
+    anchor.click()
+    anchor.remove()
+    window.setTimeout(() => URL.revokeObjectURL(url), 0)
+  }
+
+  const scorePercent = result ? normalizeFraudScore(result.fraud_score) : 0
+  const verdict = result?.prediction.trim() ?? ""
+  const isFraud = /^fraud/i.test(verdict)
+
   return (
-    <div className="input-form">
-      <h3>Submit Claim for Fraud Analysis</h3>
-      <form onSubmit={handleSubmit}>
-        <div className="form-row">
-          <label>Claim Amount (USD)</label>
-          <input value={form.claim_amount} onChange={(e) => setForm({ ...form, claim_amount: e.target.value })} type="number" required />
-        </div>
-        <div className="form-row">
-          <label>Patient Age</label>
-          <input value={form.patient_age} onChange={(e) => setForm({ ...form, patient_age: e.target.value })} type="number" required />
-        </div>
-        <div className="form-row">
-          <label>Patient Income (USD)</label>
-          <input value={form.patient_income} onChange={(e) => setForm({ ...form, patient_income: e.target.value })} type="number" required />
+    <div className="claim-card">
+      <div className="claim-card__head">
+        <div>
+          <p className="claim-card__eyebrow">New assessment</p>
+          <h3>Submit a claim</h3>
         </div>
         <div className="form-row">
           <label>Claim Type</label>
@@ -65,9 +142,17 @@ export function ClaimInputForm() {
             <option value="general_practice">General Practice</option>
           </select>
         </div>
-        <div className="form-row">
-          <label>Risk Cluster</label>
-          <input value={form.cluster} onChange={(e) => setForm({ ...form, cluster: e.target.value })} type="number" required />
+      </form>
+
+      {submitting && (
+        <div className="analysis-progress" role="status" aria-live="polite">
+          <div className="analysis-progress__head">
+            <LoaderIcon className="spin" size={16} />
+            <span>Running the six-agent review…</span>
+          </div>
+          <div className="analysis-progress__bar" aria-hidden="true">
+            <span />
+          </div>
         </div>
         <div className="form-row">
           <label>Submission Method</label>
@@ -77,37 +162,93 @@ export function ClaimInputForm() {
             <option value="paper">Paper</option>
           </select>
         </div>
-        <button type="submit" className="submit-btn">Analyze with AI Agents</button>
-      </form>
+      )}
 
       {result && (
-        <div className="result-panel">
-          <h3>Prediction Result</h3>
-          <p>Prediction: <strong>{result.prediction}</strong></p>
-          <p>Fraud Score: {result.fraud_score}%</p>
-          <AgentAuditTrail auditTrail={result.audit_trail} />
-        </div>
-      )}
-    </div>
-  )
-}
+        <section
+          className={`result-panel result-panel--${isFraud ? "fraud" : "safe"}`}
+          ref={resultRef}
+          aria-labelledby="result-title"
+          aria-live="polite"
+        >
+          <div className="result-panel__glow" aria-hidden="true" />
 
-function AgentAuditTrail({ auditTrail }: { auditTrail: any[] }) {
-  return (
-    <div className="audit-trail">
-      <h4>Agent Audit Trail</h4>
-      <ul>
-        {auditTrail.map((entry, idx) => (
-          <li key={idx} className="audit-item">
-            <strong>{entry.agent}:</strong> {entry.status}{' '}
-            {entry.details && Object.keys(entry.details).length > 0 && (
-              <span>
-                {JSON.stringify(entry.details)}
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
+          <div className="result-panel__head">
+            <div>
+              <p className="result-panel__eyebrow">
+                <FileCheckIcon size={14} />
+                Analysis complete
+              </p>
+              <h3 id="result-title">Claim assessment</h3>
+            </div>
+            <span
+              className={`verdict verdict--${isFraud ? "fraud" : "safe"}`}
+            >
+              {isFraud ? (
+                <AlertTriangleIcon size={16} />
+              ) : (
+                <CheckCircleIcon size={16} />
+              )}
+              {result.prediction}
+            </span>
+          </div>
+
+          <div className="result-panel__main">
+            <ScoreGauge value={scorePercent} isFraud={isFraud} />
+
+            <div className="result-summary">
+              <p className="result-summary__label">Recommended action</p>
+              <p className="result-summary__action">
+                {getRecommendation(isFraud, scorePercent)}
+              </p>
+
+              <dl className="meta-grid">
+                <div>
+                  <dt>Model</dt>
+                  <dd>{result.model_name ?? "Agentic ensemble"}</dd>
+                </div>
+                <div>
+                  <dt>Features</dt>
+                  <dd>{result.feature_count ?? "—"}</dd>
+                </div>
+                <div>
+                  <dt>Agent chain</dt>
+                  <dd className="mono">{result.agent_id ?? "—"}</dd>
+                </div>
+                <div>
+                  <dt>Scored at</dt>
+                  <dd>
+                    {scoredAt
+                      ? scoredAt.toLocaleTimeString([], {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                          second: "2-digit",
+                        })
+                      : "—"}
+                  </dd>
+                </div>
+              </dl>
+
+              <button
+                type="button"
+                className="btn btn--quiet result-export"
+                onClick={exportResult}
+              >
+                <DownloadIcon size={15} />
+                Export JSON
+              </button>
+            </div>
+          </div>
+
+          <AuditTrail entries={result.audit_trail ?? []} />
+
+          <p className="result-note">
+            <AlertTriangleIcon size={14} />
+            Fraud scores are uncalibrated and intended to support human triage,
+            not replace it.
+          </p>
+        </section>
+      )}
     </div>
   )
 }
