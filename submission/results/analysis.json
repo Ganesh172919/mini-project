@@ -1,0 +1,147 @@
+{
+  "selected_test": {
+    "scenario": "intake",
+    "model": "RandomForest",
+    "approach": 1,
+    "split": "test",
+    "policy": "validation_f1",
+    "accuracy": 0.9985185185185184,
+    "precision": 1.0,
+    "recall": 0.975,
+    "f1": 0.9873417721518988,
+    "roc_auc": 1.0,
+    "ap": 1.0,
+    "tn": 635,
+    "fp": 0,
+    "fn": 1,
+    "tp": 39,
+    "threshold": 0.4166666666666667,
+    "train_seconds": 0.6086103999987245,
+    "feature_count": 28,
+    "best_epoch": null
+  },
+  "feature_importance": [
+    {
+      "feature": "num__PatientIncome",
+      "importance": 0.4400052928501459
+    },
+    {
+      "feature": "num__ClaimAmount",
+      "importance": 0.4316062756199031
+    },
+    {
+      "feature": "num__PatientAge",
+      "importance": 0.024789600891162857
+    },
+    {
+      "feature": "num__ClaimMonth",
+      "importance": 0.01768143641062732
+    },
+    {
+      "feature": "num__ClaimDayOfWeek",
+      "importance": 0.013051969738633824
+    },
+    {
+      "feature": "num__ClaimYear",
+      "importance": 0.005572007772603711
+    },
+    {
+      "feature": "cat__ClaimSubmissionMethod_Online",
+      "importance": 0.004003929058764441
+    },
+    {
+      "feature": "cat__ClaimType_Inpatient",
+      "importance": 0.003674930980090698
+    },
+    {
+      "feature": "cat__ProviderSpecialty_Orthopedics",
+      "importance": 0.0035588404774684794
+    },
+    {
+      "feature": "cat__PatientMaritalStatus_Single",
+      "importance": 0.0033337447252672933
+    },
+    {
+      "feature": "cat__PatientMaritalStatus_Married",
+      "importance": 0.0031738408146640053
+    },
+    {
+      "feature": "cat__PatientGender_M",
+      "importance": 0.0031525157915130073
+    },
+    {
+      "feature": "cat__ClaimType_Outpatient",
+      "importance": 0.0030893335703665345
+    },
+    {
+      "feature": "cat__PatientGender_F",
+      "importance": 0.003067511219882161
+    },
+    {
+      "feature": "cat__PatientEmploymentStatus_Employed",
+      "importance": 0.0030388933892045926
+    },
+    {
+      "feature": "cat__PatientEmploymentStatus_Unemployed",
+      "importance": 0.002988954248038631
+    },
+    {
+      "feature": "cat__ProviderSpecialty_Cardiology",
+      "importance": 0.0029812413633482455
+    },
+    {
+      "feature": "cat__ProviderSpecialty_Pediatrics",
+      "importance": 0.0029776678508771004
+    },
+    {
+      "feature": "cat__PatientMaritalStatus_Divorced",
+      "importance": 0.00296252956264453
+    },
+    {
+      "feature": "cat__PatientMaritalStatus_Widowed",
+      "importance": 0.0029352985426034242
+    },
+    {
+      "feature": "cat__ClaimSubmissionMethod_Paper",
+      "importance": 0.0029205256680240148
+    },
+    {
+      "feature": "cat__PatientEmploymentStatus_Retired",
+      "importance": 0.002890904687852965
+    },
+    {
+      "feature": "cat__ClaimType_Routine",
+      "importance": 0.00284317997923948
+    },
+    {
+      "feature": "cat__ProviderSpecialty_General Practice",
+      "importance": 0.0028399673010974175
+    },
+    {
+      "feature": "cat__ClaimType_Emergency",
+      "importance": 0.0028334715795077284
+    },
+    {
+      "feature": "cat__ProviderSpecialty_Neurology",
+      "importance": 0.0027853821015515804
+    },
+    {
+      "feature": "cat__PatientEmploymentStatus_Student",
+      "importance": 0.0027374836002709317
+    },
+    {
+      "feature": "cat__ClaimSubmissionMethod_Phone",
+      "importance": 0.0025032702046460125
+    }
+  ],
+  "errors": [
+    {
+      "source_row": 1124,
+      "target": 1,
+      "score": 0.27,
+      "ClaimAmount": 7465.07,
+      "PatientAge": 39,
+      "ClaimType": "Outpatient"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "metric_rows_recomputed": 128,
+  "api_prediction_requests": 32,
+  "negative_input_tests": 4,
+  "static_routes_checked": 5,
+  "api_results": [
+    {
+      "scenario": "intake",
+      "model": "LogisticRegression",
+      "score": 0.2696087062358856
+    },
+    {
+      "scenario": "intake",
+      "model": "LogisticRegression",
+      "score": 0.9998880624771118
+    },
+    {
+      "scenario": "intake",
+      "model": "RandomForest",
+      "score": 0.03333333333333333
+    },
+    {
+      "scenario": "intake",
+      "model": "RandomForest",
+      "score": 1.0
+    },
+    {
+      "scenario": "intake",
+      "model": "XGBoost",
+      "score": 7.648669998161495e-05
+    },
+    {
+      "scenario": "intake",
+      "model": "XGBoost",
+      "score": 0.9999785423278809
+    },
+    {
+      "scenario": "intake",
+      "model": "SVM",
+      "score": 0.2901031160621358
+    },
+    {
+      "scenario": "intake",
+      "model": "SVM",
+      "score": 0.8968841434065343
+    },
+    {
+      "scenario": "intake",
+      "model": "GradientBoosting",
+      "score": 2.190173045085937e-05
+    },
+    {
+      "scenario": "intake",
+      "model": "GradientBoosting",
+      "score": 0.9999780982688176
+    },
+    {
+      "scenario": "intake",
+      "model": "MLP",
+      "score": 0.013767872005701065
+    },
+    {
+      "scenario": "intake",
+      "model": "MLP",
+      "score": 0.9992096424102783
+    },
+    {
+      "scenario": "intake",
+      "model": "ResidualMLP",
+      "score": 1.2189896551717538e-05
+    },
+    {
+      "scenario": "intake",
+      "model": "ResidualMLP",
+      "score": 0.9997783303260803
+    },
+    {
+      "scenario": "intake",
+      "model": "CNN1D",
+      "score": 0.31014108657836914
+    },
+    {
+      "scenario": "intake",
+      "model": "CNN1D",
+      "score": 0.9997135996818542
+    },
+    {
+      "scenario": "baseline",
+      "model": "LogisticRegression",
+      "score": 0.0173635371029377
+    },
+    {
+      "scenario": "baseline",
+      "model": "LogisticRegression",
+      "score": 0.9999330043792725
+    },
+    {
+      "scenario": "baseline",
+      "model": "RandomForest",
+      "score": 0.013333333333333334
+    },
+    {
+      "scenario": "baseline",
+      "model": "RandomForest",
+      "score": 1.0
+    },
+    {
+      "scenario": "baseline",
+      "model": "XGBoost",
+      "score": 9.915338887367398e-05
+    },
+    {
+      "scenario": "baseline",
+      "model": "XGBoost",
+      "score": 0.9999840259552002
+    },
+    {
+      "scenario": "baseline",
+      "model": "SVM",
+      "score": 0.18273141519824415
+    },
+    {
+      "scenario": "baseline",
+      "model": "SVM",
+      "score": 0.8686521881222014
+    },
+    {
+      "scenario": "baseline",
+      "model": "GradientBoosting",
+      "score": 2.190173045085937e-05
+    },
+    {
+      "scenario": "baseline",
+      "model": "GradientBoosting",
+      "score": 0.9999780982688176
+    },
+    {
+      "scenario": "baseline",
+      "model": "MLP",
+      "score": 0.0002894364297389984
+    },
+    {
+      "scenario": "baseline",
+      "model": "MLP",
+      "score": 0.999908447265625
+    },
+    {
+      "scenario": "baseline",
+      "model": "ResidualMLP",
+      "score": 1.456741671734818e-10
+    },
+    {
+      "scenario": "baseline",
+      "model": "ResidualMLP",
+      "score": 1.0
+    },
+    {
+      "scenario": "baseline",
+      "model": "CNN1D",
+      "score": 0.00013415623106993735
+    },
+    {
+      "scenario": "baseline",
+      "model": "CNN1D",
+      "score": 0.9998302459716797
+    }
+  ]
+}

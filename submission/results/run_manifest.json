@@ -1,0 +1,32 @@
+{
+  "generated_utc": "2026-10-20T12:26:25.456518+00:00",
+  "seed": 42,
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "torch": "2.14.1+cpu",
+    "joblib": "1.6.0"
+  },
+  "seconds": 63.88146980000238,
+  "source_sha256": "952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45",
+  "models": [
+    "LogisticRegression",
+    "RandomForest",
+    "XGBoost",
+    "SVM",
+    "GradientBoosting",
+    "MLP",
+    "ResidualMLP",
+    "CNN1D"
+  ],
+  "scenarios": [
+    "baseline",
+    "intake",
+    "no_amount",
+    "temporal"
+  ],
+  "test_reuse": "Historical random-split test has appeared in prior project results. All reported experiments are retrospective internal benchmarks."
+}

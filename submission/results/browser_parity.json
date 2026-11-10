@@ -1,0 +1,128 @@
+[
+  {
+    "scenario": "baseline",
+    "model": "preprocessing",
+    "rows": 675,
+    "max_absolute_error": 0,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "preprocessing",
+    "rows": 675,
+    "max_absolute_error": 0,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "baseline",
+    "model": "LogisticRegression",
+    "rows": 675,
+    "max_absolute_error": 4.4204131033342975e-7,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "baseline",
+    "model": "RandomForest",
+    "rows": 675,
+    "max_absolute_error": 0,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "baseline",
+    "model": "XGBoost",
+    "rows": 675,
+    "max_absolute_error": 7.38267560418393e-8,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "baseline",
+    "model": "SVM",
+    "rows": 675,
+    "max_absolute_error": 3.3861802251067274e-15,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "baseline",
+    "model": "GradientBoosting",
+    "rows": 675,
+    "max_absolute_error": 3.7269449679189215e-20,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "baseline",
+    "model": "MLP",
+    "rows": 675,
+    "max_absolute_error": 8.003239981846377e-8,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "baseline",
+    "model": "ResidualMLP",
+    "rows": 675,
+    "max_absolute_error": 3.99523405247848e-7,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "baseline",
+    "model": "CNN1D",
+    "rows": 675,
+    "max_absolute_error": 2.046842170200236e-7,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "LogisticRegression",
+    "rows": 675,
+    "max_absolute_error": 3.816034749859476e-7,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "RandomForest",
+    "rows": 675,
+    "max_absolute_error": 0,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "XGBoost",
+    "rows": 675,
+    "max_absolute_error": 8.573200105388423e-8,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "SVM",
+    "rows": 675,
+    "max_absolute_error": 1.7763568394002505e-15,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "GradientBoosting",
+    "rows": 675,
+    "max_absolute_error": 3.7269449679189215e-20,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "MLP",
+    "rows": 675,
+    "max_absolute_error": 1.1292335810875187e-7,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "ResidualMLP",
+    "rows": 675,
+    "max_absolute_error": 3.542719081428558e-7,
+    "label_mismatches": 0
+  },
+  {
+    "scenario": "intake",
+    "model": "CNN1D",
+    "rows": 675,
+    "max_absolute_error": 3.8471189833799713e-7,
+    "label_mismatches": 0
+  }
+]

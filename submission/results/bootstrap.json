@@ -1,0 +1,20 @@
+{
+  "model": "RandomForest",
+  "replicates": 1000,
+  "seed": 2026,
+  "method": "stratified test resampling at fixed trained model and fixed validation threshold",
+  "intervals": {
+    "ap": [
+      0.9999999999999999,
+      1.0
+    ],
+    "f1": [
+      0.961038961038961,
+      1.0
+    ],
+    "recall": [
+      0.925,
+      1.0
+    ]
+  }
+}

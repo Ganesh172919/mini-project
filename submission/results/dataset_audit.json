@@ -1,0 +1,134 @@
+{
+  "rows": 4500,
+  "columns": 19,
+  "fraud": 270,
+  "prevalence": 0.06,
+  "missing": {
+    "ClaimID": 0,
+    "PatientID": 0,
+    "ProviderID": 0,
+    "ClaimAmount": 0,
+    "ClaimDate": 0,
+    "DiagnosisCode": 0,
+    "ProcedureCode": 0,
+    "PatientAge": 0,
+    "PatientGender": 0,
+    "ProviderSpecialty": 0,
+    "ClaimStatus": 0,
+    "PatientIncome": 0,
+    "PatientMaritalStatus": 0,
+    "PatientEmploymentStatus": 0,
+    "ProviderLocation": 0,
+    "ClaimType": 0,
+    "ClaimSubmissionMethod": 0,
+    "Cluster": 0,
+    "ClaimLegitimacy": 0
+  },
+  "duplicate_rows": 0,
+  "unique": {
+    "ClaimID": 4500,
+    "PatientID": 4500,
+    "ProviderID": 4500,
+    "ClaimAmount": 4490,
+    "ClaimDate": 731,
+    "DiagnosisCode": 4495,
+    "ProcedureCode": 4495,
+    "PatientAge": 100,
+    "PatientGender": 2,
+    "ProviderSpecialty": 5,
+    "ClaimStatus": 3,
+    "PatientIncome": 4500,
+    "PatientMaritalStatus": 4,
+    "PatientEmploymentStatus": 4,
+    "ProviderLocation": 3876,
+    "ClaimType": 4,
+    "ClaimSubmissionMethod": 3,
+    "Cluster": 4,
+    "ClaimLegitimacy": 2
+  },
+  "cluster_crosstab": {
+    "Fraud": {
+      "0": 0,
+      "1": 267,
+      "2": 0,
+      "3": 3
+    },
+    "Legitimate": {
+      "0": 1144,
+      "1": 833,
+      "2": 1104,
+      "3": 1149
+    }
+  },
+  "date_min": "2022-07-09",
+  "date_max": "2024-07-08",
+  "source_sha256": "952b6e23c9845b9086994c08bc81323575968c318f845ea69e3b9609614b6a45",
+  "source_copy_identical": true,
+  "amount_by_class": {
+    "min": {
+      "Fraud": 7465.07,
+      "Legitimate": 100.12
+    },
+    "max": {
+      "Fraud": 9978.43,
+      "Legitimate": 9997.2
+    },
+    "mean": {
+      "Fraud": 8733.565111111111,
+      "Legitimate": 4776.797829787234
+    }
+  },
+  "split_sizes": {
+    "baseline": {
+      "train": 3150,
+      "val": 675,
+      "test": 675
+    },
+    "intake": {
+      "train": 3150,
+      "val": 675,
+      "test": 675
+    },
+    "no_amount": {
+      "train": 3150,
+      "val": 675,
+      "test": 675
+    },
+    "temporal": {
+      "train": 3152,
+      "val": 677,
+      "test": 671
+    }
+  },
+  "split_fraud": {
+    "baseline": {
+      "train": 189,
+      "val": 41,
+      "test": 40
+    },
+    "intake": {
+      "train": 189,
+      "val": 41,
+      "test": 40
+    },
+    "no_amount": {
+      "train": 189,
+      "val": 41,
+      "test": 40
+    },
+    "temporal": {
+      "train": 199,
+      "val": 34,
+      "test": 37
+    }
+  },
+  "temporal_cutoffs": [
+    "2023-11-21",
+    "2024-03-10"
+  ],
+  "legacy_arrays_match": {
+    "train": true,
+    "val": true,
+    "test": true
+  }
+}

@@ -10,3 +10,6 @@
 8. Agentic AI is a separate team component owned by Varshith.
 9. The FastAPI prediction service reuses the fitted preprocessing transformer from `Approch-1/data/processed/preprocessor.joblib` read-only, while the MLP checkpoint and frozen feature-name contract remain under `Approch-2-DL/`.
 10. The prediction API reports an uncalibrated `fraud_score`, not a calibrated probability.
+11. The final submission is isolated in `submission/`; it evaluates five classical models and exactly three neural models. Historical artifacts stay intact.
+12. The final intake contract excludes Cluster. Both default and validation-selected threshold metrics are retained. Model selection uses validation AP and F1.
+13. The final submission website uses browser inference from exported fitted parameters. A local FastAPI endpoint independently serves saved Python models. The earlier Node and React skeleton is not required for this separate demonstration.

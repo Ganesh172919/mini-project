@@ -1,0 +1,226 @@
+[
+  {
+    "scenario": "baseline",
+    "model": "LogisticRegression",
+    "approach": 1,
+    "threshold": 0.637692928314209,
+    "features": 29
+  },
+  {
+    "scenario": "baseline",
+    "model": "RandomForest",
+    "approach": 1,
+    "threshold": 0.3,
+    "features": 29
+  },
+  {
+    "scenario": "baseline",
+    "model": "XGBoost",
+    "approach": 1,
+    "threshold": 0.18775148689746857,
+    "features": 29
+  },
+  {
+    "scenario": "baseline",
+    "model": "SVM",
+    "approach": 1,
+    "threshold": 0.5925868981058751,
+    "features": 29
+  },
+  {
+    "scenario": "baseline",
+    "model": "GradientBoosting",
+    "approach": 1,
+    "threshold": 0.9999780982688176,
+    "features": 29
+  },
+  {
+    "scenario": "baseline",
+    "model": "MLP",
+    "approach": 2,
+    "threshold": 0.8138696551322937,
+    "features": 29
+  },
+  {
+    "scenario": "baseline",
+    "model": "ResidualMLP",
+    "approach": 2,
+    "threshold": 0.03836420550942421,
+    "features": 29
+  },
+  {
+    "scenario": "baseline",
+    "model": "CNN1D",
+    "approach": 2,
+    "threshold": 0.8382759094238281,
+    "features": 29
+  },
+  {
+    "scenario": "intake",
+    "model": "LogisticRegression",
+    "approach": 1,
+    "threshold": 0.7617825865745544,
+    "features": 28
+  },
+  {
+    "scenario": "intake",
+    "model": "RandomForest",
+    "approach": 1,
+    "threshold": 0.4166666666666667,
+    "features": 28
+  },
+  {
+    "scenario": "intake",
+    "model": "XGBoost",
+    "approach": 1,
+    "threshold": 0.21210132539272308,
+    "features": 28
+  },
+  {
+    "scenario": "intake",
+    "model": "SVM",
+    "approach": 1,
+    "threshold": 0.5859485710187659,
+    "features": 28
+  },
+  {
+    "scenario": "intake",
+    "model": "GradientBoosting",
+    "approach": 1,
+    "threshold": 0.9999780982688176,
+    "features": 28
+  },
+  {
+    "scenario": "intake",
+    "model": "MLP",
+    "approach": 2,
+    "threshold": 0.8359395265579224,
+    "features": 28
+  },
+  {
+    "scenario": "intake",
+    "model": "ResidualMLP",
+    "approach": 2,
+    "threshold": 0.2751244008541107,
+    "features": 28
+  },
+  {
+    "scenario": "intake",
+    "model": "CNN1D",
+    "approach": 2,
+    "threshold": 0.9690607786178589,
+    "features": 28
+  },
+  {
+    "scenario": "no_amount",
+    "model": "LogisticRegression",
+    "approach": 1,
+    "threshold": 0.5851899981498718,
+    "features": 27
+  },
+  {
+    "scenario": "no_amount",
+    "model": "RandomForest",
+    "approach": 1,
+    "threshold": 0.09666666666666666,
+    "features": 27
+  },
+  {
+    "scenario": "no_amount",
+    "model": "XGBoost",
+    "approach": 1,
+    "threshold": 0.001945446478202939,
+    "features": 27
+  },
+  {
+    "scenario": "no_amount",
+    "model": "SVM",
+    "approach": 1,
+    "threshold": 0.4023979365315129,
+    "features": 27
+  },
+  {
+    "scenario": "no_amount",
+    "model": "GradientBoosting",
+    "approach": 1,
+    "threshold": 0.0012327470998098303,
+    "features": 27
+  },
+  {
+    "scenario": "no_amount",
+    "model": "MLP",
+    "approach": 2,
+    "threshold": 0.7057477235794067,
+    "features": 27
+  },
+  {
+    "scenario": "no_amount",
+    "model": "ResidualMLP",
+    "approach": 2,
+    "threshold": 0.1859178990125656,
+    "features": 27
+  },
+  {
+    "scenario": "no_amount",
+    "model": "CNN1D",
+    "approach": 2,
+    "threshold": 0.7108206152915955,
+    "features": 27
+  },
+  {
+    "scenario": "temporal",
+    "model": "LogisticRegression",
+    "approach": 1,
+    "threshold": 0.9478570818901062,
+    "features": 28
+  },
+  {
+    "scenario": "temporal",
+    "model": "RandomForest",
+    "approach": 1,
+    "threshold": 0.3566666666666667,
+    "features": 28
+  },
+  {
+    "scenario": "temporal",
+    "model": "XGBoost",
+    "approach": 1,
+    "threshold": 0.9987439513206482,
+    "features": 28
+  },
+  {
+    "scenario": "temporal",
+    "model": "SVM",
+    "approach": 1,
+    "threshold": 0.44859431125226756,
+    "features": 28
+  },
+  {
+    "scenario": "temporal",
+    "model": "GradientBoosting",
+    "approach": 1,
+    "threshold": 0.9999780982679273,
+    "features": 28
+  },
+  {
+    "scenario": "temporal",
+    "model": "MLP",
+    "approach": 2,
+    "threshold": 0.9460719227790833,
+    "features": 28
+  },
+  {
+    "scenario": "temporal",
+    "model": "ResidualMLP",
+    "approach": 2,
+    "threshold": 0.1828998476266861,
+    "features": 28
+  },
+  {
+    "scenario": "temporal",
+    "model": "CNN1D",
+    "approach": 2,
+    "threshold": 0.7209591865539551,
+    "features": 28
+  }
+]

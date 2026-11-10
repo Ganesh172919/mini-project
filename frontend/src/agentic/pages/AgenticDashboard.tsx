@@ -1,11 +1,3 @@
-import {
-  AlertTriangleIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  LockIcon,
-} from "../../components/Icons"
-import { AgentCard } from "../components/AgentCard"
-import { AGENTS } from "../data/agents"
 import { ClaimInputForm } from "./ClaimInputForm"
 
 export function AgenticDashboard() {

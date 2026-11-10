@@ -1,0 +1,8 @@
+{
+  "scenario": "intake",
+  "model": "RandomForest",
+  "criterion": "validation AP rounded to 12 decimals, then validation F1, then declared model order",
+  "threshold": 0.4166666666666667,
+  "validation_ap": 1.0,
+  "validation_f1": 1.0
+}
