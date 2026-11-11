@@ -12,6 +12,7 @@
     "@google/generative-ai": "^0.24.1",
     "@types/cors": "^2.8.19",
     "cors": "^2.8.6",
+    "dotenv": "^16.4.7",
     "express": "latest"
   },
   "devDependencies": {

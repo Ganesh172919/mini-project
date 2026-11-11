@@ -1,10 +1,16 @@
 import { Router } from "express"
 import { GoogleGenerativeAI } from "@google/generative-ai"
+import dotenv from "dotenv"
+import path from "node:path"
 
 const router = Router()
 
+dotenv.config({
+  path: path.resolve(process.cwd(), "../../Approach-3-Agentic-AI/.env"),
+})
+
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY ?? "")
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" })
+const model = genAI.getGenerativeModel({ model: "gemini-3.8-flash" })
 
 router.post("/", async (req, res) => {
   try {
@@ -20,8 +26,12 @@ router.post("/", async (req, res) => {
         role: msg.role === "assistant" ? "model" : "user",
         parts: [{ text: msg.content }],
       })),
-      systemInstruction:
-        "You are a helpful health insurance fraud detection assistant. Help users understand fraud patterns, explain predictions, and answer questions about health insurance claims. Keep responses concise.",
+      systemInstruction: {
+        role: "system",
+        parts: [{
+          text: "You are a helpful health insurance fraud detection assistant. Help users understand fraud patterns, explain predictions, and answer questions about health insurance claims. Keep responses concise.",
+        }],
+      },
     })
 
     const result = await chat.sendMessage(message)

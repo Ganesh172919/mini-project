@@ -3,6 +3,7 @@ import { HomePage } from "./pages/HomePage"
 import { DLPage } from "./pages/DLPage"
 import { ClassicalMLPage } from "./pages/ClassicalMLPage"
 import { AgenticPage } from "./pages/AgenticPage"
+import { ChatBox } from "./agentic/components/ChatBox"
 
 type Tab = "home" | "classical" | "dl" | "agentic"
 
@@ -15,6 +16,7 @@ const TABS: { id: Tab; label: string }[] = [
 
 export function App() {
   const [activeTab, setActiveTab] = useState<Tab>("home")
+  const [chatOpen, setChatOpen] = useState(false)
 
   return (
     <div className="app-shell">
@@ -53,6 +55,9 @@ export function App() {
           {activeTab === "agentic"   && <AgenticPage />}
         </div>
       </main>
+      {activeTab === "agentic" && (
+        <ChatBox open={chatOpen} onOpenChange={setChatOpen} />
+      )}
     </div>
   )
 }
