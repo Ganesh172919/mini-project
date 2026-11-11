@@ -164,3 +164,21 @@ npm run build
 cd E:\mini-project\backend\node-api
 npm run build
 ```
+
+---
+
+## Unified Documentation & Submission Deliverables (`docs/` & `deliverables/`)
+
+Full project documentation, academic reports, and presentation artifacts covering Approaches 1, 2, and 3, the 3-tier full-stack platform, and the `submission/` 4-experiment benchmark lab:
+
+- **Documentation Hub ([docs/README.md](docs/README.md)):**
+  - [Literature Survey](docs/01_LITERATURE_SURVEY.md) ([PDF](deliverables/01_Literature_Survey.pdf)) — Six thematic research pillars, 20 verified references, and research gap synthesis
+  - [Problem Formulation](docs/02_PROBLEM_FORMULATION.md) ([PDF](deliverables/02_Problem_Formulation.pdf)) — Dataset audit, `Cluster`/`ClaimAmount` hazards, weighted BCE & Autoencoder objectives, 4 experimental contracts
+  - [Innovation & Implementation](docs/03_INNOVATION_AND_IMPLEMENTATION.md) ([PDF](deliverables/03_Innovation_and_Implementation.pdf)) — Five key engineering advances, complete module implementation, dual-path serving architecture
+  - [Full Project Documentation](docs/04_FULL_PROJECT_DOCUMENTATION.md) ([PDF](deliverables/04_Full_Project_Documentation.pdf)) — Repository map, verified Track A (10-model) & Track B (32-run) tables, runbooks, API specs, limitation log
+- **Formatted Deliverables (`deliverables/`):**
+  - **IIIT Dharwad Report (from `MiniProjectTemplate.zip`):** [`deliverables/MiniProjectReport_LaTeX/MiniProjectReport.tex`](deliverables/MiniProjectReport_LaTeX/MiniProjectReport.tex) + [`deliverables/MiniProjectReport.pdf`](deliverables/MiniProjectReport.pdf)
+  - **IEEE Conference Research Paper:** [`deliverables/IEEE_Paper_LaTeX/ieee_paper.tex`](deliverables/IEEE_Paper_LaTeX/ieee_paper.tex) + [`deliverables/IEEE_Paper.pdf`](deliverables/IEEE_Paper.pdf) + [`deliverables/IEEE_Paper.docx`](deliverables/IEEE_Paper.docx)
+  - **20-Slide Presentation Deck & Speaker Notes:** [`deliverables/Project_Presentation.pptx`](deliverables/Project_Presentation.pptx) + [`deliverables/Project_Presentation.pdf`](deliverables/Project_Presentation.pdf) + [`deliverables/Project_Presentation_Notes.md`](deliverables/Project_Presentation_Notes.md)
+  - **Unified High-DPI Figures:** [`deliverables/figures/`](deliverables/figures/) (`fig1`–`fig6`)
+
